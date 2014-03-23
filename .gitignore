@@ -1,2 +1,4 @@
 *~
 *.pyc
+.#*
+static/codemirror-4.0

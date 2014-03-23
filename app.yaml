@@ -10,6 +10,9 @@ handlers:
     static_files: static/images/favicon.ico
     upload: static/images/favicon.ico
   
+  - url: /codemirror
+    static_dir: static/codemirror-4.0
+
   - url: /css
     static_dir: static/css
 

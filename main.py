@@ -116,13 +116,16 @@ class EditablePage(RequestHandler):
 
 class Editor(RequestHandler):
     
-    pass
+    def get(self, name):
+        values = dict()
+        values['name'] = name
+        self.render_response('editor.html', **values)
 
 
 
 application = webapp2.WSGIApplication([
     Route(r'/', EditablePage),
-    Route(r'/<name:[^/].*\.html>', EditablePage, name='editable-page'),
-    Route(r'/edit/<name:[^/].*\.html>', Editor, name='editor'),
+    Route(r'/<name:[^/]*\.html>', EditablePage, name='editable-page'),
+    Route(r'/edit/<name:[^/]*\.html>', Editor, name='editor'),
 ], debug=True)
 

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Editing {{ name }}
+{% endblock %}
+
+
+{% block extra_js %}
+<script type="text/javascript" src="/codemirror/lib/codemirror.js"></script>
+<script type="text/javascript" src="/codemirror/mode/markdown/markdown.js"></script>
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="/codemirror/lib/codemirror.css"/>
+{% endblock %}
+
+
+
+{% block content %}
+<div id="content">
+
+  <form>
+    <textarea id="code" name="code">
+      {% autoescape false %}
+      {{ content }}
+      1
+2
+2
+      
+      {% endautoescape %}
+    </textarea>
+  </form>
+
+  <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+    mode: 'markdown',
+    lineNumbers: true,
+    theme: "default",
+    extraKeys: {"Enter": "newlineAndIndentContinueMarkdownList"}
+    });
+  </script>
+
+</div>
+{% endblock %}

@@ -2,12 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
   <head>
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
-    <script type="text/javascript" src="js/menu.js"></script>
-    <link rel="stylesheet" href="css/jquery-ui.css"/>
-    <link rel="stylesheet" href="css/menu.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.21.custom.min.js"></script>
+    {% block extra_js %}
+    {% endblock %}
+    <link rel="stylesheet" href="/css/jquery-ui.css"/>
+    <link rel="stylesheet" href="/css/menu.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    {% block extra_css %}
+    {% endblock %}
 
     {% block head %}
     <title>{% block title %}{% endblock %}</title>
