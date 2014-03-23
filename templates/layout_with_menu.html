@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block menu %}
+<nav id="menu">
+  <div id="menu_head">
+  </div>
+
+  {% for item in menu %}
+  <div class={{ item.get_css() }}>
+    <a href="{{ item.get_url() }}">{{ item.get_name() }}</a>
+  </div>
+  {% endfor %}
+
+  {% if logged_in %}
+  <div class="menu_lvl_0">
+    <a href="{{ logout_url }}">Edit</a>
+  </div>
+  <div class="menu_lvl_0" }}>
+    <a href="logout.html">Logout</a>
+  </div>
+  {% else %}
+  <div class="menu_lvl_0">
+    <a href="login.html">Login</a>
+  </div>
+  {% endif %}
+</nav>
+{% endblock %}

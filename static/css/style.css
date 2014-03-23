@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), 
+  url(http://themes.googleusercontent.com/static/fonts/robotoslab/v2/y7lebkjgREBJK96VQi37ZobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto Slab', Georgia, Palatino, Times New Roman, serif;
+}
+
+#header {
+    border-bottom: 1px solid #333;
+}
+
+#footer {
+    clear: both;
+    color: #444444;
+    border-top: 1px solid #333;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 80%;
+    text-align: right;
+}
+
+#content {
+    width: 75%;
+    /* background-color: #ffffff; */
+    float: right;
+    display: block;
+}
+
+#content p{
+    margin-right: 15px;
+    text-align: justify;
+}
+
+#content_spacing {
+    padding: 20px;
+    margin-right: 20px;
+    max-width:800px;
+}
+
+#content h1 {
+    font-size: 250%;
+    font-weight: 200;
+}
+
+#content h2 {
+    font-size: 150%;
+    font-weight: 300;
+}
+
+#content h3 {
+    font-size: 120%;
+    font-weight: 300;
+}

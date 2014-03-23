@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    {% block head %}
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block header %}{% endblock %}
+    {% block menu %}{% endblock %}
+    {% block content %}{% endblock %}
+
+    <div id="footer">
+      Copyright &copy; 2013 University of Oxford
+    </div>
+
+  </body>
+</html>

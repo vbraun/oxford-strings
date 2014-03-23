@@ -1,0 +1,33 @@
+application: oxford-strings
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+  - url: /favicon.ico
+    static_files: static/images/favicon.ico
+    upload: static/images/favicon.ico
+  
+  - url: /css
+    static_dir: static/css
+
+  - url: /js
+    static_dir: static/js
+
+  - url: /fonts
+    static_dir: static/fonts
+
+  - url: /.*
+    script: main.application
+
+
+libraries:
+
+  - name: webapp2
+    version: latest
+
+  - name: jinja2
+    version: latest
+
