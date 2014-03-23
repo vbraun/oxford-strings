@@ -3,6 +3,7 @@
 import sys
 import os
 import webapp2
+from webapp2 import WSGIApplication, Route, cached_property, uri_for
 import jinja2
 
 from menu import menu_items
@@ -18,10 +19,6 @@ sys.path.append(LIB_DIR)
 from markdown import markdown, extensions
 from markdown.extensions.tables import TableExtension
 
-JINJA_ENVIRONMENT = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(TEMPLATES_DIR),
-    extensions=['jinja2.ext.autoescape'],
-    autoescape=True)
 
 
 content = """
@@ -77,20 +74,55 @@ Content Cell  | Content Cell
 """
 
 
-class MainPage(webapp2.RequestHandler):
 
-    def get(self):
-        template = JINJA_ENVIRONMENT.get_template('index.html')
+
+def jinja2_factory(app):
+    from webapp2_extras import jinja2
+    config = dict(jinja2.default_config)
+    config['template_path'] = TEMPLATES_DIR
+    j = jinja2.Jinja2(app, config)
+    j.environment.filters.update({
+    })
+    j.environment.globals.update({
+        'uri_for': webapp2.uri_for,
+    })
+    return j
+
+
+class RequestHandler(webapp2.RequestHandler):
+    
+    @cached_property
+    def jinja2(self):
+        from webapp2_extras import jinja2
+        return jinja2.get_jinja2(factory=jinja2_factory)
+    
+    def render_response(self, template, **kwds):
+        result = self.jinja2.render_template(template, **kwds)
+        self.response.write(result)
+
+
+
+class EditablePage(RequestHandler):
+
+    def get(self, name='index.html'):
+        print('get', name)
         values = dict()
         values['logged_in'] = True
         values['menu'] = menu_items
         values['content'] = markdown(content, extensions=[TableExtension(configs={})])
-        values['edit_url'] = 'edit?index.html'
-        self.response.write(template.render(values))
+        values['edit_url'] = uri_for('editor', name=name)
+        self.render_response(name, **values)
+
+
+class Editor(RequestHandler):
+    
+    pass
 
 
 
 application = webapp2.WSGIApplication([
-    ('/', MainPage),
+    Route(r'/', EditablePage),
+    Route(r'/<name:[^/].*\.html>', EditablePage, name='editable-page'),
+    Route(r'/edit/<name:[^/].*\.html>', Editor, name='editor'),
 ], debug=True)
 
