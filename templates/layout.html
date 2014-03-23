@@ -16,11 +16,14 @@
 
   <body>
     {% block header %}{% endblock %}
-    {% block menu %}{% endblock %}
-    {% block content %}{% endblock %}
 
-    <div id="footer">
-      Copyright &copy; 2013 University of Oxford
+    <div id="pagearea">
+      {% block menu %}{% endblock %}
+      {% block content %}{% endblock %}
+
+      <div id="footer">
+	Copyright &copy; 2014 University of Oxford
+      </div>
     </div>
 
   </body>

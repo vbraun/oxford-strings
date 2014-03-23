@@ -19,6 +19,9 @@ handlers:
   - url: /fonts
     static_dir: static/fonts
 
+  - url: /images
+    static_dir: static/images
+
   - url: /.*
     script: main.application
 

@@ -1,45 +1,85 @@
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+
+}
+@font-face {
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), 
-  url(http://themes.googleusercontent.com/static/fonts/robotoslab/v2/y7lebkjgREBJK96VQi37ZobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+  src: local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto-Medium'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto-Bold'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto-Black'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
 
 html {
-    height: 100%;
 }
 
 body {
-    height: 100%;
     margin: 0;
-    font-family: 'Roboto Slab', Georgia, Palatino, Times New Roman, serif;
+    font-family: 'Roboto', Georgia, Palatino, Times New Roman, serif;
+    font-weight: 400;
 }
 
 #header {
-    border-bottom: 1px solid #333;
+    background-color: #002147;
+    color: white;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    box-shadow: 10px 10px 5px #888888;
 }
+
+#header img {
+    vertical-align: middle;
+}
+
+
 
 #footer {
     clear: both;
-    color: #444444;
-    border-top: 1px solid #333;
-    bottom: 0;
-    right: 0;
-    padding: 5px;
+    color: #002147;
+    padding: 10px;
     font-size: 80%;
     text-align: right;
 }
 
+#pagearea {
+    margin: 0 auto;
+    max-width: 900px;
+    align: center;
+}
+
 #content {
-    width: 75%;
+    max-width: 700px;
+    margin-left: 200px;
     /* background-color: #ffffff; */
-    float: right;
     display: block;
+    margin-right: 20px;
 }
 
 #content p{
-    margin-right: 15px;
     text-align: justify;
 }
 
@@ -51,15 +91,15 @@ body {
 
 #content h1 {
     font-size: 250%;
-    font-weight: 200;
+    font-weight: 900;
 }
 
 #content h2 {
     font-size: 150%;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 #content h3 {
     font-size: 120%;
-    font-weight: 300;
+    font-weight: 500;
 }

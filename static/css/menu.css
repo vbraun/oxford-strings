@@ -1,19 +1,23 @@
 #menu {
-    width: 25%;
+    width: 200px;
+    margins: 0;
     /* background-color: #dddddd; */
     float: left;
     display: block;
+    font-weight: 300;
+    color: #002147;
+    line-height: 120%;
 }
 
 
 #menu :link {
     text-decoration: none;
-    /* color: black; */
+    color: #002147;
 }
 
 #menu :visited {
     text-decoration: none;
-    color: black;
+    color: #002147;
 }
 
 #menu :hover {
@@ -24,25 +28,27 @@
 #menu_head {
     margin-top: 100px;
     margin-bottom: 10px;
-    margin-left: 20%;
-    margin-right: 10%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .menu_lvl_0 {
-    padding-top: 10px;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 150%;
 }
 
 .menu_lvl_1 {
-    margin-left: 20%;
-    margin-right: 10%;
+    padding-top: 10px;
+    margin-left: 40px;
+    margin-right: 20px;
     font-size: 110%;
 }
 
 .menu_lvl_2 {
-    margin-left: 30%;
-    margin-right: 10%;
+    padding-top: 10px;
+    margin-left: 60px;
+    margin-right: 20px;
     font-size: 80%;
 }
