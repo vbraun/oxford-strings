@@ -3,10 +3,16 @@
 App Request Handler
 """
 
+import json
 import webapp2
 from webapp2 import cached_property
+from markdown import markdown, extensions
+from markdown.extensions.tables import TableExtension
 
 import config
+
+
+json_encoder = json.JSONEncoder()
 
 
 def jinja2_factory(app):
@@ -32,3 +38,11 @@ class RequestHandler(webapp2.RequestHandler):
     def render_response(self, template, **kwds):
         result = self.jinja2.render_template(template, **kwds)
         self.response.write(result)
+
+    def json_response(self, **kwds):
+        result = json_encoder.encode(kwds)
+        self.response.write(result)
+
+    def markdown(self, source):
+        return markdown(source, extensions=[TableExtension(configs={})])
+

@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
+"""
+Main entry point
+"""
 
 import sys
 import os
+import config
+sys.path.append(config.LIB_DIR)
+
 import webapp2
 from webapp2 import WSGIApplication, Route, cached_property, uri_for
 import jinja2
-
 from .base import RequestHandler
 
-import config
-
-
-
-sys.path.append(config.LIB_DIR)
-from markdown import markdown, extensions
-from markdown.extensions.tables import TableExtension
 
 
 
@@ -79,7 +77,7 @@ class EditablePage(RequestHandler):
         values = dict()
         values['logged_in'] = True
         values['menu'] = config.menu_items
-        values['content'] = markdown(content, extensions=[TableExtension(configs={})])
+        values['content'] = self.markdown(content)
         values['edit_url'] = uri_for('editor', name=name)
         self.render_response(name, **values)
 
@@ -89,9 +87,24 @@ class Editor(RequestHandler):
     def get(self, name):
         values = dict()
         values['name'] = name
+        values['source'] = content
+        values['preview'] = self.markdown(content)
         self.render_response('editor.html', **values)
 
-
+    def post(self, name):
+        command = self.request.get('command')
+        source = self.request.get('source')
+        if command == 'preview':
+            html = self.markdown(source)
+            self.response.write(html)
+        elif command == 'save':
+            # TODO: save
+            html = self.markdown(source)
+            self.response.write(html)
+        elif command == 'cancel':
+            self.response.write(uri_for('editable-page', name=name))
+        else:
+            assert False
 
 application = webapp2.WSGIApplication([
     Route(r'/', EditablePage),

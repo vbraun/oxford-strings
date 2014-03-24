@@ -11,20 +11,32 @@ body {
 
 .editor_menu_item :link {
     text-decoration: none;
+    color: #002147;
+}
+
+.editor_menu_item :visited {
+    text-decoration: none;
+    color: #002147;
 }
 
 .editor_menu_item :hover {
-    text-decoration: underline;
-    /* background-color: yellow; */
+    background-color: #002147;
+    color: white;
 }
 
 .editor_menu_item {
     display: inline;
-    padding-left: 10px;
+    margin-left: 10px;
 }
 
+.CodeMirror {
+    height: auto;
+}
 
-
+.CodeMirror-scroll {
+    overflow-x: auto; 
+    overflow-y: hidden
+}
 
 #editor {
     border-bottom: 1px solid black;

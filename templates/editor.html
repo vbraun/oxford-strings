@@ -9,6 +9,7 @@ Editing {{ name }}
 {% block extra_js %}
 <script type="text/javascript" src="/codemirror/lib/codemirror.js"></script>
 <script type="text/javascript" src="/codemirror/mode/markdown/markdown.js"></script>
+<script type="text/javascript" src="/js/editor.js"></script>
 {% endblock %}
 
 
@@ -21,38 +22,24 @@ Editing {{ name }}
 
 {% block body %}
 <div id="editor_menu">
-  <div class="editor_menu_item">Preview</div>
-  <div class="editor_menu_item">Save</div>
-  <div class="editor_menu_item">Cancel</div>
+  <div class="editor_menu_item"><a href="#" id="menu_preview">Preview</a></div>
+  <div class="editor_menu_item"><a href="#" id="menu_save">Save</a></div>
+  <div class="editor_menu_item"><a href="#" id="menu_cancel">Cancel</a></div>
 </div>
 
 <div id="editor">
-
   <form>
-    <textarea id="code" name="code">
-      {% autoescape false %}
-      {{ content }}
-      1
-2
-2
-      
-      {% endautoescape %}
-    </textarea>
+    <textarea id="source" name="source">{% autoescape false %}{{ source }}{% endautoescape %}</textarea>
   </form>
-
-  <script>
-    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-    mode: 'markdown',
-    lineNumbers: true,
-    theme: "default",
-    extraKeys: {"Enter": "newlineAndIndentContinueMarkdownList"}
-    });
-  </script>
-
 </div>
 
 
-<div id="preview">
-  <i>preview</i>
+<div id="preview" name="preview">
+{% autoescape false %}{{ preview }}{% endautoescape %}
 </div>
+
+<script>
+  var editor = Editor.fromTextArea("/edit/{{ name }}", "source", "preview")
+</script>
+
 {% endblock %}
