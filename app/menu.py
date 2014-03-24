@@ -18,8 +18,11 @@ class MenuItem(object):
     def get_url(self):
         return self._url
 
-    def get_css(self):
-        return 'menu_lvl_'+str(self._level)
+    def get_css(self, page_url):
+        if page_url == self._url:
+            return 'menu_selected menu_lvl_'+str(self._level)
+        else:
+            return 'menu_lvl_'+str(self._level)
         
 
     

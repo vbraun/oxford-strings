@@ -33,22 +33,30 @@
 }
 
 .menu_lvl_0 {
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 150%;
 }
 
 .menu_lvl_1 {
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-left: 40px;
     margin-right: 20px;
     font-size: 110%;
 }
 
 .menu_lvl_2 {
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-left: 60px;
     margin-right: 20px;
     font-size: 80%;
 }
+
+.menu_selected {
+    background-color: #eee;
+}
+

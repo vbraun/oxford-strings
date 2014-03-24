@@ -14,7 +14,7 @@
   </div>
 
   {% for item in menu %}
-  <div class={{ item.get_css() }}>
+  <div class="{{ item.get_css(name) }}">
     <a href="{{ item.get_url() }}">{{ item.get_name() }}</a>
   </div>
   {% endfor %}
@@ -23,7 +23,7 @@
   <div class="menu_lvl_0">
     <a href="{{ edit_url }}">Edit</a>
   </div>
-  <div class="menu_lvl_0" }}>
+  <div class="menu_lvl_0">
     <a href="logout.html">Logout</a>
   </div>
   {% else %}

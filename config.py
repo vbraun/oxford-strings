@@ -19,7 +19,7 @@ from app.menu import MenuItem
 menu_items = (
     MenuItem('Home',            'index.html'),
     MenuItem('Members',         'members.html'),
-    MenuItem('Research',        'index.html'),
+    MenuItem('Research',        'research.html'),
     MenuItem('Seminars',        'seminars.html'),
     MenuItem('Bag lunch',       'bag_lunch.html', 1),
     MenuItem('This week',       'thisweek.html', 1),

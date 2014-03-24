@@ -75,11 +75,12 @@ class EditablePage(RequestHandler):
     def get(self, name='index.html'):
         print('get', name)
         values = dict()
+        values['name'] = name
         values['logged_in'] = True
         values['menu'] = config.menu_items
         values['content'] = self.markdown(content)
         values['edit_url'] = uri_for('editor', name=name)
-        self.render_response(name, **values)
+        self.render_response('page.html', **values)
 
 
 class Editor(RequestHandler):
