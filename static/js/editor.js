@@ -40,9 +40,14 @@ Editor.init_preview = function() {
     }, self.preview_callback);
 }
 
-Editor.preview_callback = function(data) {
+Editor.preview_callback = function(data_json) {
     var self = Editor;
-    self.preview.html(data);
+    data = JSON.parse(data_json)
+    if (!data.ok) {
+        alert('Error creating preview.')
+        return;
+    }
+    self.preview.html(data.html);
 }
 
 
@@ -57,12 +62,11 @@ Editor.init_save = function() {
 
 Editor.save_callback = function(data_json) {
     var self = Editor;
-    data = JSON.decode(data_json)
-    if (!data.saved) {
+    data = JSON.parse(data_json);
+    if (!data.ok) {
         alert('Error saving data.')
         return;
     }
-    self.preview.html(data.html);
     window.location.replace(data.redirect);
 }
 
@@ -75,7 +79,11 @@ Editor.init_cancel = function() {
     }, self.cancel_callback);
 }
 
-Editor.cancel_callback = function(data) {
-    console.log('cancel, redirect to '+data)
-    window.location.replace(data);
+Editor.cancel_callback = function(data_json) {
+    data = JSON.parse(data_json);
+    if (!data.ok) {
+        alert('Error saving data.')
+        return;
+    }
+    window.location.replace(data.redirect);
 }

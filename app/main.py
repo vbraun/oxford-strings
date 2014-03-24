@@ -97,13 +97,15 @@ class Editor(RequestHandler):
         source = self.request.get('source')
         if command == 'preview':
             html = self.markdown(source)
-            self.response.write(html)
+            self.json_response(ok=True, html=html)
         elif command == 'save':
             # TODO: save
             html = self.markdown(source)
-            self.response.write(html)
+            page = uri_for('editable-page', name=name)
+            self.json_response(ok=True, redirect=page)
         elif command == 'cancel':
-            self.response.write(uri_for('editable-page', name=name))
+            page = uri_for('editable-page', name=name)
+            self.json_response(ok=True, redirect=page)
         else:
             assert False
 
