@@ -8,14 +8,9 @@ import jinja2
 
 from menu import menu_items
 
+import config
 
-APP_DIR = os.path.dirname(__file__)
-TEMPLATES_DIR = os.path.join(APP_DIR, 'templates')
-CSS_DIR = os.path.join(APP_DIR, 'static', 'css')
-JS_DIR = os.path.join(APP_DIR, 'static', 'js')
-LIB_DIR = os.path.join(APP_DIR, 'lib')
-
-sys.path.append(LIB_DIR)
+sys.path.append(config.LIB_DIR)
 from markdown import markdown, extensions
 from markdown.extensions.tables import TableExtension
 
@@ -78,9 +73,9 @@ Content Cell  | Content Cell
 
 def jinja2_factory(app):
     from webapp2_extras import jinja2
-    config = dict(jinja2.default_config)
-    config['template_path'] = TEMPLATES_DIR
-    j = jinja2.Jinja2(app, config)
+    webapp2_config = dict(jinja2.default_config)
+    webapp2_config['template_path'] = config.TEMPLATES_DIR
+    j = jinja2.Jinja2(app, webapp2_config)
     j.environment.filters.update({
     })
     j.environment.globals.update({
