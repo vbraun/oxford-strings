@@ -1,0 +1,41 @@
+
+body {
+    background-color: #ddd;
+}
+
+#editor_menu {
+    display: block;
+    color: #002147;
+    border-bottom: 1px solid black;
+}
+
+.editor_menu_item :link {
+    text-decoration: none;
+}
+
+.editor_menu_item :hover {
+    text-decoration: underline;
+    /* background-color: yellow; */
+}
+
+.editor_menu_item {
+    display: inline;
+    padding-left: 10px;
+}
+
+
+
+
+#editor {
+    border-bottom: 1px solid black;
+}
+
+#preview {
+    border: 1px solid #999;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 700px;
+    font-weight:400;
+}

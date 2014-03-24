@@ -14,12 +14,19 @@ Editing {{ name }}
 
 {% block extra_css %}
 <link rel="stylesheet" href="/codemirror/lib/codemirror.css"/>
+<link rel="stylesheet" href="/css/editor.css"/>
 {% endblock %}
 
 
 
-{% block content %}
-<div id="content">
+{% block body %}
+<div id="editor_menu">
+  <div class="editor_menu_item">Preview</div>
+  <div class="editor_menu_item">Save</div>
+  <div class="editor_menu_item">Cancel</div>
+</div>
+
+<div id="editor">
 
   <form>
     <textarea id="code" name="code">
@@ -42,5 +49,10 @@ Editing {{ name }}
     });
   </script>
 
+</div>
+
+
+<div id="preview">
+  <i>preview</i>
 </div>
 {% endblock %}

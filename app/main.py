@@ -6,9 +6,11 @@ import webapp2
 from webapp2 import WSGIApplication, Route, cached_property, uri_for
 import jinja2
 
-from menu import menu_items
+from .base import RequestHandler
 
 import config
+
+
 
 sys.path.append(config.LIB_DIR)
 from markdown import markdown, extensions
@@ -70,40 +72,13 @@ Content Cell  | Content Cell
 
 
 
-
-def jinja2_factory(app):
-    from webapp2_extras import jinja2
-    webapp2_config = dict(jinja2.default_config)
-    webapp2_config['template_path'] = config.TEMPLATES_DIR
-    j = jinja2.Jinja2(app, webapp2_config)
-    j.environment.filters.update({
-    })
-    j.environment.globals.update({
-        'uri_for': webapp2.uri_for,
-    })
-    return j
-
-
-class RequestHandler(webapp2.RequestHandler):
-    
-    @cached_property
-    def jinja2(self):
-        from webapp2_extras import jinja2
-        return jinja2.get_jinja2(factory=jinja2_factory)
-    
-    def render_response(self, template, **kwds):
-        result = self.jinja2.render_template(template, **kwds)
-        self.response.write(result)
-
-
-
 class EditablePage(RequestHandler):
 
     def get(self, name='index.html'):
         print('get', name)
         values = dict()
         values['logged_in'] = True
-        values['menu'] = menu_items
+        values['menu'] = config.menu_items
         values['content'] = markdown(content, extensions=[TableExtension(configs={})])
         values['edit_url'] = uri_for('editor', name=name)
         self.render_response(name, **values)
