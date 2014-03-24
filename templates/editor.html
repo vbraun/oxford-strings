@@ -25,6 +25,7 @@ Editing {{ name }}
   <div class="editor_menu_item"><a href="#" id="menu_preview">Preview</a></div>
   <div class="editor_menu_item"><a href="#" id="menu_save">Save</a></div>
   <div class="editor_menu_item"><a href="#" id="menu_cancel">Cancel</a></div>
+  <div class="editor_menu_item"><a href="#" id="menu_help">Help</a></div>
 </div>
 
 <div id="editor">
@@ -33,11 +34,21 @@ Editing {{ name }}
   </form>
 </div>
 
-
+<div id="content">
 <div id="preview" name="preview">
 {% autoescape false %}{{ preview }}{% endautoescape %}
 </div>
+</div>
 
+<div id="help_markdown" title="Markdown help">
+  <p>
+    Pages are written in the "Markdown" language, and then compiled
+    into html for you. It is much simpler to write. You can use inline
+    html for everything that is not covered by markdown.
+  </p>
+</div>
+
+ 
 <script>
   var editor = Editor.fromTextArea("/edit/{{ name }}", "source", "preview")
 </script>

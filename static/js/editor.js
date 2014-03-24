@@ -21,7 +21,14 @@ Editor.fromTextArea = function(ajax_url, textarea_css_id, preview_css_id) {
     jQuery('a#menu_preview').bind('click', self.init_preview);
     jQuery('a#menu_save').bind('click', self.init_save);
     jQuery('a#menu_cancel').bind('click', self.init_cancel);
+    jQuery('a#menu_help').bind('click', self.help_markdown);
     return self;
+}
+
+
+Editor.help_markdown = function() {
+    var dlg = jQuery('#help_markdown').dialog({
+        modal:true, show:false, resizable:false, width:'90%' })
 }
 
 
@@ -33,18 +40,32 @@ Editor.init_preview = function() {
     }, self.preview_callback);
 }
 
+Editor.preview_callback = function(data) {
+    var self = Editor;
+    self.preview.html(data);
+}
+
+
+
 Editor.init_save = function() {
     var self = Editor;
     jQuery.post(self.ajax_url, {
         command: 'save',
     	source: self.codemirror.getDoc().getValue(),
-    }, self.preview_callback);
+    }, self.save_callback);
 }
 
-Editor.preview_callback = function(data) {
+Editor.save_callback = function(data_json) {
     var self = Editor;
-    self.preview.html(data);
+    data = JSON.decode(data_json)
+    if (!data.saved) {
+        alert('Error saving data.')
+        return;
+    }
+    self.preview.html(data.html);
+    window.location.replace(data.redirect);
 }
+
 
 
 Editor.init_cancel = function() {
