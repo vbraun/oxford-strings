@@ -20,7 +20,7 @@
     color: #002147;
 }
 
-#menu :hover {
+#menu :link:hover {
     text-decoration: underline;
     /* background-color: yellow; */
 }

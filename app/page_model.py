@@ -68,6 +68,8 @@ Inline HTML:
 
 
 
+
+
 class Page(ndb.Model):
     """
     A page with editable content
@@ -92,7 +94,7 @@ class Page(ndb.Model):
         args = dict()
         args['parent'] = key
         args['source'] = source
-        if user is not None:
+        if user:
             args['user'] = user
         page = Page(**args)
         page.put()

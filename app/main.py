@@ -9,22 +9,26 @@ import config
 sys.path.append(config.LIB_DIR)
 
 import webapp2
-from webapp2 import WSGIApplication, Route, cached_property, uri_for
-import jinja2
+from webapp2 import WSGIApplication, Route, uri_for
+from google.appengine.api import users
+
 from .base import PageRequestHandler
+from .decorators import cached_property, requires_login, requires_admin
 
 
 class EditablePage(PageRequestHandler):
 
     def get(self, name='index.html'):
-        print('get', name)
         page = self.load_page(name)
         values = dict()
+        values['logged_in'] = bool(users.get_current_user())
+        values['is_admin'] = users.is_current_user_admin()
         values['name'] = name
-        values['logged_in'] = True
         values['menu'] = config.menu_items
         values['content'] = self.markdown(page.source)
         values['edit_url'] = uri_for('editor', name=name)
+        values['login_url'] = users.create_login_url(self.request.uri)
+        values['logout_url'] = users.create_logout_url(self.request.uri)
         self.render_response('page.html', **values)
         self.response.md5_etag()
         self.cache_must_revalidate()
@@ -32,6 +36,7 @@ class EditablePage(PageRequestHandler):
 
 class Editor(PageRequestHandler):
     
+    @requires_admin
     def get(self, name):
         page = self.load_page(name)
         values = dict()
@@ -41,6 +46,7 @@ class Editor(PageRequestHandler):
         self.cache_disable()
         self.render_response('editor.html', **values)
 
+    @requires_admin
     def post(self, name):
         command = self.request.get('command')
         source = self.request.get('source')

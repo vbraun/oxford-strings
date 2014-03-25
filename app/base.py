@@ -6,6 +6,8 @@ App Request Handler
 import json
 import webapp2
 from webapp2 import cached_property
+from google.appengine.api import users
+
 from markdown import markdown, extensions
 from markdown.extensions.tables import TableExtension
 
@@ -31,7 +33,7 @@ def jinja2_factory(app):
 
 
 class RequestHandler(webapp2.RequestHandler):
-    
+
     @cached_property
     def jinja2(self):
         from webapp2_extras import jinja2
@@ -64,5 +66,7 @@ class PageRequestHandler(RequestHandler):
         return Page.load(name)
 
     def save_page(self, name, source):
-        return Page.create(name, source)
+        user = users.get_current_user()
+        user_name = user.email()
+        return Page.create(name, source, user_name)
         

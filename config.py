@@ -25,3 +25,5 @@ menu_items = (
     MenuItem('This week',       'thisweek.html', 1),
     MenuItem('Graduate study',  'graduates.html'),
 )
+
+
