@@ -16,7 +16,7 @@ from .base import PageRequestHandler
 from .decorators import cached_property, requires_login, requires_admin
 
 
-class EditablePage(PageRequestHandler):
+class WikiPage(PageRequestHandler):
 
     def get(self, name='index.html'):
         page = self.load_page(name)
@@ -56,10 +56,10 @@ class Editor(PageRequestHandler):
         elif command == 'save':
             html = self.markdown(source)
             self.save_page(name, source)
-            editable_page = uri_for('editable-page', name=name)
-            self.json_response(ok=True, redirect=editable_page)
+            wiki_page = uri_for('wiki-page', name=name)
+            self.json_response(ok=True, redirect=wiki_page)
         elif command == 'cancel':
-            page = uri_for('editable-page', name=name)
+            page = uri_for('wiki-page', name=name)
             self.json_response(ok=True, redirect=page)
         else:
             self.json_response(ok=False)
@@ -67,8 +67,8 @@ class Editor(PageRequestHandler):
 
 
 application = webapp2.WSGIApplication([
-    Route(r'/', EditablePage),
-    Route(r'/<name:[^/]*\.html>', EditablePage, name='editable-page'),
+    Route(r'/', WikiPage),
+    Route(r'/<name:[^/]*\.html>', WikiPage, name='wiki-page'),
     Route(r'/edit/<name:[^/]*\.html>', Editor, name='editor'),
 ], debug=True)
 
