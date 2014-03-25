@@ -6,9 +6,7 @@ Main entry point
 import sys
 import os
 import config
-sys.path.append(config.LIB_DIR)
 
-import webapp2
 from webapp2 import WSGIApplication, Route, uri_for
 from google.appengine.api import users
 
@@ -19,6 +17,7 @@ from .decorators import cached_property, requires_login, requires_admin
 class WikiPage(PageRequestHandler):
 
     def get(self, name='index.html'):
+        self.cache_must_revalidate()
         page = self.load_page(name)
         values = dict()
         values['logged_in'] = bool(users.get_current_user())
@@ -32,20 +31,19 @@ class WikiPage(PageRequestHandler):
         values['logout_url'] = users.create_logout_url(self.request.uri)
         self.render_response('wiki_page.html', **values)
         self.response.md5_etag()
-        self.cache_must_revalidate()
 
 
 class Editor(PageRequestHandler):
     
     @requires_admin
     def get(self, name):
+        self.cache_disable()
         page = self.load_page(name)
         values = dict()
         values['name'] = name
         values['source'] = page.source
         values['preview'] = self.markdown(page.source)
         self.render_response('editor.html', **values)
-        self.cache_disable()
 
     @requires_admin
     def post(self, name):
@@ -68,7 +66,7 @@ class Editor(PageRequestHandler):
 
 
 
-def html_diff(filename, current, previous):
+def html_diff(filename, previous, current):
     from difflib import unified_diff
     delta = unified_diff(
         current.splitlines(), previous.splitlines(),
@@ -93,27 +91,19 @@ class History(PageRequestHandler):
         return tuple(diffs)
 
     def get(self, name):
+        self.cache_must_revalidate()
         values = dict()
         values['name'] = name
         values['changesets'] = self.compute_changesets(name)
         self.render_response('history.html', **values)
-        self.cache_must_revalidate()
             
 
 
-class Cron(PageRequestHandler):
 
-    def get(self, command):
-        pages = self.get_page_names()
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write(str(pages))
-
-
-application = webapp2.WSGIApplication([
+application = WSGIApplication([
     Route(r'/', WikiPage),
     Route(r'/<name:[^/]*\.html>', WikiPage, name='wiki-page'),
     Route(r'/edit/<name:[^/]*\.html>', Editor, name='editor'),
     Route(r'/history/<name:[^/]*\.html>', History, name='history'),
-    Route(r'/cron/<command>', Cron, name='cron'),
 ], debug=True)
 

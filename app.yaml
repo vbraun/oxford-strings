@@ -25,6 +25,9 @@ handlers:
   - url: /images
     static_dir: static/images
 
+  - url: /cron/.*
+    script: app.cron.application
+
   - url: /.*
     script: app.main.application
 
