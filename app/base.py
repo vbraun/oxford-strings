@@ -11,6 +11,8 @@ from markdown.extensions.tables import TableExtension
 
 import config
 
+from .page_model import Page
+
 
 json_encoder = json.JSONEncoder()
 
@@ -46,3 +48,21 @@ class RequestHandler(webapp2.RequestHandler):
     def markdown(self, source):
         return markdown(source, extensions=[TableExtension(configs={})])
 
+    def cache_must_revalidate(self):
+        self.response.headers['Cache-Control'] = \
+            'must-revalidate'
+
+    def cache_disable(self):
+        self.response.headers['Cache-Control'] = \
+            'no-cache, no-store, must-revalidate, pre-check=0, post-check=0'
+
+
+
+class PageRequestHandler(RequestHandler):
+
+    def load_page(self, name):
+        return Page.load(name)
+
+    def save_page(self, name, source):
+        return Page.create(name, source)
+        

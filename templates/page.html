@@ -11,37 +11,7 @@ Oxford Strings
 {% block content %}
 {% autoescape true %}
 
-<div id="content">
-
-  {% autoescape false %}
-    {{ content }}
-  {% endautoescape %}
-
-
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  <p>123</p>
-  
-</div>
+<div id="content">{% autoescape false %}{{ content }}{% endautoescape %}</div>
 
 {% endautoescape %}
 {% endblock %}
