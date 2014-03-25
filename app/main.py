@@ -27,9 +27,10 @@ class WikiPage(PageRequestHandler):
         values['menu'] = config.menu_items
         values['content'] = self.markdown(page.source)
         values['edit_url'] = uri_for('editor', name=name)
+        values['history_url'] = uri_for('history', name=name)
         values['login_url'] = users.create_login_url(self.request.uri)
         values['logout_url'] = users.create_logout_url(self.request.uri)
-        self.render_response('page.html', **values)
+        self.render_response('wiki_page.html', **values)
         self.response.md5_etag()
         self.cache_must_revalidate()
 
@@ -43,8 +44,8 @@ class Editor(PageRequestHandler):
         values['name'] = name
         values['source'] = page.source
         values['preview'] = self.markdown(page.source)
-        self.cache_disable()
         self.render_response('editor.html', **values)
+        self.cache_disable()
 
     @requires_admin
     def post(self, name):
@@ -63,12 +64,56 @@ class Editor(PageRequestHandler):
             self.json_response(ok=True, redirect=page)
         else:
             self.json_response(ok=False)
+
+
+
+
+def html_diff(filename, current, previous):
+    from difflib import unified_diff
+    delta = unified_diff(
+        current.splitlines(), previous.splitlines(),
+        filename, filename)
+    return '\n'.join(line.rstrip() for line in delta)
+    
+
+class History(PageRequestHandler):
+    
+    class ChangeSet(object):
+        def __init__(self, name, page, previous):
+            self.diff = html_diff(name, page.source, previous.source)
+            self.author = page.author
+            self.date = page.date
+        
+    def compute_changesets(self, name, limit=10):
+        pages = self.load_page_history(name, limit)
+        diffs = []
+        for i in range(len(pages)-1):
+            delta = History.ChangeSet(name, pages[i], pages[i+1])
+            diffs.append(delta)
+        return tuple(diffs)
+
+    def get(self, name):
+        values = dict()
+        values['name'] = name
+        values['changesets'] = self.compute_changesets(name)
+        self.render_response('history.html', **values)
+        self.cache_must_revalidate()
             
+
+
+class Cron(PageRequestHandler):
+
+    def get(self, command):
+        pages = self.get_page_names()
+        self.response.headers['Content-Type'] = 'text/plain'
+        self.response.write(str(pages))
 
 
 application = webapp2.WSGIApplication([
     Route(r'/', WikiPage),
     Route(r'/<name:[^/]*\.html>', WikiPage, name='wiki-page'),
     Route(r'/edit/<name:[^/]*\.html>', Editor, name='editor'),
+    Route(r'/history/<name:[^/]*\.html>', History, name='history'),
+    Route(r'/cron/<command>', Cron, name='cron'),
 ], debug=True)
 

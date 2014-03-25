@@ -65,8 +65,14 @@ class PageRequestHandler(RequestHandler):
     def load_page(self, name):
         return Page.load(name)
 
+    def load_page_history(self, name, limit=10):
+        return Page.query_name(name).fetch(limit)
+
     def save_page(self, name, source):
         user = users.get_current_user()
         user_name = user.email()
         return Page.create(name, source, user_name)
         
+
+    def get_page_names(self):
+        pass

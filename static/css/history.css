@@ -1,0 +1,20 @@
+
+.header {
+    margins: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #002147;
+    color: white;
+}
+
+.delta {
+    background-color: white;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-style: Courier;
+}

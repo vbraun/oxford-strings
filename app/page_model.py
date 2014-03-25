@@ -75,7 +75,7 @@ class Page(ndb.Model):
     A page with editable content
     """
     date = ndb.DateTimeProperty(auto_now_add=True)
-    user = ndb.StringProperty(required=False, indexed=False)
+    author = ndb.StringProperty(required=False, indexed=False)
     source = ndb.TextProperty()
 
     
@@ -89,13 +89,13 @@ class Page(ndb.Model):
         return cls.query(ancestor=key).order(-cls.date)
 
     @classmethod
-    def create(cls, name, source, user=None):
+    def create(cls, name, source, author=None):
         key = cls.make_key(name)
         args = dict()
         args['parent'] = key
         args['source'] = source
-        if user:
-            args['user'] = user
+        if author:
+            args['author'] = author
         page = Page(**args)
         page.put()
         return page

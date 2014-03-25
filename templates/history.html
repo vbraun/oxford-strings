@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Editing {{ name }}
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="/css/history.css"/>
+{% endblock %}
+
+
+
+{% block body %}
+
+{% if changesets == () %}
+<div class="header">
+  Only a single version of {{ name }} is stored.
+</div>
+{% endif %}
+
+{% for change in changesets %}
+<div class="header">
+  Change made by {{ change.author }} at {{ change.date }}
+</div>
+<div class="delta">
+<pre>
+{{ change.diff }}
+</pre>
+</div>
+{% endfor %}
+
+{% endblock %}

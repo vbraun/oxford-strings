@@ -25,6 +25,9 @@
       Administer
     </div>
     <div class="menu_lvl_1">
+      <a href="{{ history_url }}">History</a>
+    </div>
+    <div class="menu_lvl_1">
       <a href="{{ edit_url }}">Edit</a>
     </div>
     <div class="menu_lvl_1">
@@ -32,6 +35,12 @@
     </div>
   {% elif logged_in %}
     <div class="menu_lvl_0">
+      Intranet
+    </div>
+    <div class="menu_lvl_1">
+      <a href="{{ history_url }}">History</a>
+    </div>
+    <div class="menu_lvl_1">
       <a href="{{ logout_url }}">Logout</a>
     </div>
   {% else %}
