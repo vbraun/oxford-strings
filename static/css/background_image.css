@@ -1,6 +1,13 @@
+html {
+    min-height: 100%;
+}
 
 body {
     background-image: url(/images/background_Balliol.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-position: bottom left;
+}
+
+#footer {
+    margin-bottom: 200px;
 }
