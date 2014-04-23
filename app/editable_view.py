@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Main entry point
+Editable (Wiki-like) Web Pages
 """
 
 import sys
 import os
-import config
 
-from webapp2 import WSGIApplication, Route, uri_for
+from webapp2 import uri_for
 from google.appengine.api import users
 
-from .base import PageRequestHandler
-from .decorators import cached_property, requires_login, requires_admin
+from app import config
+from app.base_view import PageRequestHandler
+from app.decorators import cached_property, requires_login, requires_admin
+
 
 
 class WikiPage(PageRequestHandler):
@@ -20,15 +21,9 @@ class WikiPage(PageRequestHandler):
         self.cache_must_revalidate()
         page = self.load_page(name)
         values = dict()
-        values['logged_in'] = bool(users.get_current_user())
-        values['is_admin'] = users.is_current_user_admin()
-        values['name'] = name
-        values['menu'] = config.menu_items
         values['content'] = self.markdown(page.source)
         values['edit_url'] = uri_for('editor', name=name)
         values['history_url'] = uri_for('history', name=name)
-        values['login_url'] = users.create_login_url(self.request.uri)
-        values['logout_url'] = users.create_logout_url(self.request.uri)
         self.render_response('wiki_page.html', **values)
         self.response.md5_etag()
 
@@ -98,12 +93,4 @@ class History(PageRequestHandler):
         self.render_response('history.html', **values)
             
 
-
-
-application = WSGIApplication([
-    Route(r'/', WikiPage),
-    Route(r'/<name:[^/]*\.html>', WikiPage, name='wiki-page'),
-    Route(r'/edit/<name:[^/]*\.html>', Editor, name='editor'),
-    Route(r'/history/<name:[^/]*\.html>', History, name='history'),
-], debug=True)
 

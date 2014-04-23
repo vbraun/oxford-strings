@@ -2,7 +2,7 @@
 
 {% block header %}
 <div id="header">
-  <img src="images/oxford.png"/>
+  <img src="/images/oxford.png"/>
   String Theory Group
 </div>
 {% endblock %}
@@ -14,7 +14,7 @@
   </div>
 
   {% for item in menu %}
-    <div class="{{ item.get_css(name) }}">
+    <div class="{{ item.get_css(path) }}">
       <a href="{{ item.get_url() }}">{{ item.get_name() }}</a>
     </div>
   {% endfor %}

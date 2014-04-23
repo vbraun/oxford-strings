@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+X-WR-CALNAME: Quantum Field Theory Seminar | Mathematical Institute - University of Oxford
+PRODID:-//Drupal iCal API//EN
+BEGIN:VEVENT
+UID:calendar.25391.field_seminar_time.0.0
+SUMMARY:to be announced
+DTSTAMP:20140423T135138Z
+DTSTART:20140429T110000Z
+DTEND:20140429T120000Z
+URL;VALUE=URI:https://www.maths.ox.ac.uk/node/25391
+DESCRIPTION:Speaker: Stefan Hollands (Leipzig) ()\n Location: L5\n Further information: http://www.maths.ox.ac.uk/node/25391
+END:VEVENT
+BEGIN:VEVENT
+UID:calendar.25404.field_seminar_time.0.1
+SUMMARY:to be announced
+DTSTAMP:20140423T135138Z
+DTSTART:20140513T110000Z
+DTEND:20140513T120000Z
+URL;VALUE=URI:https://www.maths.ox.ac.uk/node/25404
+DESCRIPTION:Speaker: Roger Penrose ()\n Location: L5\n Further information: http://www.maths.ox.ac.uk/node/25404
+END:VEVENT
+BEGIN:VEVENT
+UID:calendar.25405.field_seminar_time.0.2
+SUMMARY:to be announced
+DTSTAMP:20140423T135138Z
+DTSTART:20140610T110000Z
+DTEND:20140610T120000Z
+URL;VALUE=URI:https://www.maths.ox.ac.uk/node/25405
+DESCRIPTION:Speaker: John Barrett (Nottingham) ()\n Location: L5\n Further information: http://www.maths.ox.ac.uk/node/25405
+END:VEVENT
+END:VCALENDAR

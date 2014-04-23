@@ -3,6 +3,7 @@ Menu items
 """
 
 
+import logging
 
 
 class MenuItem(object):
@@ -11,6 +12,8 @@ class MenuItem(object):
         self._name = name
         self._url = url
         self._level = level
+        if not url.startswith('/'):
+            logging.warn('url must start with slash, got ' + url)
 
     def get_name(self):
         return self._name

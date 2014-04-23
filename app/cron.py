@@ -1,8 +1,8 @@
-import config
+from app import config
 
 from webapp2 import WSGIApplication, Route, uri_for
-from .base import PageRequestHandler
-from .decorators import cached_property
+from app.base_view import PageRequestHandler
+from app.decorators import cached_property
 
 
 class Daily(PageRequestHandler):

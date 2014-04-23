@@ -1,0 +1,755 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DIAS-STP
+X-WR-TIMEZONE:Europe/Dublin
+X-WR-CALDESC:Seminar Calendar 
+BEGIN:VEVENT
+DTSTART:20110314T150000Z
+DTEND:20110314T160000Z
+DTSTAMP:20140423T123516Z
+UID:ibt7iec6qmj2msjh2lbbk4qrj0@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20110205T002937Z
+DESCRIPTION:
+LAST-MODIFIED:20110306T082754Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Per Berglund: TBA
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110315T150000Z
+DTEND:20110315T160000Z
+DTSTAMP:20140423T123516Z
+UID:d0slk0b082jvduhene1n7sar3k@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20110301T151107Z
+DESCRIPTION:http://www.math.ku.dk/~levy\n
+LAST-MODIFIED:20110306T082754Z
+LOCATION:
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Cyril Levy: "The Non-Commutative Integral and Spectral Triples"
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110202T150000Z
+DTEND:20110202T160000Z
+DTSTAMP:20140423T123516Z
+UID:p7jtfvsvnv5gnf7a86ve6g79g4@google.com
+CREATED:20101027T114334Z
+DESCRIPTION:Speaker: Dr Carlos Herdeiro (Aveiro and Porto)\n\nTitle: "Black
+  holes\, trans-Planckian scattering and numerical relativity"\n\nAbstract\n
+ \nThe basic two-body problem in General Relativity is a two black hole syst
+ em. \nThis is a key system for gravitational wave astronomy\, since the col
+ lision of \ntwo black holes is expected to be the most powerful astrophysic
+ al source of \ngravitational radiation. The complete evolution of such syst
+ em\, comprising \ninspiral\, merger and ringdown stages\, can only be follo
+ wed numerically. After \n40 years of work\, the first successful numerical 
+ codes evolving such systems \nwere reported in 2005. In the last 5 years\, 
+ the field of numerical relativity \nhas produced accurate and insightful re
+ sults concerning the full non-linear \ndynamical evolution of black hole sy
+ stems.\n\nIn this seminar I shall discuss a current research programme to g
+ eneralise the \ntechniques of numerical relativity\, namely to arbitrary di
+ mension. I shall \nfocus on the description of black hole collisions in hig
+ her dimensions and \ntheir application to trans Planckian scattering scenar
+ ios potentially testable \nin particle accelerator experiments such as thos
+ e at the LHC.\n\nI shall present the wave forms and energy converted into g
+ ravitational \nradiation for a head-on black hole collision in a higher dim
+ ensional \nspace-time\, which we obtained for the first time in 2010.\n\nRe
+ f:\n\nhttp://arXiv.org/abs/arXiv:1001.2302\nhttp://arXiv.org/abs/arXiv:1006
+ .3081\nhttp://arXiv.org/abs/arXiv:1011.0742\n
+LAST-MODIFIED:20110213T032016Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:Carlos Herdeiro: "Black holes\, trans-Planckian scattering and nume
+ rical relativity"
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20110119T150000Z
+DTEND:20110119T160000Z
+DTSTAMP:20140423T123516Z
+UID:41bat409o5tbg1cp891eu4orro@google.com
+CREATED:20110113T051016Z
+DESCRIPTION:Title: Solutions in massive gravity models: Vainstein mechanism
+  and the ghost.\n\nAbstract:\nAfter a brief review of massive gravity model
+ s in 4D\,  an explicit \nsolution describing the gravitational field of a c
+ ompact source is presented. This\nsolution exhibits  the non-linear recover
+ y of GR inside the Vainstein radius.
+LAST-MODIFIED:20110120T235334Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Michael Volkov: "Solutions in massive gravity models: Vainstein mec
+ hanism and the ghost."
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20110603
+DTEND;VALUE=DATE:20110605
+DTSTAMP:20140423T123516Z
+UID:ie847ge9r0jf8uem69qul1die0@google.com
+CREATED:20101210T163355Z
+DESCRIPTION:
+LAST-MODIFIED:20101229T043515Z
+LOCATION:DIAS\, 10 Burlington Rd\, Dublin
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Irish QFT Theory Meeting 2011
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20101209T153000Z
+DTEND:20101209T163000Z
+DTSTAMP:20140423T123516Z
+UID:pn9cmsic42bfru68ija79sar7k@google.com
+CREATED:20101029T214212Z
+DESCRIPTION:Abstract: It has been long conjectured that the imaginary part 
+ of the non trivial zeros of the Riemann zeta function are the eigenvalues o
+ f a self-adjoint operator acting in a Hilbert space. In 1999 this idea was 
+ put on a more concrete ground by Berry\, Keating and Connes who suggested\,
+  using semiclassical arguments\, that this operator could be related to the
+  one dimensional Hamiltonian H = xp.  In this talk we shall show that this 
+ simple Hamiltonian gives the dynamics of a charged particle moving in two d
+ imensions and subject to the action of a magnetic and electric field. The q
+ uantization of this model helps to clarify some issues concerning the diffe
+ rent spectral interpretation of the Riemann zeros and may shed new light ab
+ out the Riemann Hamiltonian.\n
+LAST-MODIFIED:20101206T161214Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:Germán Sierra: On the spectral interpretation of the Riemann zeros
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20101208T150000Z
+DTEND:20101208T160000Z
+DTSTAMP:20140423T123516Z
+UID:j70saekhqnd0m3erk0co15gm24@google.com
+CREATED:20101109T152040Z
+DESCRIPTION:Abstract:\n\nWe review the basic properties of the five dimensi
+ onal black ring solutions.\n\nWe point out that the heuristic construction 
+ of a black ring has an analogue in some field theory models defined in a d=
+ 3+1 flat spacetime. Such stationary solutions are usually called  'vortons'
+  (or 'ring solitons'). After exposing this analogy\, we return to gravity a
+ nd construct black rings in Einstein-Gauss-Bonnet theory.\n\nWe also consid
+ er the nonperturbative construction of static black hole solutions with a n
+ onspherical event horizon topology in d>5 spacetime dimensions.\n
+LAST-MODIFIED:20101201T234201Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:Eugen Radu: Toroidal solutions in field theory: black rings and vor
+ tons
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20100624
+DTEND;VALUE=DATE:20100625
+DTSTAMP:20140423T123516Z
+UID:t8ur6hbdnr0h6evrc85godpjo4@google.com
+CREATED:20100601T130013Z
+DESCRIPTION:Start praying for good weather now.
+LAST-MODIFIED:20100601T130013Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Summer BBQ
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T130000Z
+DTEND:20100528T140000Z
+DTSTAMP:20140423T123516Z
+UID:itlj6s1k0fujtsrulbp5tgve60@google.com
+CREATED:20100525T095541Z
+DESCRIPTION:2010 O'Raifeartaigh lecture.
+LAST-MODIFIED:20100601T050240Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Fedor Smirnov: "One-Point Functions for Sine-Gordon Model at Finite
+  Temperature"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100529T140000Z
+DTEND:20100529T150000Z
+DTSTAMP:20140423T123516Z
+UID:9426982igv23k8cgq1ue93f4bs@google.com
+CREATED:20100510T135535Z
+DESCRIPTION:Overview over recent developments.
+LAST-MODIFIED:20100601T050240Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:18
+STATUS:CONFIRMED
+SUMMARY:Werner Nahm: "2D Gauge Theories and Integrability after Gerasimov/S
+ hatashvili/Nekrasov"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100529T083000Z
+DTEND:20100529T093000Z
+DTSTAMP:20140423T123516Z
+UID:u4mlteed2ittitrnonnvr3n808@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20100510T135231Z
+DESCRIPTION:Introductory talk
+LAST-MODIFIED:20100601T050239Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Joan Simon: "Holography and Correlation Functions"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T113000Z
+DTEND:20100528T130000Z
+DTSTAMP:20140423T123516Z
+UID:fo3lt8e5opdsq1epaf4fhlorm4@google.com
+CREATED:20100510T134939Z
+DESCRIPTION:Participants will forage for food in small groups.
+LAST-MODIFIED:20100601T050239Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lunch break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100529T110000Z
+DTEND:20100529T113000Z
+DTSTAMP:20140423T123516Z
+UID:u84i1rokmk32dveet011i6i32s@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20100524T093656Z
+DESCRIPTION:Research talk.
+LAST-MODIFIED:20100601T050239Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:Christian Saemann: "M2-Branes Ending On M5-Branes" 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100529T133000Z
+DTEND:20100529T140000Z
+DTSTAMP:20140423T123516Z
+UID:ihvb59lpdl2vimsrnmvh1nte68@google.com
+CREATED:20100510T135714Z
+DESCRIPTION:Coffee will be served on the first floor.
+LAST-MODIFIED:20100601T050239Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:10
+STATUS:CONFIRMED
+SUMMARY:Coffee break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T083000Z
+DTEND:20100528T093000Z
+DTSTAMP:20140423T123516Z
+UID:vkfmhoc8bgarlj1qsmibbr0f20@google.com
+CREATED:20100510T134508Z
+DESCRIPTION:Abstract:\n\nThe ADHM construction for the moduli space of k G 
+ Instantons on C^2 is  \nknown only for the classical gauge groups ABCD. No 
+ known construction  \nis available for exceptional groups. This fact nicely
+  fits with brane  \nconstructions of Dp branes probing D(p+4) branes.This t
+ alk will go  \nover the computation of Hilbert Series for the one instanton
+  moduli  \nspace and show that it is possible to count all chiral operators
+  on  \nthe moduli space even though a Lagrangian is not known for exception
+ al  \ngauge groups.
+LAST-MODIFIED:20100601T050239Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Amihay Hanany: "Chiral Operators on the One Instanton Moduli Space"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T153000Z
+DTEND:20100528T160000Z
+DTSTAMP:20140423T123516Z
+UID:ej99qgbrl0c38phla9mlfpi3qo@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20100510T135733Z
+DESCRIPTION:Research talk.
+LAST-MODIFIED:20100601T050239Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:10
+STATUS:CONFIRMED
+SUMMARY:Werner Nahm: "Random Walks and Integrability"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T093000Z
+DTEND:20100528T100000Z
+DTSTAMP:20140423T123516Z
+UID:9kfoa4il3p5h9ohskg6en95qsk@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20100510T134718Z
+DESCRIPTION:Coffee will be served on the first floor.
+LAST-MODIFIED:20100601T050239Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:8
+STATUS:CONFIRMED
+SUMMARY:Coffee break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T103000Z
+DTEND:20100528T110000Z
+DTSTAMP:20140423T123516Z
+UID:c9ckmlr3nmjjib2tcp5bg5ei4k@google.com
+CREATED:20100524T100203Z
+DESCRIPTION:Research talk.
+LAST-MODIFIED:20100601T050238Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Madeeha Khalid: "K3 surfaces with involutions and their orbifold li
+ mits"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100529T113000Z
+DTEND:20100529T130000Z
+DTSTAMP:20140423T123516Z
+UID:12gu3s2v10qi8hnn727vqad8d8@google.com
+CREATED:20100510T135517Z
+DESCRIPTION:Participants will forage for food in small groups.
+LAST-MODIFIED:20100601T050238Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lunch break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T140000Z
+DTEND:20100528T143000Z
+DTSTAMP:20140423T123516Z
+UID:7a5coqi3r550vseek6h2gfl8lo@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20100510T135033Z
+DESCRIPTION:Coffee will be served on the first floor.
+LAST-MODIFIED:20100601T050238Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:8
+STATUS:CONFIRMED
+SUMMARY:Coffee break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T150000Z
+DTEND:20100528T153000Z
+DTSTAMP:20140423T123516Z
+UID:q8si8csj4q5d6hnaqnlh0k3nlk@google.com
+CREATED:20100524T092742Z
+DESCRIPTION:Research talk.
+LAST-MODIFIED:20100601T050238Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:8
+STATUS:CONFIRMED
+SUMMARY:Veselin Filev: "1+2 D Defect Field Theory in a Magnetic Field. A Ho
+ lographic Study"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100529T130000Z
+DTEND:20100529T133000Z
+DTSTAMP:20140423T123516Z
+UID:ngn5lnc0amqifej6bvkqn5k56k@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20100524T101204Z
+DESCRIPTION:Research talk.
+LAST-MODIFIED:20100601T050238Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:8
+STATUS:CONFIRMED
+SUMMARY:Jon-Ivar Skullerud: "Large-1/Nc QCD at High Density: A Quarkyonic P
+ hase?"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T180000Z
+DTEND:20100528T200000Z
+DTSTAMP:20140423T123516Z
+UID:4h6069ivmie6ndh7ooc3d1c0oo@google.com
+CREATED:20100510T140441Z
+DESCRIPTION:http://www.dobbins.ie
+LAST-MODIFIED:20100601T050238Z
+LOCATION:15 Stephens Lane\, Dublin\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Conference Dinner at Dobbins Restaurant
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T110000Z
+DTEND:20100528T113000Z
+DTSTAMP:20140423T123516Z
+UID:ilitblbr7j1f7a6of1bl7jp76c@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20100524T093454Z
+DESCRIPTION:Research talk.
+LAST-MODIFIED:20100601T050237Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:8
+STATUS:CONFIRMED
+SUMMARY:Joost Slingerland: "Experimental Signatures of Topological Field Th
+ eory"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T100000Z
+DTEND:20100528T103000Z
+DTSTAMP:20140423T123516Z
+UID:p6cimucja09gga3f4oh0c957gs@google.com
+CREATED:20100510T134908Z
+DESCRIPTION:Research talk.
+LAST-MODIFIED:20100601T050237Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Michael Tuite: "Combinatorics of CFT Correlation Functions"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100529T093000Z
+DTEND:20100529T100000Z
+DTSTAMP:20140423T123516Z
+UID:c6nevone9146404jo9kpijj448@google.com
+CREATED:20100510T135324Z
+DESCRIPTION:Coffee will be served on the first floor.
+LAST-MODIFIED:20100601T050237Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Coffee break
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100528T143000Z
+DTEND:20100528T150000Z
+DTSTAMP:20140423T123516Z
+UID:pin537f7une4p8dod21onjv0o0@google.com
+CREATED:20100510T135651Z
+DESCRIPTION:Research talk.
+LAST-MODIFIED:20100601T050237Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:10
+STATUS:CONFIRMED
+SUMMARY:Ryo Suzuki: "Five-loop Konishi energy from Mirror TBA"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100529T100000Z
+DTEND:20100529T110000Z
+DTSTAMP:20140423T123516Z
+UID:fdbtd41vfvs6ckubpna58pn8sk@google.com
+CREATED:20100510T135019Z
+DESCRIPTION:Introductory talk.
+LAST-MODIFIED:20100601T050236Z
+LOCATION:Dublin Institute for Advanced Studies\, 10 Burlington Road\, Dubli
+ n\, Ireland
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Niclas Wyllard: "4d N=2 Gauge Theories\, 2d CFTs\, and Matrix Model
+ s"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100408T143000Z
+DTEND:20100408T153000Z
+DTSTAMP:20140423T123516Z
+UID:e97liq4v8ntitghs2fe1gmshm8@google.com
+CREATED:20100315T132609Z
+DESCRIPTION:Abstract:\n\nUsing Noether's procedure we present a complete so
+ lution for the trilinear interactions of arbitrary spins $s_{1}\,s_{2}\, s_
+ {3}$ in a flat background\, and discuss the possibility to enlarge this con
+ struction to higher order interactions in the gauge field.
+LAST-MODIFIED:20100328T073257Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Ruben Manvelyan: "General trilinear interaction for arbitrary even 
+ higher spin gauge fields: The beauty of Noether's procedure"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20100528
+DTEND;VALUE=DATE:20100530
+DTSTAMP:20140423T123516Z
+UID:6a3a1beb-b717-4d48-89e4-da25c7c3626e
+CREATED:20100308T151555Z
+DESCRIPTION:
+LAST-MODIFIED:20100328T073256Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:6
+STATUS:CONFIRMED
+SUMMARY:Irish Quantum Field Theory Meeting 2010
+TRANSP:TRANSPARENT
+X-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for LOCATION propert
+ y. Removing entire property:
+X-MOZ-GENERATION:2
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100211T153000Z
+DTEND:20100211T163000Z
+DTSTAMP:20140423T123516Z
+UID:4atagj5brfgc6h7lvn3gmu2ue8@google.com
+CREATED:20100202T130616Z
+DESCRIPTION:Abstract: \n\nOn the lattice\, the standard way to fix Landau g
+ auge is to minimizing the so-called lattice Landau gauge (LLG)-fixing funct
+ ional numerically. Minimizing a multivariate function efficiently is one of
+  the\nfundamental problems in many branches of theoretical physics. The con
+ ventional numerical minimization methods such as Simulated Annealing and Ov
+ er-relaxation are known to fail in obtaining the global minimum. We observe
+  that the extremizing equations for the LLG-fixing functional and\, in gene
+ ral\, for multivariate functions arising in many physical phenomena have 'p
+ olynomial-like' non-linearity. After explaining how one can transform the e
+ xtremizing equations for the LLG\, for the compact U(1) case as an example\
+ , to a system of multivariate polynomial equations\, we propose a few metho
+ ds to solve these equations and obtain all the extrema of the LLG-fixing fu
+ nctional. I will demonstrate our preliminary results from both these method
+ s. If time permits\, I will also present the results for the modified latti
+ ce Landau gauge which was proposed recently\, in order to establish the BRS
+ T symmetry on the lattice.
+LAST-MODIFIED:20100313T092453Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Dhagash Mehta: "Algebraic Geometry and Landau Gauge Fixing on the L
+ attice"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100128T153000Z
+DTEND:20100128T163000Z
+DTSTAMP:20140423T123516Z
+UID:jqa8gr94d28lmjonk23utv05d4@google.com
+CREATED:20091209T111628Z
+DESCRIPTION:
+LAST-MODIFIED:20100225T065649Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:B. Stefanski: "Integrability and the AdS_3/CFT_2 correspondence"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20091121
+DTEND;VALUE=DATE:20091123
+DTSTAMP:20140423T123516Z
+UID:v2kohm394qinla2362kktvlkto@google.com
+CREATED:20091209T113030Z
+DESCRIPTION:Friday Nov. 20th\, Saturday Nov. 21st and Sunday Nov. 22nd\nhtt
+ p://www.stp.dias.ie/events/2009/Werner60.html\n\nAdvances in Theoretical Ph
+ ysics\nA conference in honour of Professor Werner Nahm
+LAST-MODIFIED:20091209T113030Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advances in Theoretical Physics: A conference in honour of Professo
+ r Werner Nahm
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091124T200000Z
+DTEND:20091124T210000Z
+DTSTAMP:20140423T123516Z
+UID:p29vfi1f2e91gjffc72gp8cngk@google.com
+CREATED:20091209T112919Z
+DESCRIPTION:http://www.stp.dias.ie/events/2009/STP_SPL_2009.pdf\n\nSpecial 
+ event on 21 November 2009 at 8pm\n\nStatutory public lecture by Professor P
+ eter Goddard:\nThere are no Excuses in Paradise:\nThe Past\, Present and Fu
+ ture of Institutes for Advanced Studies
+LAST-MODIFIED:20091209T112919Z
+LOCATION:Trinity College\, Dublin\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:P. Goddard: "There are no Excuses in Paradise: The Past\, Present a
+ nd Future of Institutes for Advanced Studies"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091201T153000Z
+DTEND:20091201T163000Z
+DTSTAMP:20140423T123516Z
+UID:p6e6384dt9p58qsfv18q9ho8b4@google.com
+CREATED:20091209T112044Z
+DESCRIPTION:  "Noncommutative Black Holes and Quantum Structure of Spacetim
+ e"\n  Prof. Kumar Gupta\, Saha Intitute\, Kolkata
+LAST-MODIFIED:20091209T112044Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland  
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:K. Gupta: "Noncommutative Black Holes and Quantum Structure of Spac
+ etime"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091202T163000Z
+DTEND:20091202T173000Z
+DTSTAMP:20140423T123516Z
+UID:bplrp0mtkh3gscdgpdevovbugs@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20091209T111944Z
+DESCRIPTION:Holographic Spectral Functions in Metallic AdS/CFT\n\nDr. Jonat
+ han Shock\, IGFAE\, University of Santiago de Compostela\, Spain\n\nAbstrac
+ t:\n\nAbstract: We study the holographic D3/D7 setup dual to N=4 supersymme
+ tric\nYang-Mills with quenched fundamental matter. We extend the previous\n
+ analyses of conductivity and photoproduction to the case where there is a\n
+ finite electric field. Due to the electric field a special region in the\nD
+ 7-brane geometry\, labelled the singular shell\, appears generically\, and\
+ nthe computation of correlators involves a careful study of the indicial\ne
+ xponents both at this singular region and at the horizon. We show that\nthe
+ re is a unique choice consistent with the known expression for the\nelectri
+ cal conductivity found by Karch and O'Bannon. We explore the\nparameter spa
+ ce spanned by the quark mass\, the baryon density and the\nelectric field. 
+ We find a region where the conductivity and\nphotoproduction change rapidly
+  and trace this behavior to competing\neffects which manifest themselves as
+  a crossover behavior in the probe\nbrane embeddings.\n
+LAST-MODIFIED:20091209T111952Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland  
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:J. Shock: "Holographic Spectral Functions in Metallic AdS/CFT"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091204T153000Z
+DTEND:20091204T163000Z
+DTSTAMP:20140423T123516Z
+UID:lb611jdhtlq7aegosjbvkpsocc@google.com
+CREATED:20091209T111850Z
+DESCRIPTION:Dr. Anton Khoroshkin (ETH Zurich)\n\nCohomology of Lie algebras
+  of vector fields and its applications\n\nI will discuss some results on th
+ e cohomology of the Lie algebra of\nformal vector fields on the plane and s
+ ome related Lie algebras\, and\napplications of these results to formal dif
+ ferential geometry. If time\nallows\, I will also explain how to use these 
+ results to construct\ncentral extensions of a 2-dimensional generalization 
+ of the Witt\nalgebra.\n
+LAST-MODIFIED:20091209T111850Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:A. Khoroshkin: "Cohomology of Lie algebras of vector fields and its
+  applications"
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091211T153000Z
+DTEND:20091211T163000Z
+DTSTAMP:20140423T123516Z
+UID:74j4siq2n8nu67imboc9nv4kp4@google.com
+CREATED:20091209T103408Z
+DESCRIPTION:Cosmic Rays and the Search for a Violation of Lorentz Invarianc
+ e\nDr. Wolfgang Bietenholz\, ICN\, UNAM\, Mexico\n\nAbstract:\n\n We introd
+ uce general aspects of cosmic rays\, in particular\n in view of the GZK ene
+ rgy cutoff. Next we discuss possibilities\n of a spontaneous breaking of Lo
+ rentz Invariance\, focusing\n on the scenario of particle specific maximal 
+ attainable\n velocities. We consider applications to ultra high energy\n co
+ smic rays and to neutrino oscillation.\n We also address cosmic photons fro
+ m blazars or gamma ray\n bursts. Precision tests of the photon dispersion r
+ elation\n allow for conclusions not far below the Planck scale.\n At last w
+ e review recent developments based on data by\n the Pierre Auger Collaborat
+ ion.\n\n\n\n
+LAST-MODIFIED:20091209T111413Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland  
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:W. Bietenholz: "Cosmic Rays and the Search for a Violation of Loren
+ tz Invariance"
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091210T153000Z
+DTEND:20091210T163000Z
+DTSTAMP:20140423T123516Z
+UID:opj13jgm459b13safkstovb5h0@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=DIAS-S
+ TP;X-NUM-GUESTS=0:mailto:4mih2br7ootr28s8qmk6qa7suo@group.calendar.google.c
+ om
+CREATED:20091209T103651Z
+DESCRIPTION:Holographic predictions and lattice results for a hot\, colorfu
+ l plasma\nDr. Marco Panero\, ETH Zurich\, Switzerland\n\nAbstract:\n\nThe e
+ xperimental evidence gathered in high-energy collisions of heavy ions\nat S
+ PS and RHIC has revealed that\, at high temperature\, hadronic matter\nunde
+ rgoes a qualitative change to a new state\, characterized by surprising\nfe
+ atures making it a nearly ideal fluid. Some properties of this `strongly\ni
+ nteracting quark-gluon plasma' can be predicted numerically by computer\nsi
+ mulations of lattice QCD\, but a full analytical description based on the\n
+ first principles of QCD has proven elusive. In recent years\, however\, new
+ \nanalytical insights into the dynamics of strongly interacting systems cam
+ e\nfrom String Theory\, with gauge/gravity techniques based on the AdS/CFT\
+ ncorrespondence conjectured by Maldacena\, and involving the mathematical\n
+ simplifications that occur when the rank of the gauge group is taken to\nin
+ finity. In this talk\, after introducing the physical problem of the QCD\np
+ lasma and briefly discussing the lattice formulation for\nfinite-temperatur
+ e QCD studies\, I shall present the results of my recent\nsimulations of th
+ e equation of state in SU(N) gauge theories with N = 3\,\n4\, 5\, 6 and 8 c
+ olors\, and their extrapolation to the limit for N going to\ninfinity. The 
+ results for the different gauge groups reveal that the\nequilibrium thermod
+ ynamic observables\, normalized according to the number\nof gluons\, are we
+ akly dependent on N (the `physical case' N = 3 being\nalready very close to
+  the large-N limit)\, and can be successfully\ndescribed by holographic gau
+ ge/gravity models. The implications of these\nfindings for a potentially re
+ alistic stringy description of the QCD\nplasma\, as well as some open probl
+ ems for future research\, will be pointed\nout. This talk is based on arXiv
+ :0907.3719 [hep-lat].\n
+LAST-MODIFIED:20091209T111303Z
+LOCATION:10 Burlington Road\, DUBLIN 4\, Co. Dublin City\, Ireland 
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:M. Panero: "Holographic predictions and lattice results for a hot\,
+  colorful plasma"
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

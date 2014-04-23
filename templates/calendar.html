@@ -1,0 +1,30 @@
+{% extends "layout_with_menu.html" %}
+
+{% block title %}
+Oxford Strings
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="/css/background_image.css"/>
+{% endblock %}
+
+
+
+{% block content %}
+<div id="content">
+
+  {% for event in event_list %}
+  <div class="event">
+    {{ event.active }}<br/>
+    {{ event.start_date }}<br/>
+    {{ event.end_date }}<br/>
+    {{ event.author }}<br/>
+    {{ event.location }}<br/>
+    {{ event.speaker }}<br/>
+    {{ event.description }}<br/>
+  </div>
+  {% endfor %}
+  
+</div>
+{% endblock %}

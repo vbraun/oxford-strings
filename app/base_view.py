@@ -8,12 +8,11 @@ import webapp2
 from webapp2 import cached_property
 from google.appengine.api import users
 
+from app import config
+from app.page_model import Page
+
 from markdown import markdown, extensions
 from markdown.extensions.tables import TableExtension
-
-import config
-
-from .page_model import Page
 
 
 json_encoder = json.JSONEncoder()
@@ -40,15 +39,18 @@ class RequestHandler(webapp2.RequestHandler):
         return jinja2.get_jinja2(factory=jinja2_factory)
     
     def render_response(self, template, **kwds):
+        kwds.setdefault('menu', config.menu_items)
+        kwds.setdefault('path', self.request.path)
+        kwds.setdefault('logged_in', bool(users.get_current_user()))
+        kwds.setdefault('is_admin', users.is_current_user_admin())
+        kwds.setdefault('login_url', users.create_login_url(self.request.uri))
+        kwds.setdefault('logout_url', users.create_logout_url(self.request.uri))
         result = self.jinja2.render_template(template, **kwds)
         self.response.write(result)
 
     def json_response(self, **kwds):
         result = json_encoder.encode(kwds)
         self.response.write(result)
-
-    def markdown(self, source):
-        return markdown(source, extensions=[TableExtension(configs={})])
 
     def cache_must_revalidate(self):
         self.response.headers['Cache-Control'] = \
@@ -61,6 +63,9 @@ class RequestHandler(webapp2.RequestHandler):
 
 
 class PageRequestHandler(RequestHandler):
+
+    def markdown(self, source):
+        return markdown(source, extensions=[TableExtension(configs={})])
 
     def load_page(self, name):
         return Page.load(name)

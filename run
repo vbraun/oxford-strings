@@ -1,0 +1,25 @@
+#!/bin/sh
+
+SDK=$(git config --get googleappengine.path)
+if [ $? -ne 0 ]; then
+    echo "Google Appengine SDK path not configured. Run something like"
+    echo ""
+    echo "    git config googleappengine.path /home/vbraun/opt/google_appengine"
+    echo ""
+    echo "in the project directory to set it up."
+fi
+
+# export SKIP_SDK_UPDATE_CHECK=yes
+
+exec "$SDK/dev_appserver.py" . \
+    --log_level debug \
+    --host 127.0.0.1 \
+    --port 8080 \
+    2>&1 | \
+    grep --line-buffered -v \
+    -e 'GET /static' -e 'POST /stats' -e 'GET /favicon.ico' \
+    2>&1 | \
+    egrep --color=always '^|WARNING.*|ERROR.*'
+
+# todo
+#   --python_startup_script=scripts/autocompile.py \

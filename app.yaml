@@ -29,7 +29,7 @@ handlers:
     script: app.cron.application
 
   - url: /.*
-    script: app.main.application
+    script: app.route.application
 
 
 libraries:

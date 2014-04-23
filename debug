@@ -1,0 +1,37 @@
+#!/usr/bin/python
+
+import os
+import sys
+
+try:
+    import IPython
+except ImportError:
+    print('The debug shell requires IPython')
+
+
+
+def main(sdk_path):
+    sys.modules.pop('google', None)
+    sys.path.insert(0, sdk_path)
+    import dev_appserver
+
+    from IPython.frontend.terminal.ipapp import TerminalIPythonApp
+    ip = TerminalIPythonApp.instance()
+    ip.initialize(argv=[])
+    ip.shell.user_global_ns['dev'] = dev_appserver
+    import importlib
+    def ipy_import_module(module_name, identifier):
+        module = importlib.import_module(module_name)
+        ip.shell.user_global_ns[identifier] = module
+    ipy_import_module('google.appengine.api.users', 'users')
+    ipy_import_module('develop.config', 'config')
+
+    dev_appserver.fix_sys_path()
+    ip.start()
+
+
+
+if __name__ == '__main__':
+    from develop.config import get_sdk_path
+    sdk_path = get_sdk_path()
+    main(sdk_path)
