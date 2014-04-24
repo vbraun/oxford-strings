@@ -28,28 +28,6 @@ class IcalSyncer(RequestHandler):
         self.response.write(str(cal.events))
 
 
-class CalendarEdit(RequestHandler):
-    """
-    TODO
-    """
-    
-    def get_event(self, uid):
-        if uid is not None:
-            ev = Event.query(Event.uid == uid).fetch(1)
-            if len(ev) > 0:
-                return ev[0]
-        uid = str(uuid.uuid4())
-        ev = Event(uid=uid, editable=True, active=True)
-        ev.start_date = datetime.utcnow()
-        ev.end_date = datetime.utcnow()
-        ev.put()
-        return ev
-
-    def get(self, uid=None):
-        values = dict()
-        values['calendar'] = [self.get_event(uid)]
-        self.render_response('calendar.html', **values)
-
 
 class CalendarRemove(RequestHandler):
     
@@ -64,8 +42,20 @@ class CalendarRemove(RequestHandler):
 
 class CalendarAdmin(RequestHandler):
     
+    def get_events(self):
+        """
+        Return all future events
+        """
+        now = datetime.combine(date.today(), datetime.min.time())
+        return Event.query(Event.start_date >= now).order(Event.start_date).fetch(100)
+
     def get(self):
-        pass
+        values = dict()
+        values['sync_url'] = uri_for('cron-sync')
+        values['full_url'] = uri_for('calendar-admin')
+        values['calendar'] = self.get_events()
+        self.render_response('calendar_admin.html', **values)
+
         
     
 
@@ -86,9 +76,9 @@ class EventListing(RequestHandler):
     def get(self):
         self.cache_must_revalidate()
         values = dict()
-        # values['name'] = name
-        values['edit_url'] = uri_for('calendar-new')
+        # values['edit_url'] = uri_for('calendar-new')
         values['sync_url'] = uri_for('cron-sync')
+        values['full_url'] = uri_for('calendar-admin')
         values['calendar'] = self.get_events()
         self.render_response(self.get_template(), **values)
         self.response.md5_etag()
@@ -112,7 +102,6 @@ class BagLunch(EventListing):
         query = Event.query(Event.series == 'Bag Lunch', Event.start_date >= now)
         return query.order(Event.start_date).fetch(100)
 
-
     def get_template(self):
         return 'bag_lunch.html'
 
@@ -133,3 +122,27 @@ class ThisWeek(EventListing):
         # but inequality queries can currently be only on one property
         query = Event.query(Event.start_date >= t0, Event.start_date < t1)
         return query.order(Event.start_date).fetch(100)
+
+
+class CalendarEdit(EventListing):
+    """
+    TODO
+    """
+    
+    def get_event(self, uid):
+        if uid is not None:
+            ev = Event.query(Event.uid == uid).fetch(1)
+            if len(ev) > 0:
+                return ev[0]
+        uid = str(uuid.uuid4())
+        ev = Event(uid=uid, editable=True, active=True)
+        ev.start_date = datetime.utcnow()
+        ev.end_date = datetime.utcnow()
+        ev.put()
+        return ev
+
+    def get(self, uid=None):
+        values = dict()
+        values['calendar'] = [self.get_event(uid)]
+        self.render_response('calendar.html', **values)
+

@@ -1,8 +1,5 @@
 <div class="event" id="{{ event.uid }}">
   <div class="event_toolbar">
-    {% if event.editable %}
-      <a href="{{ event.get_edit_url() }}">Edit</a>
-    {% endif %}
     <a href="#" name="{{ event.uid }}">Hide</a>
   </div>
   <div class="event_time_loc">

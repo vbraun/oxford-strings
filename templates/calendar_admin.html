@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Oxford Strings Calendar
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="/css/calendar_admin.css"/>
+{% endblock %}
+
+
+
+{% block body %}
+
+<div class="header">
+  Select which events to include in the strings calendar
+</div>
+
+<div class="event_table">
+  {% for event in calendar %}
+  <div class="event_table_row" id="{{ event.uid }}">
+    <div class="event_table_toolbar">
+      <input type="checkbox" name="{{ event.uid }}" value="checked" />
+{#      {% if event.editable %}                          #}
+{#        <a href="{{ event.get_edit_url() }}">Edit</a>  #}
+{#      {% endif %}                                      #}
+    </div>
+    <div class="event_table_time">{{ event.get_time_short() }}</div>
+    <div class="event_table_title">{{ event.title }}</div>
+    <div class="event_table_speaker">{{ event.speaker }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+

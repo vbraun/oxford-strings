@@ -1,0 +1,61 @@
+
+.header {
+    margins: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #002147;
+    color: white;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+.event_table {
+    overflow-x: scroll;
+    display: table;
+    border-spacing: 10px 1px;
+    border-collapse: separate;
+    box-sizing: border-box;
+    table-layout: auto;
+    width: 100%;
+}
+
+.event_table_row {
+    width: 100%;
+    overflow: hidden;
+    display: table-row;
+}
+
+.event_table_toolbar {
+    display: table-cell;
+    font-weight: 300;
+    color: #002147;
+}
+
+.event_table_toolbar checkbox {
+}
+
+.event_table_time {
+    display: table-cell;
+    white-space: nowrap;
+}
+
+
+.event_table_title {
+    display: table-cell;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 100px;
+    max-width: 500px;
+}
+
+.event_table_speaker {
+    display: table-cell;
+}
+

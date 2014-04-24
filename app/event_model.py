@@ -49,6 +49,10 @@ class Event(ndb.Model):
         else:
             return time.strftime('%A, %B %e, at %H:%M', t0.timetuple())
 
+    def get_time_short(self):
+        t0 = self._to_localtime(self.start_date)
+        return time.strftime('%b %e, %H:%M', t0.timetuple())
+
     def get_duration(self):
         length = (self.end_date - self.start_date).seconds / 60
         if length > 0:
