@@ -103,3 +103,35 @@ body {
     font-size: 120%;
     font-weight: 500;
 }
+
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event_time_loc {
+    display: inline;
+}
+
+.event_toolbar {
+    float: right;
+    display: inline;
+    font-weight: 300;
+    color: #002147;
+}
+
+.event_title {
+    font-size: 200%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.event_speaker {
+    font-size: 150%;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.event_abstract {
+}

@@ -10,20 +10,49 @@ Oxford Strings
 {% endblock %}
 
 
+{% block extra_menu %}
+  {% if is_admin %}
+    <div class="menu_lvl_0">
+      Administer
+    </div>
+    <div class="menu_lvl_1">
+      <a href="{{ sync_url }}">Sync</a>
+    </div>
+    <div class="menu_lvl_1">
+      <a href="{{ calendar_url }}">Calendar</a>
+    </div>
+    <div class="menu_lvl_1">
+      <a href="{{ edit_url }}">New Event</a>
+    </div>
+    <div class="menu_lvl_1">
+      <a href="{{ logout_url }}">Logout</a>
+    </div>
+  {% elif logged_in %}
+    <div class="menu_lvl_0">
+      Intranet
+    </div>
+    <div class="menu_lvl_1">
+      <a href="{{ calendar_url }}">Calendar</a>
+    </div>
+    <div class="menu_lvl_1">
+      <a href="{{ logout_url }}">Logout</a>
+    </div>
+  {% else %}
+    <div class="menu_lvl_0">
+      <a href="{{ login_url }}">Login</a>
+    </div>
+  {% endif %}
+{% endblock %}
+
 
 {% block content %}
 <div id="content">
 
-  {% for event in event_list %}
-  <div class="event">
-    {{ event.active }}<br/>
-    {{ event.start_date }}<br/>
-    {{ event.end_date }}<br/>
-    {{ event.author }}<br/>
-    {{ event.location }}<br/>
-    {{ event.speaker }}<br/>
-    {{ event.description }}<br/>
-  </div>
+  <h1>Upcoming Events</h1>
+
+  {% for event in calendar %}
+    {% include "calendar_event.html" %}
+    <hr>
   {% endfor %}
   
 </div>

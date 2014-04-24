@@ -11,6 +11,39 @@ Oxford Strings
 
 
 
+{% block extra_menu %}
+{% if is_admin %}
+  <div class="menu_lvl_0">
+    Administer
+  </div>
+  <div class="menu_lvl_1">
+    <a href="{{ history_url }}">History</a>
+  </div>
+  <div class="menu_lvl_1">
+    <a href="{{ edit_url }}">Edit</a>
+  </div>
+  <div class="menu_lvl_1">
+    <a href="{{ logout_url }}">Logout</a>
+  </div>
+{% elif logged_in %}
+  <div class="menu_lvl_0">
+    Intranet
+  </div>
+  <div class="menu_lvl_1">
+    <a href="{{ history_url }}">History</a>
+  </div>
+  <div class="menu_lvl_1">
+    <a href="{{ logout_url }}">Logout</a>
+  </div>
+{% else %}
+  <div class="menu_lvl_0">
+    <a href="{{ login_url }}">Login</a>
+  </div>
+{% endif %}
+{% endblock %}
+
+
+
 {% block content %}
 {% autoescape true %}
 
