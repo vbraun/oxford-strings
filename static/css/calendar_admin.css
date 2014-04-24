@@ -45,6 +45,15 @@ body {
 }
 
 
+.event_table_series {
+    display: table-cell;
+    white-space: nowrap;
+    min-width: 10px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .event_table_title {
     display: table-cell;
     font-weight: 700;

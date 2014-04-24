@@ -16,20 +16,6 @@ import app.config as config
 from app.base_view import RequestHandler
 from app.decorators import cached_property, requires_login, requires_admin
 from app.event_model import Event
-from app.ical import CalendarSync
-
-
-
-class IcalSyncer(RequestHandler):
-
-    def get(self):
-        print 'sync'
-        cal = CalendarSync()
-        cal.import_file('/home/vbraun/Code/GAE/OxfordStrings/app/test/calendar/oxford.ics')
-        cal.import_file('/home/vbraun/Code/GAE/OxfordStrings/app/test/calendar/google.ics')
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write(str(cal.events))
-
 
 
 
@@ -44,6 +30,7 @@ class CalendarAdmin(RequestHandler):
         return Event.query(Event.start_date >= now).order(Event.start_date).fetch(100)
 
     def get(self):
+        self.cache_must_revalidate()
         values = dict()
         values['sync_url'] = uri_for('cron-sync')
         values['full_url'] = uri_for('calendar-admin')

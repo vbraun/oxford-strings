@@ -12,9 +12,9 @@ from google.appengine.api import users
 
 from app.base_view import PageRequestHandler
 from app.editable_view import WikiPage, Editor, History
+from app.cron import IcalSyncer
 from app.calendar_view import (
-    IcalSyncer, CalendarAdmin,
-    Seminars, ThisWeek, BagLunch,
+    CalendarAdmin, Seminars, ThisWeek, BagLunch,
 )
 
 application = WSGIApplication([

@@ -1,8 +1,9 @@
 from app import config
 
 from webapp2 import WSGIApplication, Route, uri_for
-from app.base_view import PageRequestHandler
+from app.base_view import RequestHandler, PageRequestHandler
 from app.decorators import cached_property
+from app.ical_sync import CalendarSync
 
 
 class Daily(PageRequestHandler):
@@ -31,7 +32,27 @@ class Daily(PageRequestHandler):
 
 
 
+
+class IcalSyncer(RequestHandler):
+
+    def get(self):
+        self.response.headers['Content-Type'] = 'text/plain'
+        cal = CalendarSync()
+        for remote in config.remote_calendars:
+            cal.import_url(remote.series, remote.url, remote.activate)
+        self.response.write(str(cal.events))
+
+
+
+
+
+
+
+
+
+
 application = WSGIApplication([
     Route(r'/cron/daily', Daily, name='cron-daily'),
+    Route(r'/cron/calendar', IcalSyncer, name='cron-calendar'),
 ], debug=True)
 

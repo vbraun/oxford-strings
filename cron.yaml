@@ -1,4 +1,9 @@
 cron:
-- description: daily summary job
+ 
+- description: expire backups
   url: /cron/daily
   schedule: every 24 hours
+
+- description: pull from remote calendars
+  url: /cron/calendar
+  schedule: every 2 hours
