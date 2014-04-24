@@ -13,7 +13,7 @@ from google.appengine.api import users
 from app.base_view import PageRequestHandler
 from app.editable_view import WikiPage, Editor, History
 from app.calendar_view import (
-    IcalSyncer, CalendarEdit, CalendarRemove, CalendarAdmin,
+    IcalSyncer, CalendarAdmin,
     Seminars, ThisWeek, BagLunch,
 )
 
@@ -26,9 +26,11 @@ application = WSGIApplication([
     Route(r'/cal/this_week.html', ThisWeek, name='this-week'),
     Route(r'/cal/bag_lunch.html', BagLunch, name='bag-lunch'),
     Route(r'/cal/admin', CalendarAdmin, name='calendar-admin'),
-    Route(r'/cal/edit', CalendarEdit, name='calendar-new'),
-    Route(r'/cal/edit/<uid>', CalendarEdit, name='calendar-edit'),
-    Route(r'/cal/remove/<uid>', CalendarRemove, name='calendar-remove'),
+
+    # Not implemented
+    #    Route(r'/cal/edit', CalendarEdit, name='calendar-new'),
+    #    Route(r'/cal/edit/<uid>', CalendarEdit, name='calendar-edit'),
+
     Route(r'/cal/sync', IcalSyncer, name='cron-sync'),
 ], debug=True)
 

@@ -12,6 +12,17 @@ indexes:
 
 - kind: Event
   properties:
+  - name: active
+  - name: series
+  - name: start_date
+
+- kind: Event
+  properties:
+  - name: active
+  - name: start_date
+
+- kind: Event
+  properties:
   - name: series
   - name: start_date
 

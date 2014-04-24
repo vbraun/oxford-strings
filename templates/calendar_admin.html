@@ -12,6 +12,7 @@ Oxford Strings Calendar
 
 
 
+
 {% block body %}
 
 <div class="header">
@@ -22,10 +23,9 @@ Oxford Strings Calendar
   {% for event in calendar %}
   <div class="event_table_row" id="{{ event.uid }}">
     <div class="event_table_toolbar">
-      <input type="checkbox" name="{{ event.uid }}" value="checked" />
-{#      {% if event.editable %}                          #}
-{#        <a href="{{ event.get_edit_url() }}">Edit</a>  #}
-{#      {% endif %}                                      #}
+      <input type="checkbox" class="calendar_event_checkbox" 
+	     name="{{ event.key.id() }}" 
+	     {% if event.active %} checked {% endif %}/>
     </div>
     <div class="event_table_time">{{ event.get_time_short() }}</div>
     <div class="event_table_title">{{ event.title }}</div>
@@ -34,5 +34,19 @@ Oxford Strings Calendar
   {% endfor %}
 </div>
 
+<button id="done">Done</button>
+
+</div>
 {% endblock %}
 
+
+
+
+{% block js_at_end %}
+<script>
+    var calendar = new Calendar('{{ calendar_admin_url }}');
+    jQuery('button#done').bind('click', function() {
+        window.location = '{{ uri_for("seminars") }}';
+    });
+</script>
+{% endblock %}

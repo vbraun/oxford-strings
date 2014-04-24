@@ -6,6 +6,7 @@ Calendaring Page Views
 import sys
 import os
 import uuid
+import logging
 from datetime import date, datetime, timedelta
 
 from webapp2 import uri_for
@@ -29,15 +30,6 @@ class IcalSyncer(RequestHandler):
 
 
 
-class CalendarRemove(RequestHandler):
-    
-    def post(self, uid, active):
-        ev = Event.query(Event.uid == uid).fetch(1)
-        if len(ev) == 0:
-            return
-        ev = ev[0]
-        ev.active = False
-        ev.put
 
 
 class CalendarAdmin(RequestHandler):
@@ -53,10 +45,16 @@ class CalendarAdmin(RequestHandler):
         values = dict()
         values['sync_url'] = uri_for('cron-sync')
         values['full_url'] = uri_for('calendar-admin')
+        values['calendar_admin_url'] = self.request.uri
         values['calendar'] = self.get_events()
         self.render_response('calendar_admin.html', **values)
 
-        
+    def post(self):
+        key_id = self.request.get('key_id')
+        active = (self.request.get('active') == u'true')
+        ev = Event.get_by_id(int(key_id))
+        ev.active = active
+        ev.put()
     
 
 
@@ -68,7 +66,8 @@ class EventListing(RequestHandler):
         Return all future events
         """
         now = datetime.combine(date.today(), datetime.min.time())
-        return Event.query(Event.start_date >= now).order(Event.start_date).fetch(100)
+        query = Event.query(Event.start_date >= now, Event.active == True)
+        return query.order(Event.start_date).fetch(100)
 
     def get_template(self):
         raise NotImplementedError
@@ -78,7 +77,7 @@ class EventListing(RequestHandler):
         values = dict()
         # values['edit_url'] = uri_for('calendar-new')
         values['sync_url'] = uri_for('cron-sync')
-        values['full_url'] = uri_for('calendar-admin')
+        values['calendar_admin_url'] = uri_for('calendar-admin')
         values['calendar'] = self.get_events()
         self.render_response(self.get_template(), **values)
         self.response.md5_etag()
@@ -99,7 +98,10 @@ class BagLunch(EventListing):
         Return all future events in the bag lunch series
         """
         now = datetime.combine(date.today(), datetime.min.time())
-        query = Event.query(Event.series == 'Bag Lunch', Event.start_date >= now)
+        query = Event.query(
+            Event.series == 'Bag Lunch', 
+            Event.start_date >= now,
+            Event.active == True)
         return query.order(Event.start_date).fetch(100)
 
     def get_template(self):
@@ -120,20 +122,21 @@ class ThisWeek(EventListing):
         # allow for week-spanning events would be ideally:
         # query = Event.query(Event.start_date <= t1, Event.end_date >= t0)
         # but inequality queries can currently be only on one property
-        query = Event.query(Event.start_date >= t0, Event.start_date < t1)
+        query = Event.query(
+            Event.start_date >= t0, 
+            Event.start_date < t1, 
+            Event.active == True)
         return query.order(Event.start_date).fetch(100)
 
 
 class CalendarEdit(EventListing):
     """
-    TODO
+    TODO: do we really want to edit events ourselves?
     """
     
-    def get_event(self, uid):
-        if uid is not None:
-            ev = Event.query(Event.uid == uid).fetch(1)
-            if len(ev) > 0:
-                return ev[0]
+    def get_event(self, key_id):
+        if key_id is not None:
+            return Event.get_by_id(int(key_id))
         uid = str(uuid.uuid4())
         ev = Event(uid=uid, editable=True, active=True)
         ev.start_date = datetime.utcnow()

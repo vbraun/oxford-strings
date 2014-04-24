@@ -19,7 +19,7 @@ Oxford Strings
       <a href="{{ sync_url }}">Sync</a>
     </div>
     <div class="menu_lvl_1">
-      <a href="{{ full_url }}">Full calendar</a>
+      <a href="{{ calendar_admin_url }}">Full calendar</a>
     </div>
     <div class="menu_lvl_1">
       <a href="{{ logout_url }}">Logout</a>
@@ -53,4 +53,11 @@ Oxford Strings
   {% endfor %}
   
 </div>
+{% endblock %}
+
+
+{% block js_at_end %}
+<script>
+    var calendar = new Calendar('{{ calendar_admin_url }}');
+</script>
 {% endblock %}
