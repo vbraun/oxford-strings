@@ -18,6 +18,8 @@ from app.decorators import cached_property, requires_login, requires_admin
 from app.event_model import Event
 from app.ical import CalendarSync
 
+
+
 class IcalSyncer(RequestHandler):
 
     def get(self):
@@ -49,6 +51,7 @@ class CalendarAdmin(RequestHandler):
         values['calendar'] = self.get_events()
         self.render_response('calendar_admin.html', **values)
 
+    @requires_admin
     def post(self):
         key_id = self.request.get('key_id')
         active = (self.request.get('active') == u'true')

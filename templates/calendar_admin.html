@@ -23,9 +23,11 @@ Oxford Strings Calendar
   {% for event in calendar %}
   <div class="event_table_row" id="{{ event.uid }}">
     <div class="event_table_toolbar">
+      {% if is_admin %}
       <input type="checkbox" class="calendar_event_checkbox" 
 	     name="{{ event.key.id() }}" 
 	     {% if event.active %} checked {% endif %}/>
+      {% endif %}
     </div>
     <div class="event_table_time">{{ event.get_time_short() }}</div>
     <div class="event_table_title">{{ event.title }}</div>
