@@ -3,9 +3,10 @@
     {% if event.editable %}
       <a href="{{ event.get_edit_url() }}">Edit</a>
     {% endif %}
-    <a href="#" name="{{ event.uid }}">Remove</a>
+    <a href="#" name="{{ event.uid }}">Hide</a>
   </div>
-  <div class="event_time_loc">On {{ event.get_time() }} in {{ event.location }}:</div>
+  <div class="event_time_loc">
+    On {{ event.get_time() }} {{ event.get_where() }}  {{ event.get_duration() }}:</div>
   <div class="event_title">{{ event.title }}</div>
   <div class="event_speaker">{{ event.speaker }}</div>
   <div class="event_abstract"><b>Abstract:</b> {{ event.description }}</div>

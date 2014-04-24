@@ -1,0 +1,27 @@
+{% extends "calendar.html" %}
+
+
+{% block content %}
+<div id="content">
+
+  <h1>This Week</h1>
+
+  <p>
+    Here is a selection of seminars that might be of interest to
+    string theorists in Oxford:
+  </p>
+
+  {% if calendar %}
+    {% for event in calendar %}
+      {% include "calendar_event.html" %}
+      <hr>
+    {% endfor %}
+  {% else %}
+    <p>
+      No seminars found during this week. Please come back during term
+      time.
+    </p>
+  {% endif %}
+  
+</div>
+{% endblock %}

@@ -19,10 +19,7 @@ Oxford Strings
       <a href="{{ sync_url }}">Sync</a>
     </div>
     <div class="menu_lvl_1">
-      <a href="{{ calendar_url }}">Calendar</a>
-    </div>
-    <div class="menu_lvl_1">
-      <a href="{{ edit_url }}">New Event</a>
+      <a href="{{ calendar_url }}">Full calendar</a>
     </div>
     <div class="menu_lvl_1">
       <a href="{{ logout_url }}">Logout</a>
@@ -48,7 +45,7 @@ Oxford Strings
 {% block content %}
 <div id="content">
 
-  <h1>Upcoming Events</h1>
+  <h1>All Upcoming Events</h1>
 
   {% for event in calendar %}
     {% include "calendar_event.html" %}

@@ -1,0 +1,45 @@
+{% extends "calendar.html" %}
+
+
+{% block content %}
+<div id="content">
+
+  <h1>String Group Bag Lunch</h1>
+
+  <p>
+    The Oxford string theory group has its informal lunchtime sessions
+    at 12 o'clock each Wednesday during term time, in L5 (or L3) on
+    the mezzanine floor of the Andrew Wiles building. This is a chance
+    to get together once a week to discuss topics of interest in an
+    informal way, and hopefully learn from each other. Unfortunately,
+    no food is allowed in the seminar room, but those who want may
+    continue discussions over lunch at the mezzanine cafeteria after
+    the seminar.
+  </p>
+
+  <p>
+    Below is the list of people who have agreed to lead discussions on
+    given weeks, and the corresponding topics. If you wish to suggest
+    a topic you would like to know more about, or volunteer to present
+    something, contact Magdalena, Ricardo or Volker. Remember that we
+    want to keep these sessions informal and discussional. Everything
+    should be done on the whiteboard or verbally (no slides!), and
+    should assume as little prior knowledge as is reasonable.
+  </p>
+
+  <h1>Schedule for this Semester</h1>
+
+  {% if calendar %}
+    {% for event in calendar %}
+      {% include "calendar_event.html" %}
+      <hr>
+    {% endfor %}
+  {% else %}
+    <p>
+      No bag lunch seminars are currently schedule. Please come back
+      during term time.
+    </p>
+  {% endif %}
+  
+</div>
+{% endblock %}

@@ -6,7 +6,7 @@ Calendaring Page Views
 import sys
 import os
 import uuid
-from datetime import datetime
+from datetime import date, datetime, timedelta
 
 from webapp2 import uri_for
 from google.appengine.api import users
@@ -29,6 +29,9 @@ class IcalSyncer(RequestHandler):
 
 
 class CalendarEdit(RequestHandler):
+    """
+    TODO
+    """
     
     def get_event(self, uid):
         if uid is not None:
@@ -50,7 +53,7 @@ class CalendarEdit(RequestHandler):
 
 class CalendarRemove(RequestHandler):
     
-    def post(self, uid):
+    def post(self, uid, active):
         ev = Event.query(Event.uid == uid).fetch(1)
         if len(ev) == 0:
             return
@@ -59,11 +62,26 @@ class CalendarRemove(RequestHandler):
         ev.put
 
 
+class CalendarAdmin(RequestHandler):
+    
+    def get(self):
+        pass
+        
+    
+
+
 
 class EventListing(RequestHandler):
 
     def get_events(self):
-        return Event.query().order(-Event.start_date).fetch(20)
+        """
+        Return all future events
+        """
+        now = datetime.combine(date.today(), datetime.min.time())
+        return Event.query(Event.start_date >= now).order(Event.start_date).fetch(100)
+
+    def get_template(self):
+        raise NotImplementedError
 
     def get(self):
         self.cache_must_revalidate()
@@ -72,11 +90,46 @@ class EventListing(RequestHandler):
         values['edit_url'] = uri_for('calendar-new')
         values['sync_url'] = uri_for('cron-sync')
         values['calendar'] = self.get_events()
-        self.render_response('calendar.html', **values)
+        self.render_response(self.get_template(), **values)
         self.response.md5_etag()
 
 
 
 class Seminars(EventListing):
-    pass
+
+    def get_template(self):
+        return 'calendar.html'
+
+
+
+class BagLunch(EventListing):
+
+    def get_events(self):
+        """
+        Return all future events in the bag lunch series
+        """
+        now = datetime.combine(date.today(), datetime.min.time())
+        query = Event.query(Event.series == 'Bag Lunch', Event.start_date >= now)
+        return query.order(Event.start_date).fetch(100)
+
+
+    def get_template(self):
+        return 'bag_lunch.html'
+
+
+class ThisWeek(EventListing):
     
+    def get_template(self):
+        return 'this_week.html'
+    
+    def get_events(self):
+        today = date.today()
+        last_sunday = today - timedelta(days=today.weekday() + 1)
+        next_sunday = last_sunday + timedelta(weeks=1)
+        t0 = datetime.combine(last_sunday, datetime.min.time())
+        t1 = datetime.combine(next_sunday, datetime.max.time())
+        # allow for week-spanning events would be ideally:
+        # query = Event.query(Event.start_date <= t1, Event.end_date >= t0)
+        # but inequality queries can currently be only on one property
+        query = Event.query(Event.start_date >= t0, Event.start_date < t1)
+        return query.order(Event.start_date).fetch(100)

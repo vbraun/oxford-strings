@@ -29,8 +29,8 @@ menu_items = (
     MenuItem('Members',         '/members.html'),
     MenuItem('Research',        '/research.html'),
     MenuItem('Seminars',        '/cal/seminars.html'),
-    MenuItem('Bag lunch',       '/bag_lunch.html', 1),
-    MenuItem('This week',       '/thisweek.html', 1),
+    MenuItem('Bag lunch',       '/cal/bag_lunch.html', 1),
+    MenuItem('This week',       '/cal/this_week.html', 1),
     MenuItem('Graduate study',  '/graduates.html'),
 )
 

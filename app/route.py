@@ -12,7 +12,10 @@ from google.appengine.api import users
 
 from app.base_view import PageRequestHandler
 from app.editable_view import WikiPage, Editor, History
-from app.calendar_view import Seminars, IcalSyncer, CalendarEdit, CalendarRemove
+from app.calendar_view import (
+    IcalSyncer, CalendarEdit, CalendarRemove, 
+    Seminars, ThisWeek, BagLunch,
+)
 
 application = WSGIApplication([
     Route(r'/', WikiPage),
@@ -20,6 +23,8 @@ application = WSGIApplication([
     Route(r'/edit/<name:[^/]*\.html>', Editor, name='editor'),
     Route(r'/history/<name:[^/]*\.html>', History, name='history'),
     Route(r'/cal/seminars.html', Seminars, name='seminars'),
+    Route(r'/cal/this_week.html', ThisWeek, name='this-week'),
+    Route(r'/cal/bag_lunch.html', BagLunch, name='bag-lunch'),
     Route(r'/cal/edit', CalendarEdit, name='calendar-new'),
     Route(r'/cal/edit/<uid>', CalendarEdit, name='calendar-edit'),
     Route(r'/cal/remove/<uid>', CalendarRemove, name='calendar-remove'),
