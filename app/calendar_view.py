@@ -105,10 +105,10 @@ class ThisWeek(EventListing):
     
     def get_events(self):
         today = date.today()
-        last_sunday = today - timedelta(days=today.weekday() + 1)
-        next_sunday = last_sunday + timedelta(weeks=1)
-        t0 = datetime.combine(last_sunday, datetime.min.time())
-        t1 = datetime.combine(next_sunday, datetime.max.time())
+        last_saturday = today - timedelta(days=today.weekday() + 2)
+        next_saturday = last_saturday + timedelta(weeks=1)
+        t0 = datetime.combine(last_saturday, datetime.min.time())
+        t1 = datetime.combine(next_saturday, datetime.max.time())
         # allow for week-spanning events would be ideally:
         # query = Event.query(Event.start_date <= t1, Event.end_date >= t0)
         # but inequality queries can currently be only on one property
@@ -117,6 +117,29 @@ class ThisWeek(EventListing):
             Event.start_date < t1, 
             Event.active == True)
         return query.order(Event.start_date).fetch(100)
+
+
+class NextWeek(EventListing):
+    
+    def get_template(self):
+        return 'next_week.html'
+    
+    def get_events(self):
+        today = date.today()
+        last_saturday = today - timedelta(days=today.weekday() + 2) + timedelta(weeks=1)
+        next_saturday = last_saturday + timedelta(weeks=1)
+        t0 = datetime.combine(last_saturday, datetime.min.time())
+        t1 = datetime.combine(next_saturday, datetime.max.time())
+        # allow for week-spanning events would be ideally:
+        # query = Event.query(Event.start_date <= t1, Event.end_date >= t0)
+        # but inequality queries can currently be only on one property
+        query = Event.query(
+            Event.start_date >= t0, 
+            Event.start_date < t1, 
+            Event.active == True)
+        return query.order(Event.start_date).fetch(100)
+
+
 
 
 class CalendarEdit(EventListing):
