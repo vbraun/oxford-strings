@@ -38,7 +38,7 @@ menu_items = (
 # The calendars to pull from
 from app.remote_calendars import Calendar
 remote_calendars = (
-#    Calendar('String Theory', None),
+    Calendar('String Theory', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/930/ical', True),
     Calendar('QFT', 'http://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/913/ical', True),
     Calendar('Geometry and Analysis', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/886/ical', False),
     Calendar('Algebraic and Symplectic Geometry', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/945/ical', False),
