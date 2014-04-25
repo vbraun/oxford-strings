@@ -39,11 +39,12 @@ menu_items = (
 # The calendars to pull from
 from app.remote_calendars import Calendar
 remote_calendars = (
+    # series name, ical url, where to include events by default
     Calendar('String Theory', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/930/ical', True),
-    Calendar('QFT', 'http://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/913/ical', True),
+    Calendar('Quantum Field Theory', 'http://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/913/ical', True),
     Calendar('Geometry and Analysis', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/886/ical', False),
     Calendar('Algebraic and Symplectic Geometry', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/945/ical', False),
-    Calendar('Number Theory', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/903/ical', True),
+    Calendar('Number Theory', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/903/ical', False),
     Calendar('Math Colloquium', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/874/ical', True),
     Calendar('Bag Lunch', 'https://www.google.com/calendar/ical/bkhromh605bm44dl8fuq4dip58%40group.calendar.google.com/public/basic.ics', True),
 )

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Utilities for ical files
 """
@@ -13,10 +14,42 @@ from datetime import date, datetime
 import urllib2
 
 
+class BeautifyString(object):
+    """
+    Remove various crap
+    """
+    def __init__(self, *search_replace_pairs):
+        self._regexs = tuple((re.compile(search), replace)
+                             for search, replace in search_replace_pairs)
+        
+    def __call__(self, string):
+        for regex, replace in self._regexs:
+            string = regex.sub(replace, string)
+        return string
+
+
+beautify = BeautifyString(
+    (ur"""\\\s*"a""", u'ä'),
+    (ur"""\\\s*"o""", u'ö'),
+    (ur"""\\\s*"u""", u'ü'),
+    (ur"""\\\s*"A""", u'Ä'),
+    (ur"""\\\s*"O""", u'Ö'),
+    (ur"""\\\s*"U""", u'Ü'),
+    (ur"""\\\s*\{ss\}""", u'ß'),
+    (ur"""\s*\(\)""", ur''),
+    (ur"""\\\s*'e""", u'é'),
+    (ur"""\\\s*`e""", u'è'),
+    (ur"""(http[s]?://[a-zA-Z0-9\.~_/]*)""", ur'<a href="\1">\1</a>'),
+    (ur"""arXiv:([0-9][0-9][0-9][0-9]\.[0-9][0-9][0-9][0-9])""", ur'<a href="http://arxiv.org/abs/\1">arXiv:\1</a>'),
+#    (u'', u''),
+)
+
+
+
 class IcalEvent(object):
 
-    SPEAKER_RE = re.compile(u'^ *Speaker: *(.*)')
-    LOCATION_RE = re.compile(u'^ *Location: *(.*)')
+    SPEAKER_RE = re.compile(ur'^\s*Speaker:\s*(.*)')
+    LOCATION_RE = re.compile(ur'^\s*Location:\s*(.*)')
 
     def __init__(self, series, author, event, active_by_default=False):
         self.uid = event['UID']
@@ -25,8 +58,8 @@ class IcalEvent(object):
         self.active_by_default = active_by_default
         self.start_date = self._utc(event['DTSTART'].dt)
         self.end_date = self._utc(event['DTEND'].dt)
-        self.title = event.get('SUMMARY', 'No summary').replace('\n', '')
-        self._init_description(event.get('DESCRIPTION', 'No description'))
+        self.title = beautify(event.get('SUMMARY', u'No summary').replace('\n', ''))
+        self._init_description(event.get('DESCRIPTION', u'No description'))
 
     def _utc(self, dt):
         """
@@ -44,14 +77,14 @@ class IcalEvent(object):
         for line in desc.splitlines():
             match = self.SPEAKER_RE.match(line)
             if match:
-                self.speaker = match.group(1)
+                self.speaker = beautify(match.group(1))
                 continue
             match = self.LOCATION_RE.match(line)
             if match:
                 self.location = match.group(1)
                 continue
             self.description += line
-        self.description = textwrap.dedent(self.description)
+        self.description = beautify(textwrap.dedent(self.description))
 
     def __repr__(self):
         s = u'Event\n'
