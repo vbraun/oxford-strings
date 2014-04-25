@@ -14,7 +14,7 @@ from app.base_view import PageRequestHandler
 from app.editable_view import WikiPage, Editor, History
 from app.cron import IcalSyncer
 from app.calendar_view import (
-    CalendarAdmin, Seminars, ThisWeek, NextWeek, BagLunch,
+    CalendarAdmin, Seminars, ThisWeek, NextWeek, BagLunch, IcalExport,
 )
 
 application = WSGIApplication([
@@ -27,6 +27,7 @@ application = WSGIApplication([
     Route(r'/cal/next_week.html', NextWeek, name='next-week'),
     Route(r'/cal/bag_lunch.html', BagLunch, name='bag-lunch'),
     Route(r'/cal/admin', CalendarAdmin, name='calendar-admin'),
+    Route(r'/cal/strings.ics', IcalExport, name='ical-export'),
 
     # Not implemented
     #    Route(r'/cal/edit', CalendarEdit, name='calendar-new'),

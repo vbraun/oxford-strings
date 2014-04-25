@@ -74,6 +74,39 @@ class EventListing(RequestHandler):
 
 
 
+class IcalExport(EventListing): 
+
+    def _ical_time(self, dt):
+        import pytz
+        import time
+        dt = pytz.utc.localize(dt)
+        return time.strftime('%Y%m%dT%H%M%SZ', dt.timetuple())
+
+    def get(self):
+        from icalendar import Calendar, Event, vCalAddress, vText
+        cal = Calendar()
+        cal.add('prodid', '-//Strings Oxford Calendaring//strings.ox.ac.uk//')
+        cal.add('version', '1.0')
+        cal.add('X-WR-CALNAME', 'Strings Oxford')
+        for ev in self.get_events():
+            event = Event()
+            event['uid'] = vText(ev.uid)
+            event['location'] = vText(ev.location)
+            event['summary'] = ev.title
+            event['dtstart'] = self._ical_time(ev.start_date)
+            event['dtend'] = self._ical_time(ev.end_date)
+            desc  = u'Speaker: {}\n'.format(ev.speaker)
+            desc += u'Location: {}\n'.format(ev.location)
+            desc += u'Series: {}\n'.format(ev.series)
+            desc += ev.description
+            event['description'] = vText(desc)
+            cal.add_component(event)
+        self.response.headers['Content-Type'] = 'text/plain'
+        #self.response.headers['Content-Type'] = 'text/calendar'
+        self.response.write(cal.to_ical())
+
+
+
 class Seminars(EventListing):
 
     def get_template(self):
