@@ -101,8 +101,8 @@ class IcalExport(EventListing):
             desc += ev.description
             event['description'] = vText(desc)
             cal.add_component(event)
-        self.response.headers['Content-Type'] = 'text/plain'
-        #self.response.headers['Content-Type'] = 'text/calendar'
+        #self.response.headers['Content-Type'] = 'text/plain'
+        self.response.headers['Content-Type'] = 'text/calendar'
         self.response.write(cal.to_ical())
 
 
