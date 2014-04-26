@@ -39,7 +39,7 @@ beautify = BeautifyString(
     (ur"""\s*\(\)""", ur''),
     (ur"""\\\s*'e""", u'é'),
     (ur"""\\\s*`e""", u'è'),
-    (ur"""(http[s]?://[a-zA-Z0-9\.~_/]*)""", ur'<a href="\1">\1</a>'),
+    (ur"""(http[s]?://[a-zA-Z0-9\.~_/-]*)""", ur'<a href="\1">\1</a>'),
     (ur"""arXiv:([0-9][0-9][0-9][0-9]\.[0-9][0-9][0-9][0-9])""", ur'<a href="http://arxiv.org/abs/\1">arXiv:\1</a>'),
 #    (u'', u''),
 )
@@ -74,6 +74,7 @@ class IcalEvent(object):
         self.location = ''
         self.speaker = ''
         self.description = ''
+        print '-----\n', desc, '----\n'
         for line in desc.splitlines():
             match = self.SPEAKER_RE.match(line)
             if match:
@@ -84,7 +85,9 @@ class IcalEvent(object):
                 self.location = match.group(1)
                 continue
             self.description += line
+
         self.description = beautify(textwrap.dedent(self.description))
+        print '-----\n', self.description, '----\n'
 
     def __repr__(self):
         s = u'Event\n'
@@ -145,6 +148,8 @@ class CalendarSync(object):
         cal = icalendar.Calendar.from_ical(ical)
         author = cal.get('X-WR-CALNAME', 'Unknown source').strip()
         for event in cal.subcomponents:
+            if event.name != 'VEVENT':
+                continue
             event = IcalEvent(name, author, event, active_by_default)
             event.save()
             self.events.append(event)

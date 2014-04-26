@@ -142,4 +142,5 @@ body {
 
 .event_abstract {
     text-align: justify;
+    overflow: auto;
 }

@@ -40,6 +40,7 @@ menu_items = (
 from app.remote_calendars import Calendar
 remote_calendars = (
     # series name, ical url, where to include events by default
+    Calendar('Math/Physics', 'https://p02-calendarws.icloud.com/ca/subscribe/1/H27V2KdwHOwUP1-T2utnLgUfT4rbXQwJ20lQlolSc7lxsTg7Rj7k8USjJdnX3fuPx6EX7bhjx6Lf87LvlFpnxEUmjjbFR6VG4uDCu8EBW08', True),
     Calendar('String Theory', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/930/ical', True),
     Calendar('Quantum Field Theory', 'http://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/913/ical', True),
     Calendar('Geometry and Analysis', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/886/ical', False),
