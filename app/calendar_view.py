@@ -86,7 +86,7 @@ class IcalExport(EventListing):
         from icalendar import Calendar, Event, vCalAddress, vText
         cal = Calendar()
         cal.add('prodid', '-//Strings Oxford Calendaring//strings.ox.ac.uk//')
-        cal.add('version', '1.0')
+        cal.add('version', '2.0')
         cal.add('X-WR-CALNAME', 'Strings Oxford')
         for ev in self.get_events():
             event = Event()
