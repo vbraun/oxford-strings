@@ -57,6 +57,7 @@ class IcalEvent(object):
         self.series = series
         self.author = author
         self.active_by_default = active_by_default
+        self.location = str(event.get('LOCATION', ''))
         self.start_date = self._utc(event['DTSTART'].dt)
         self.end_date = self._utc(event['DTEND'].dt)
         self.title = beautify(event.get('SUMMARY', u'No summary').replace('\n', ''))
@@ -72,7 +73,6 @@ class IcalEvent(object):
         return dt
 
     def _init_description(self, desc):
-        self.location = ''
         self.speaker = ''
         self.description = ''
         for line in desc.splitlines():
