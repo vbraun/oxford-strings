@@ -160,6 +160,12 @@ class ThisWeek(EventListing):
         return query.order(Event.start_date).fetch(100)
 
 
+class ThisWeekEmail(ThisWeek):
+
+    def get_template(self):
+        return 'this_week_email.html'
+
+
 class NextWeek(ThisWeek):
     
     def get_template(self):

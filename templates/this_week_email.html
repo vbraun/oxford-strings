@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="/css/style.css"/>
+  </head>
+
+<body>
+  <h1>This Week</h1>
+
+<ol>
+{% for event in calendar %}
+<li>
+  <div style="font-size:12px;">
+    On {{ event.get_time() }} {{ event.get_where() }}, a seminar in
+    the {{ event.series }} series:
+  </div>
+  <div style="font-size:18px; font-weight:bold;">
+    {{ event.speaker }}
+  </div>
+  <div style="font-size:17px; color:#002147;">
+    {{ event.title }}
+  </div>
+  {% if event.description.strip() %}
+  <div style="font-size:12px;">
+    <b>Abstract:</b>
+    <em>{% autoescape false %}{{ event.description }}{% endautoescape %}</em>
+  </div>
+  {% endif %}
+<br/>
+</li>
+{% endfor %}
+</ol>
+
+</body>
+
+</html>
+
+
