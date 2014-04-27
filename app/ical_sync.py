@@ -10,6 +10,7 @@ import icalendar
 import textwrap
 import calendar
 import time
+import pytz
 from datetime import date, datetime
 import urllib2
 
@@ -67,10 +68,14 @@ class IcalEvent(object):
         """
         Convert date to datetime UTC
         """
-        if isinstance(dt, date):
+        if not isinstance(dt, datetime):   
+            # Note: datetime is subclass of date
             timestamp = time.mktime(dt.timetuple())
             dt = datetime.fromtimestamp(timestamp)
-        return dt
+        if dt.tzinfo is None:
+            dt = pytz.utc.localize(dt)
+        # App engine stores only UTC and without tzinfo
+        return dt.astimezone(pytz.utc).replace(tzinfo=None)
 
     def _init_description(self, desc):
         self.speaker = ''
@@ -123,6 +128,7 @@ class IcalEvent(object):
         ev.speaker = self.speaker
         ev.title = self.title
         ev.description = self.description
+        ev.seen = datetime.utcnow()
         ev.put()
 
 
@@ -156,7 +162,7 @@ class CalendarSync(object):
             event = IcalEvent(name, author, event, active_by_default)
             event.save()
             self.events.append(event)
-            
+
 
             
             

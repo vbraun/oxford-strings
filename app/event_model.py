@@ -24,6 +24,9 @@ class Event(ndb.Model):
     # The event unique id
     uid = ndb.StringProperty()
 
+    # When we saw the calendar entry the last time
+    seen = ndb.DateTimeProperty(indexed=False, required=False)
+
     editable = ndb.BooleanProperty()
     active = ndb.BooleanProperty()
 
