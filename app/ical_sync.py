@@ -50,6 +50,7 @@ class IcalEvent(object):
 
     SPEAKER_RE = re.compile(ur'^\s*Speaker:\s*(.*)')
     LOCATION_RE = re.compile(ur'^\s*Location:\s*(.*)')
+    SERIES_RE = re.compile(ur'^\s*Series:\s*(.*)')
 
     def __init__(self, series, author, event, active_by_default=False):
         self.uid = event['UID']
@@ -74,7 +75,6 @@ class IcalEvent(object):
         self.location = ''
         self.speaker = ''
         self.description = ''
-        print '-----\n', desc, '----\n'
         for line in desc.splitlines():
             match = self.SPEAKER_RE.match(line)
             if match:
@@ -84,10 +84,13 @@ class IcalEvent(object):
             if match:
                 self.location = match.group(1)
                 continue
+            match = self.SERIES_RE.match(line)
+            if match:
+                self.series = match.group(1)
+                continue
             self.description += line
 
         self.description = beautify(textwrap.dedent(self.description))
-        print '-----\n', self.description, '----\n'
 
     def __repr__(self):
         s = u'Event\n'

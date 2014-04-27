@@ -1,6 +1,8 @@
 <div class="event" id="{{ event.key.id() }}">
   <div class="event_toolbar">
-    <a href="#" class="calendar_event_hide_link" name="{{ event.key.id() }}">Hide</a>
+    {% if is_admin %}
+      <a href="#" class="calendar_event_hide_link" name="{{ event.key.id() }}">Hide</a>
+    {% endif %}
   </div>
   <div class="event_time_loc">
     On {{ event.get_time() }} {{ event.get_where() }}, a seminar in

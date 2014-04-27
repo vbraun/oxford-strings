@@ -32,6 +32,7 @@ menu_items = (
     MenuItem('Bag lunch',       '/cal/bag_lunch.html', 1),
     MenuItem('This week',       '/cal/this_week.html', 1),
     MenuItem('Next week',       '/cal/next_week.html', 1),
+    MenuItem('Subscribe',       '/subscribe.html', 1),
     MenuItem('Graduate study',  '/graduates.html'),
 )
 
