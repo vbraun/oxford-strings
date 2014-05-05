@@ -25,13 +25,13 @@ class Event(ndb.Model):
     uid = ndb.StringProperty()
 
     # When we saw the calendar entry the last time
-    seen = ndb.DateTimeProperty(indexed=False, required=False)
+    seen = ndb.DateTimeProperty(required=False)
 
     editable = ndb.BooleanProperty()
     active = ndb.BooleanProperty()
 
     start_date = ndb.DateTimeProperty()
-    end_date = ndb.DateTimeProperty()
+    end_date = ndb.DateTimeProperty(indexed=False)
     author = ndb.StringProperty(required=False, indexed=False)
     
     # The seminar series
@@ -39,7 +39,7 @@ class Event(ndb.Model):
     location= ndb.TextProperty(required=False)
     speaker = ndb.TextProperty(required=False)
     title = ndb.TextProperty(required=False)
-    description = ndb.TextProperty(required=False)
+    description = ndb.TextProperty(indexed=False, required=False)
     
 
 
