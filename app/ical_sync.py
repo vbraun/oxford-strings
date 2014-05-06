@@ -30,19 +30,19 @@ class BeautifyString(object):
 
 
 beautify = BeautifyString(
-    (ur"""\\\s*"a""", u'ä'),
-    (ur"""\\\s*"o""", u'ö'),
-    (ur"""\\\s*"u""", u'ü'),
-    (ur"""\\\s*"A""", u'Ä'),
-    (ur"""\\\s*"O""", u'Ö'),
-    (ur"""\\\s*"U""", u'Ü'),
-    (ur"""\\\s*\{ss\}""", u'ß'),
-    (ur"""\s*\(\)""", ur''),
-    (ur"""\\\s*'e""", u'é'),
-    (ur"""\\\s*`e""", u'è'),
     (ur"""(http[s]?://[a-zA-Z0-9\.~_/-]*)""", ur'<a href="\1">\1</a>'),
     (ur"""arXiv:([0-9][0-9][0-9][0-9]\.[0-9][0-9][0-9][0-9])""", ur'<a href="http://arxiv.org/abs/\1">arXiv:\1</a>'),
-#    (u'', u''),
+    # (ur"""\\\s*"a""", u'ä'),
+    # (ur"""\\\s*"o""", u'ö'),
+    # (ur"""\\\s*"u""", u'ü'),
+    # (ur"""\\\s*"A""", u'Ä'),
+    # (ur"""\\\s*"O""", u'Ö'),
+    # (ur"""\\\s*"U""", u'Ü'),
+    # (ur"""\\\s*\{ss\}""", u'ß'),
+    # (ur"""\s*\(\)""", ur''),
+    # (ur"""\\\s*'e""", u'é'),
+    # (ur"""\\\s*`e""", u'è'),
+    #    (u'', u''),
 )
 
 
@@ -93,7 +93,7 @@ class IcalEvent(object):
             if match:
                 self.series = match.group(1)
                 continue
-            self.description += line
+            self.description += line + '\n'
 
         self.description = beautify(textwrap.dedent(self.description))
 
