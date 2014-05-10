@@ -23,7 +23,7 @@
     On {{ event.get_time() }} {{ event.get_where() }}, a seminar in
     the {{ event.series }} series:
   </div>
-  <div style="font-size:18px; font-weight:bold;">
+  <div style="font-size:18px; font-weight:bold; padding-top:5px; padding-bottom: 3px;">
     {{ event.speaker }}
   </div>
   <div style="font-size:17px; color:#002147;">
@@ -31,7 +31,7 @@
   </div>
   {% if event.description.strip() %}
   <div style="font-size:12px;">
-    <b>Abstract:</b>
+    <b>Further information:</b>
     <em>{% autoescape false %}{{ event.description }}{% endautoescape %}</em>
   </div>
   {% endif %}

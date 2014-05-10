@@ -50,4 +50,5 @@ remote_calendars = (
     Calendar('Math Colloquium', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/874/ical', True),
     Calendar('Bag Lunch', 'https://www.google.com/calendar/ical/bkhromh605bm44dl8fuq4dip58%40group.calendar.google.com/public/basic.ics', True),
     Calendar('Relativity', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/915/ical', False),
+    Calendar('Physics', 'https://www2.physics.ox.ac.uk/ical/research/seminars', False),
 )
