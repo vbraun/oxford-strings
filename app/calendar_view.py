@@ -69,6 +69,7 @@ class EventListing(RequestHandler):
         values['sync_url'] = uri_for('cron-sync')
         values['calendar_admin_url'] = uri_for('calendar-admin')
         values['calendar'] = self.get_events()
+        values['abstract_intro'] = config.abstract_intro
         self.render_response(self.get_template(), **values)
         self.response.md5_etag()
 

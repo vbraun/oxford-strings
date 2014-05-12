@@ -31,8 +31,8 @@
   </div>
   {% if event.description.strip() %}
   <div style="font-size:12px;">
-    <b>Further information:</b>
-    <em>{% autoescape false %}{{ event.description }}{% endautoescape %}</em>
+    <b>{{ abstract_intro }}</b>
+    <em>{% autoescape false %}{{ event.get_description() }}{% endautoescape %}</em>
   </div>
   {% endif %}
 <br/>

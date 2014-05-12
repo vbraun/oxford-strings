@@ -82,3 +82,16 @@ default_series = (
 )
 
 default_series_lower_case = tuple(s.lower() for s in default_series)
+
+
+# How to start the abstract.
+abstract_intro = 'Further information:'
+
+# The following will be stripped off if they are at the beginning of
+# the abstract (case insensitive)
+strip_abstract_intro = tuple(s.lower() for s in [
+    abstract_intro,
+    'more information:',
+    'abstract:',
+])
+                             

@@ -12,6 +12,8 @@ import pytz
 UTC_TZ = pytz.utc
 LOCAL_TZ = pytz.timezone('Europe/London')
 
+import app.config as config
+
 
 class Event(ndb.Model):
     """
@@ -90,3 +92,16 @@ class Event(ndb.Model):
         Convert to the local time
         """
         return LOCAL_TZ.localize(dt).astimezone(UTC_TZ)
+
+
+    def get_description(self):
+        """
+        Return the description with the intro stripped out
+        """
+        desc = self.description.lstrip()
+        desc_lower = desc.lower()
+        for to_strip in config.strip_abstract_intro:
+            if desc_lower.startswith(to_strip):
+                desc = desc[len(to_strip):].lstrip()
+                desc_lower = desc_lower[len(to_strip):].lstrip()
+        return desc
