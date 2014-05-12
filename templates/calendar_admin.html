@@ -33,6 +33,9 @@ Oxford Strings Calendar
     <div class="event_table_series">{{ event.series }}</div>
     <div class="event_table_title">{{ event.title }}</div>
     <div class="event_table_speaker">{{ event.speaker }}</div>
+    {% if event.source %}
+      <div class="event_table_source">{{ event.source }}</div>
+    {% endif %}
   </div>
   {% endfor %}
 </div>

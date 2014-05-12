@@ -68,3 +68,10 @@ body {
     display: table-cell;
 }
 
+.event_table_source {
+    display: table-cell;
+    background-color: bbb;
+    font-size: 50%;
+    font-weight: 200;
+}
+

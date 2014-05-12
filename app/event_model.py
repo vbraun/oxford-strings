@@ -27,6 +27,9 @@ class Event(ndb.Model):
     # When we saw the calendar entry the last time
     seen = ndb.DateTimeProperty(required=False)
 
+    # Calendar source (see config.py)
+    source = ndb.StringProperty(required=False, indexed=False)
+
     editable = ndb.BooleanProperty()
     active = ndb.BooleanProperty()
 

@@ -14,6 +14,8 @@ import pytz
 from datetime import date, datetime
 import urllib2
 
+import app.config as config
+
 
 class BeautifyString(object):
     """
@@ -55,7 +57,8 @@ class IcalEvent(object):
 
     def __init__(self, series, author, event, active_by_default=False):
         self.uid = event['UID']
-        self.series = series
+        self.source = series
+        self.series = series    # may be overridden by the description
         self.author = author
         self.active_by_default = active_by_default
         self.location = str(event.get('LOCATION', ''))
@@ -117,9 +120,12 @@ class IcalEvent(object):
         from app.event_model import Event
         ev = Event.query(Event.uid == self.uid).fetch(1)
         if len(ev) == 0:
-            ev = Event(uid=self.uid, editable=False, active=self.active_by_default)
+            active = self.active_by_default or (
+                self.series.lower() in config.default_series_lower_case)
+            ev = Event(uid=self.uid, editable=False, active=active)
         else: 
             ev = ev[0]
+        ev.source = self.source
         ev.start_date = self.start_date
         ev.end_date = self.end_date
         ev.author = self.author

@@ -38,17 +38,47 @@ menu_items = (
 
 
 # The calendars to pull from
+# Note: the seminar series name can be overridden by a "Series: ..." line in the description
 from app.remote_calendars import Calendar
 remote_calendars = (
     # series name, ical url, where to include events by default
-    Calendar('Math/Physics', 'https://p02-calendarws.icloud.com/ca/subscribe/1/H27V2KdwHOwUP1-T2utnLgUfT4rbXQwJ20lQlolSc7lxsTg7Rj7k8USjJdnX3fuPx6EX7bhjx6Lf87LvlFpnxEUmjjbFR6VG4uDCu8EBW08', True),
-    Calendar('String Theory', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/930/ical', True),
-    Calendar('Quantum Field Theory', 'http://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/913/ical', True),
-    Calendar('Geometry and Analysis', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/886/ical', False),
-    Calendar('Algebraic and Symplectic Geometry', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/945/ical', False),
-    Calendar('Number Theory', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/903/ical', False),
-    Calendar('Math Colloquium', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/874/ical', True),
-    Calendar('Bag Lunch', 'https://www.google.com/calendar/ical/bkhromh605bm44dl8fuq4dip58%40group.calendar.google.com/public/basic.ics', True),
-    Calendar('Relativity', 'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/915/ical', False),
-    Calendar('Physics', 'https://www2.physics.ox.ac.uk/ical/research/seminars', False),
+    Calendar('Math/Physics', 
+             'https://p02-calendarws.icloud.com/ca/subscribe/1/H27V2KdwHOwU'
+             'P1-T2utnLgUfT4rbXQwJ20lQlolSc7lxsTg7Rj7k8USjJdnX3fuPx6EX7bhjx'
+             '6Lf87LvlFpnxEUmjjbFR6VG4uDCu8EBW08', True),
+    Calendar('String Theory', 
+             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/930/ical'),
+    Calendar('Quantum Field Theory', 
+             'http://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/913/ical'),
+    Calendar('Geometry and Analysis', 
+             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/886/ical'),
+    Calendar('Algebraic and Symplectic Geometry', 
+             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/945/ical'),
+    Calendar('Number Theory', 
+             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/903/ical'),
+    Calendar('Math Colloquium', 
+             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/874/ical'),
+    Calendar('Bag Lunch', 
+             'https://www.google.com/calendar/ical/bkhromh605bm44dl8fuq4dip'
+             '58%40group.calendar.google.com/public/basic.ics'),
+    Calendar('Relativity', 
+             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/915/ical'),
+    Calendar('Physics', 
+             'https://www2.physics.ox.ac.uk/ical/research/seminars'),
 )
+
+# Calendar sources (seminar series) whose events should be included by
+# default. All others must be picked manually using the
+# http://strings-oxford.appspot.com/cal/admin view.
+default_series = (
+    'String Theory',
+    'Quantum Field Theory',
+    'Math Colloquium',
+    'Bag Lunch',
+    'Holography Seminar',
+    'Particle Phenomenology Forum',
+    'Math/Physics',
+    'Theoretical Physics Colloquium',
+)
+
+default_series_lower_case = tuple(s.lower() for s in default_series)
