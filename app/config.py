@@ -79,6 +79,8 @@ default_series = (
     'Particle Phenomenology Forum',
     'Math/Physics',
     'Theoretical Physics Colloquium',
+    'Algebraic and Symplectic Geometry',
+    'Relativity',
 )
 
 default_series_lower_case = tuple(s.lower() for s in default_series)
