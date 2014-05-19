@@ -105,3 +105,10 @@ class Event(ndb.Model):
                 desc = desc[len(to_strip):].lstrip()
                 desc_lower = desc_lower[len(to_strip):].lstrip()
         return desc
+
+    def get_speaker(self):
+        """
+        Return the speaker with potential crap stripped out
+        """    
+        speaker = self.speaker.replace('()', '').strip()
+        return speaker

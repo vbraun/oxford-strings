@@ -81,6 +81,9 @@ default_series = (
     'Theoretical Physics Colloquium',
     'Algebraic and Symplectic Geometry',
     'Relativity',
+    'Geometry and Analysis',
+    'Particles and fields seminar',
+    'Colloquia seminar',
 )
 
 default_series_lower_case = tuple(s.lower() for s in default_series)

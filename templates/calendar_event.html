@@ -7,7 +7,7 @@
   <div class="event_time_loc">
     On {{ event.get_time() }} {{ event.get_where() }}, a seminar in
     the {{ event.series }} series:</div>
-  <div class="event_speaker">{{ event.speaker }}</div>
+  <div class="event_speaker">{{ event.get_speaker() }}</div>
   <div class="event_title">{{ event.title }}</div>
   {% if event.description.strip() %}
   <div class="event_abstract"><b>{{ abstract_intro }}</b>
