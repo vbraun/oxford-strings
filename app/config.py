@@ -65,6 +65,8 @@ remote_calendars = (
              'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/915/ical'),
     Calendar('Physics', 
              'https://www2.physics.ox.ac.uk/ical/research/seminars'),
+    Calendar('Twistor Workshop', 
+             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/1837/ical'),
 )
 
 # Calendar sources (seminar series) whose events should be included by
@@ -84,6 +86,7 @@ default_series = (
     'Geometry and Analysis',
     'Particles and fields seminar',
     'Colloquia seminar',
+    'Twistor Workshop',
 )
 
 default_series_lower_case = tuple(s.lower() for s in default_series)
