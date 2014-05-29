@@ -37,7 +37,7 @@ class BeautifyString(object):
         u'<a href="http://arxiv.org/abs/arXiv:1211.3410">arXiv:1211.3410</a>'
 
         >>> beautify('http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html')
-        u'<a href="http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html">http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html</a>'
+        u'<a href="http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html">http:/<wbr>/<wbr>www-thphys.physics.ox.ac.uk/<wbr>people/<wbr>AndreiStarinets/<wbr>oxford_holography_group/<wbr>holography_seminar/<wbr>seminar.html</a>'
     """
     def __init__(self, *search_replace_pairs):
         self._regexs = tuple((re.compile(search), replace)
