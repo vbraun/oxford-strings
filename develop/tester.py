@@ -5,7 +5,7 @@ import doctest
 import traceback
 from glob import glob
 
-from develop import config
+from develop.config import config
 
 
 class TesterABC(object):
@@ -82,8 +82,6 @@ class DocTester(TesterABC):
 
     def run(self):
         for m in self._modules:
-            from wendehals.autogen import doctest_reset
-            doctest_reset()
             doctest.testmod(m)
 
 

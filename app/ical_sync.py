@@ -17,9 +17,27 @@ import urllib2
 import app.config as config
 
 
+
 class BeautifyString(object):
-    """
+    r"""
     Remove various crap
+
+    EXAMPLES::
+
+        >>> from app.ical_sync import beautify
+        >>> beautify('12355')
+        '12355'
+        >>> beautify('arXiv:1234.5678')
+        u'<a href="http://arxiv.org/abs/1234.5678">arXiv:1234.5678</a>'
+
+        >>> beautify('arXiv:1234.5678 and arXiv:1234.5679')
+        u'<a href="http://arxiv.org/abs/1234.5678">arXiv:1234.5678</a> and <a href="http://arxiv.org/abs/1234.5679">arXiv:1234.5679</a>'
+
+        >>> beautify('http://arxiv.org/abs/arXiv:1211.3410')
+        u'<a href="http://arxiv.org/abs/arXiv:1211.3410">arXiv:1211.3410</a>'
+
+        >>> beautify('http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html')
+        u'<a href="http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html">http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html</a>'
     """
     def __init__(self, *search_replace_pairs):
         self._regexs = tuple((re.compile(search), replace)
@@ -28,12 +46,38 @@ class BeautifyString(object):
     def __call__(self, string):
         for regex, replace in self._regexs:
             string = regex.sub(replace, string)
-        return string
+        return self._linkify(string)
+
+    LINK_RE = re.compile("""(?<!["/])(http[s]?://[a-zA-Z0-9\.~_/\-:]*)""")
+    
+    def _linkify(self, text):
+        cursor_pos = 0
+        output = ''
+        for match in self.LINK_RE.finditer(text):
+            output += text[cursor_pos:match.start(1)]
+            url = match.group(1)
+            output += ur'<a href="' + url + '">'
+            output += self._simplify_link_name(url)
+            output += ur'</a>'
+            cursor_pos = match.end(1)
+        output += "".join([text[cursor_pos:]])
+        return output
+        
+    def _simplify_link_name(self, url):
+        # version 1
+        arxiv = 'http://arxiv.org/abs/arXiv:'
+        if url.startswith(arxiv):
+            url = 'arXiv:' + url[len(arxiv):].strip()
+        # version 2
+        arxiv = 'http://arxiv.org/abs/'
+        if url.startswith(arxiv):
+            url = 'arXiv:' + url[len(arxiv):].strip()
+        url = re.sub('/', '/<wbr>', url)
+        return url
 
 
 beautify = BeautifyString(
-    (ur"""(http[s]?://[a-zA-Z0-9\.~_/-]*)""", ur'<a href="\1">\1</a>'),
-    (ur"""arXiv:([0-9][0-9][0-9][0-9]\.[0-9][0-9][0-9][0-9])""", ur'<a href="http://arxiv.org/abs/\1">arXiv:\1</a>'),
+    (ur"""(?<!/)ar[xX]iv:([0-9][0-9][0-9][0-9]\.[0-9][0-9][0-9][0-9])""", ur'http://arxiv.org/abs/\1'),
     # (ur"""\\\s*"a""", u'ä'),
     # (ur"""\\\s*"o""", u'ö'),
     # (ur"""\\\s*"u""", u'ü'),
@@ -50,6 +94,10 @@ beautify = BeautifyString(
 
 
 class IcalEvent(object):
+    """
+    Event read from ICal source
+    """
+    
 
     LOCATION_RE = re.compile(ur'^\s*Location:\s*(.*)')
     SPEAKER_RE = re.compile(ur'^\s*Speaker:\s*(.*)')
@@ -144,6 +192,8 @@ class IcalEvent(object):
                 desc = desc[len(to_strip):].lstrip()
                 desc_lower = desc_lower[len(to_strip):].lstrip()
         desc = desc.strip('/ \n')
+        if desc == 'No description':
+            return ''
         return desc
 
     def __repr__(self):

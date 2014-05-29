@@ -1,0 +1,119 @@
+#!/usr/bin/python
+
+import os
+import sys
+
+
+
+def setup():
+    from develop.sdk_path import get_sdk_path
+    sdk_path = get_sdk_path()
+    sys.modules.pop('google', None)
+    sys.path.insert(0, sdk_path)
+    import dev_appserver
+    dev_appserver.fix_sys_path()
+
+
+DOCTEST_DIRS = (
+    'app', 
+)    
+
+UNITTEST_DIRS = (
+    'app/test',
+)
+
+WATCH_DIRS = set(DOCTEST_DIRS + UNITTEST_DIRS)
+
+    
+def watch():
+    from develop.config import config
+    try:
+        import pyinotify
+        print('Watching for filesystem changes')
+    except ImportError:
+        print('pyinotify not found, cannot watch filesystem')
+        sys.exit(1)
+
+    class OnCloseWriteHandler(pyinotify.ProcessEvent):
+        def process_IN_CLOSE_WRITE(self, event):
+            if not event.pathname.endswith('.py'):
+                return
+            from subprocess import check_call, CalledProcessError
+            try:
+                check_call([sys.argv[0], '--doc', event.pathname])
+                check_call([sys.argv[0], '--unit', event.pathname])
+                check_call([sys.argv[0], '--doc', '--unit'])
+            except CalledProcessError:
+                pass
+
+
+    wm = pyinotify.WatchManager()
+    handler = OnCloseWriteHandler()
+    notifier = pyinotify.Notifier(wm, default_proc_fun=handler)
+    for path in WATCH_DIRS:
+        path = os.path.join(config.HOME_DIR, path)
+        print('watching {}'.format(path))
+        wm.add_watch(path, pyinotify.IN_CLOSE_WRITE)
+    notifier.loop()
+
+
+
+def run_doctests(filename=None):
+    from develop.tester import DocTester
+    dt = DocTester()
+    if filename is None:
+        dt.add_dir(*DOCTEST_DIRS)
+    else:
+        dt.add_file(filename)
+    dt.run()
+
+
+def run_unittests(filename=None):
+    from develop.tester import UnitTester
+    ut = UnitTester()
+    if filename is None:
+        ut.add_dir(*UNITTEST_DIRS)
+    else:
+        ut.add_file(filename)
+    ut.run()
+
+
+def run_all(filename=None):
+    from subprocess import check_call
+    file_arg = [] if filename is None else [filename]
+    check_call([sys.argv[0], '--doc']  + file_arg)
+    check_call([sys.argv[0], '--unit'] + file_arg)
+    
+
+
+description = \
+"""
+Run Automatted Tests
+
+Watches for filesystem changes if no argument is specified. Otherwise,
+the specified test is run.
+"""
+
+if __name__ == '__main__':
+    setup()
+    from argparse import ArgumentParser
+    parser = ArgumentParser(description=description)
+    parser.add_argument('-d', '--doc', dest='doc', action='store_true',
+                        default=False, help='Run doctests')
+    parser.add_argument('-u', '--unit', dest='unit', action='store_true',
+                        default=False, help='Run unittests')
+    parser.add_argument('file_py', metavar='file.py', nargs='?', 
+                        type=str, default=None, help='File to doctest')
+    args = parser.parse_args()
+    if args.doc:
+        run_doctests(args.file_py)
+    if args.unit:
+        run_unittests(args.file_py)
+    if not (args.doc or args.unit):
+        if args.file_py:
+            run_all(args.file_py)
+        else:
+            run_all()
+            watch()
+
+    

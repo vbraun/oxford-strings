@@ -1,34 +1,31 @@
 # -*- coding: utf-8 -*-
 """
-Configuration for when NOT running on Appengine.
+Configuration for development (tests etc)
 """
-
-from app.config import *
-
-# import os
-# import sys
-
-
-# HOME_DIR = os.path.dirname(os.path.dirname(__file__))
-
-TEST_DIR = os.path.join(APP_DIR, 'app', 'test')
-
-
-GIT_CONFIG_HELP = """
-Google Appengine SDK path not configured. Run something like
-
-    git config googleappengine.path /home/vbraun/opt/google_appengine
-
-in the project directory to set it up.
-""".strip()
-
-def get_sdk_path():
-    from .git_interface import GitInterface, GitError
-    git = GitInterface()
-    try:
-        return git.config('googleappengine.path').strip()
-    except GitError:
-        print(GIT_CONFIG_HELP)
-        import sys
-        sys.exit(1)
     
+
+import os
+
+from google.appengine.api import lib_config
+#from app.config import config as app_config
+import app.config as app_config
+from develop.sdk_path import get_sdk_path
+
+class _ConfigDefaults(object):
+
+    # Set up paths. Only change this if you reorganize the project directory
+    HOME_DIR = app_config.HOME_DIR
+    TEMPLATES_DIR = app_config.TEMPLATES_DIR
+    CSS_DIR = app_config.CSS_DIR
+    JS_DIR = app_config.JS_DIR
+
+    # whether or not we are running on the dev appserver (True) or on Appengine (False)
+    DEV_SERVER = False
+
+    TEST_DIR = os.path.join(app_config.HOME_DIR, 'app', 'test')
+
+    get_sdk_path = get_sdk_path
+
+
+config = lib_config.register('develop',  _ConfigDefaults.__dict__)
+
