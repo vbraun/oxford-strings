@@ -93,22 +93,19 @@ class Event(ndb.Model):
         """
         return LOCAL_TZ.localize(dt).astimezone(UTC_TZ)
 
-
-    def get_description(self):
-        """
-        Return the description with the intro stripped out
-        """
-        desc = self.description.lstrip()
-        desc_lower = desc.lower()
-        for to_strip in config.strip_abstract_intro:
-            if desc_lower.startswith(to_strip):
-                desc = desc[len(to_strip):].lstrip()
-                desc_lower = desc_lower[len(to_strip):].lstrip()
-        return desc
-
     def get_speaker(self):
         """
         Return the speaker with potential crap stripped out
         """    
         speaker = self.speaker.replace('()', '').strip()
         return speaker
+
+    def get_series_without_seminar(self):
+        """
+        Return the series without "... Seminar" at the end.
+        """
+        seminar = 'seminar'
+        if self.series.lower().endswith(seminar):
+            return self.series[:-len(seminar)].strip()
+        else:
+            return self.series

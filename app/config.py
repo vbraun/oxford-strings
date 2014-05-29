@@ -46,22 +46,22 @@ remote_calendars = (
              'https://p02-calendarws.icloud.com/ca/subscribe/1/H27V2KdwHOwU'
              'P1-T2utnLgUfT4rbXQwJ20lQlolSc7lxsTg7Rj7k8USjJdnX3fuPx6EX7bhjx'
              '6Lf87LvlFpnxEUmjjbFR6VG4uDCu8EBW08', True),
-    Calendar('String Theory', 
+    Calendar('String Theory Seminar', 
              'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/930/ical'),
     Calendar('Quantum Field Theory', 
              'http://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/913/ical'),
-    Calendar('Geometry and Analysis', 
+    Calendar('Geometry and Analysis Seminar', 
              'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/886/ical'),
     Calendar('Algebraic and Symplectic Geometry', 
              'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/945/ical'),
-    Calendar('Number Theory', 
+    Calendar('Number Theory Seminar', 
              'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/903/ical'),
     Calendar('Math Colloquium', 
              'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/874/ical'),
     Calendar('Bag Lunch', 
              'https://www.google.com/calendar/ical/bkhromh605bm44dl8fuq4dip'
              '58%40group.calendar.google.com/public/basic.ics'),
-    Calendar('Relativity', 
+    Calendar('Relativity Seminar', 
              'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/915/ical'),
     Calendar('Physics', 
              'https://www2.physics.ox.ac.uk/ical/research/seminars'),
@@ -73,17 +73,17 @@ remote_calendars = (
 # default. All others must be picked manually using the
 # http://strings-oxford.appspot.com/cal/admin view.
 default_series = (
-    'String Theory',
-    'Quantum Field Theory',
+    'String Theory Seminar',
+    'Quantum Field Theory Seminar',
     'Math Colloquium',
     'Bag Lunch',
     'Holography Seminar',
     'Particle Phenomenology Forum',
     'Math/Physics',
     'Theoretical Physics Colloquium',
-    'Algebraic and Symplectic Geometry',
-    'Relativity',
-    'Geometry and Analysis',
+    'Algebraic and Symplectic Geometry Seminar',
+    'Relativity Seminar',
+    'Geometry and Analysis Seminar',
     'Particles and fields seminar',
     'Colloquia seminar',
     'Twistor Workshop',
@@ -100,6 +100,7 @@ abstract_intro = 'Further information:'
 strip_abstract_intro = tuple(s.lower() for s in [
     abstract_intro,
     'more information:',
+    'furthern information:',
     'abstract:',
 ])
                              

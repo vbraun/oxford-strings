@@ -1,69 +1,24 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 METHOD:PUBLISH
-X-WR-CALNAME: Algebra Seminar | Mathematical Institute - University of Oxford
+X-WR-CALNAME: String Theory Seminar | Mathematical Institute - University of Oxford
 PRODID:-//Drupal iCal API//EN
 BEGIN:VEVENT
-UID:calendar.24867.field_seminar_time.0.0
-SUMMARY:TBA
-DTSTAMP:20140423T225454Z
-DTSTART:20140506T160000Z
-DTEND:20140506T170000Z
-URL;VALUE=URI:https://www.maths.ox.ac.uk/node/24867
-DESCRIPTION:Speaker: Alain Valette (Universite de Neuchatel)\n Location: C5\n Further information: http://www.maths.ox.ac.uk/node/24867
+UID:calendar.25511.field_seminar_time.0.0
+SUMMARY:String Spectra and Effective Actions with Minimal Supersymmetry in the Type I  \n Context
+DTSTAMP:20140529T202104Z
+DTSTART:20140609T110000Z
+DTEND:20140609T120000Z
+URL;VALUE=URI:https://www.maths.ox.ac.uk/node/25511
+DESCRIPTION:Seminar: String Theory Seminar\n Speaker: Igor Buchberger\n University: Karlstad University\n Location: L5\n Abstract: /I will discuss four-dimensional minimally supersymmetric toroidal  \n orientifold models with D-branes and worldvolume flux. With flux but no  \n orbifold projection\, these models are well understood. They have been used  \n extensively in various phenomenological contexts\, and are T-dual to D-branes  \n at angles. With orbifold\, supersymmetry is reduced also in the closed string  \n sector\, and T-duality relations are not always straightforward. I will  \n discuss work in progress on aspects of the one-loop string effective actions  \n of these more general models./
 END:VEVENT
 BEGIN:VEVENT
-UID:calendar.24868.field_seminar_time.0.1
-SUMMARY:TBA
-DTSTAMP:20140423T225454Z
-DTSTART:20140610T160000Z
-DTEND:20140610T170000Z
-URL;VALUE=URI:https://www.maths.ox.ac.uk/node/24868
-DESCRIPTION:Speaker: Jon Gonzalez Sanchez (Universidad Autonoma de Madrid)\n Location: C5\n Further information: http://www.maths.ox.ac.uk/node/24868
-END:VEVENT
-BEGIN:VEVENT
-UID:calendar.24902.field_seminar_time.0.2
-SUMMARY:Virtual Endomorphisms of Groups
-DTSTAMP:20140423T225454Z
-DTSTART:20140429T160000Z
-DTEND:20140429T170000Z
-URL;VALUE=URI:https://www.maths.ox.ac.uk/node/24902
-DESCRIPTION:Speaker: Said Sidki (Universidade de Brasília)\n Location: C5\n Further information: http://www.maths.ox.ac.uk/node/24902
-END:VEVENT
-BEGIN:VEVENT
-UID:calendar.24910.field_seminar_time.0.3
-SUMMARY:TBA
-DTSTAMP:20140423T225454Z
-DTSTART:20140513T160000Z
-DTEND:20140513T170000Z
-URL;VALUE=URI:https://www.maths.ox.ac.uk/node/24910
-DESCRIPTION:Speaker: Eric Swenson (Brigham Young)\n Location: C5\n Further information: http://www.maths.ox.ac.uk/node/24910
-END:VEVENT
-BEGIN:VEVENT
-UID:calendar.25324.field_seminar_time.0.4
-SUMMARY:Finite subgroups of the classical groups
-DTSTAMP:20140423T225454Z
-DTSTART:20140527T160000Z
-DTEND:20140527T170000Z
-URL;VALUE=URI:https://www.maths.ox.ac.uk/node/25324
-DESCRIPTION:Speaker: Michael Collins (Oxford University)\n Location: C5\n Further information: http://www.maths.ox.ac.uk/node/25324
-END:VEVENT
-BEGIN:VEVENT
-UID:calendar.25448.field_seminar_time.0.5
-SUMMARY:tba
-DTSTAMP:20140423T225454Z
-DTSTART:20140603T160000Z
-DTEND:20140603T170000Z
-URL;VALUE=URI:https://www.maths.ox.ac.uk/node/25448
-DESCRIPTION:Speaker: Tsachik Gelander (Weizmann Institute)\n Location: C5\n Further information: http://www.maths.ox.ac.uk/node/25448
-END:VEVENT
-BEGIN:VEVENT
-UID:calendar.25466.field_seminar_time.0.6
-SUMMARY:The subgroup structure of automorphism groups of a partially commutative  \n groups
-DTSTAMP:20140423T225454Z
-DTSTART:20140520T160000Z
-DTEND:20140520T170000Z
-URL;VALUE=URI:https://www.maths.ox.ac.uk/node/25466
-DESCRIPTION:Speaker: Andrew Duncan (Newcastle)\n Location: C5\n Further information: http://www.maths.ox.ac.uk/node/25466
+UID:calendar.25512.field_seminar_time.0.1
+SUMMARY:The Landscape
+DTSTAMP:20140529T202104Z
+DTSTART:20140616T110000Z
+DTEND:20140616T120000Z
+URL;VALUE=URI:https://www.maths.ox.ac.uk/node/25512
+DESCRIPTION:Seminar: String Theory Seminar\n Speaker: Laura Mersini Houghton\n University: University of North Carolina at Chapel Hill\n Location: L5\n Abstract: /I will discuss the validity of the claims that eternal inflation  \n populates the landscape and show the reasons for the mathematical  \n inconsistency between the two. Within the formalism of quantum cosmology\,  \n solutions for the wavefunction of the universe to the landscape are Anderson  \n localized. The latter can give rise to observational tests of the landscape\,  \n some of which are already supported from Planck's findings of anomalies at  \n large scales./
 END:VEVENT
 END:VCALENDAR

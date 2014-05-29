@@ -4,674 +4,192 @@ METHOD:PUBLISH
 X-WR-CALNAME: Seminars | University of Oxford Department of Physics
 PRODID:-//Drupal iCal API//EN
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3443
-DESCRIPTION:Title: Aerosol Forcing:  Last Century's Problem\nSpeaker: Bjorn Stevens (MPI)\nSeries: Atmospheric, Oceanic and Planetary Physics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:Aerosol Forcing:  Last Century's Problem
-DTSTART;VALUE=DATE-TIME:20140508T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3692
-DESCRIPTION:Title: Jets as probes of strongly coupled hot QCD matter\nSpeaker: Jorge Casalderrey Solana (University of Barcelona)\nSeries: Particles and fields seminar\nFurther information: http://arxiv.org/abs/arXiv:1101.0618
-LOCATION:Sciama Lecture Theatre
-SUMMARY:Jets as probes of strongly coupled hot QCD matter
-DTSTART;VALUE=DATE-TIME:20140508T151500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3740
-DESCRIPTION:Title: TBA\nSpeaker: Alexander Karlberg (University of Oxford)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140508T120000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3763
-DESCRIPTION:Title: Quantum criticality in the heavy fermion compound Ce3Pd20Si6 (Host: Radu Coldea)\nSpeaker: Prof Dr Silke Buehler-Paschen (Vienna University of Technology)\nSeries: Condensed Matter Physics seminar\nFurther information: http://www2.physics.ox.ac.uk/sites/default/files/2011-05-27/08_05_2014_pdf_21534.pdf
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:Quantum criticality in the heavy fermion compound Ce3Pd20Si6 (Host: Radu Coldea)
-DTSTART;VALUE=DATE-TIME:20140508T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3838
-DESCRIPTION:Title: The use of voids in cosmology\nSpeaker: Seshadri Nadathur (Helsinki)\nSeries: Cosmology
-LOCATION:BIPAC seminar room
-SUMMARY:The use of voids in cosmology
-DTSTART;VALUE=DATE-TIME:20140508T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3777
-DESCRIPTION:Title: Memory effects in avalanche dynamics: a key to the statistical properties of earthquakes\nSpeaker: Alberto Rosso (Universite Paris Sud, Orsay)\nSeries: Theoretical Condensed Matter seminar\nFurther information: http://www-thphys.physics.ox.ac.uk/talks/solids/abstracts/rosso.html
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:Memory effects in avalanche dynamics: a key to the statistical properties of earthquakes
-DTSTART;VALUE=DATE-TIME:20140509T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3800
-DESCRIPTION:Title: Linear Resistivity from Hydrodynamics\nSpeaker: Richard Davison (U. Leiden)\nSeries: Holography Seminar\nFurther information: http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html
-LOCATION:DWB 501 (Seminar Room)
-SUMMARY:Linear Resistivity from Hydrodynamics
-DTSTART;VALUE=DATE-TIME:20140512T160000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3762
-DESCRIPTION:Title: Coherent cavity networks with complete connectivity (Host: Dr Axel Kuhn)\nSpeaker: Dr Almut Beige (University of Leeds)\nSeries: Atomic and Laser Physics seminar\nFurther information: http://www2.physics.ox.ac.uk/sites/default/files/2011-05-27/12_05_2014_pdf_15997.pdf
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:Coherent cavity networks with complete connectivity (Host: Dr Axel Kuhn)
-DTSTART;VALUE=DATE-TIME:20140512T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3754
-DESCRIPTION:Title: XLENS: The Initial Mass Function of Massive Early-Type Galaxies\nSpeaker: Dr. C. Spiniello (Max Planck Garching)\nSeries: Astrophysics Colloquia
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:XLENS: The Initial Mass Function of Massive Early-Type Galaxies
-DTSTART;VALUE=DATE-TIME:20140512T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3844
-DESCRIPTION:Title: TBC\nSpeaker: Dr Jorg Zegenhagen (Diamond Light Source)\nSeries: Condensed Matter Physics seminar
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140512T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3847
-DESCRIPTION:Title: Numerical Holography and Colliding Shocks\nSpeaker: Larry Yaffe (U. Washington)\nSeries: Holography Seminar\nFurther information: http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html
-LOCATION:501, DWB (Seminar Room)
-SUMMARY:Numerical Holography and Colliding Shocks
-DTSTART;VALUE=DATE-TIME:20140513T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3803
-DESCRIPTION:Title: AMS Results\nSpeaker: Dr Thorsten Siedenburg (RWTH, Aachen)\nSeries: Particle Physics seminar
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:AMS Results
-DTSTART;VALUE=DATE-TIME:20140513T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3788
-DESCRIPTION:Title: How does the ocean achieve diapycnal upwelling (as apposed to downwelling)?\nSpeaker: Trevor McDougall (University of New South Wales)\nSeries: Geophysical and Nonlinear Fluid Dynamics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:How does the ocean achieve diapycnal upwelling (as apposed to downwelling)?
-DTSTART;VALUE=DATE-TIME:20140513T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3795
-DESCRIPTION:Title: Exact Refermionization of the two-channel electronic Mach-Zehnder interferometer\nSpeaker: Mathias Rufino (Oxford)\nSeries: Informal Condensed Matter seminar
-LOCATION:DWB Fisher Room
-SUMMARY:Exact Refermionization of the two-channel electronic Mach-Zehnder interferometer
-DTSTART;VALUE=DATE-TIME:20140514T101500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3833
-DESCRIPTION:Title: TBC\nSpeaker: Sara Motta (ESAC-Madrid)\nSeries: (SPI-MAX) coffee
-LOCATION:BIPAC seminar room
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140514T100000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3839
-DESCRIPTION:Title: TBA\nSpeaker: Tomislav Prokopec (Utrecht)\nSeries: Cosmology
-LOCATION:BIPAC seminar room
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140515T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3693
-DESCRIPTION:Title: F-theory compactifications and their effective physics\nSpeaker: Thomas Grimm (Max-Planck Institut fur Physik, Munich)\nSeries: Particles and fields seminar\nFurther information: http://wwwth.mpp.mpg.de/members/grimm/
-LOCATION:Sciama Lecture Theatre
-SUMMARY:F-theory compactifications and their effective physics
-DTSTART;VALUE=DATE-TIME:20140515T151500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3732
-DESCRIPTION:Title: TBC\nSpeaker: Shravan Shetty (TBC)\nSeries: Galaxy Evolution Seminars (Thursdays)
-LOCATION:Bipac Seminar Room, DWB
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140515T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3609
-DESCRIPTION:Title: TBA\nSpeaker: Brian Feldstein (University of Oxford)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140515T120000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3602
-DESCRIPTION:Title: Making monthly-to-seasonal forecasts useful\nSpeaker: Alberto Arribas (Met Office)\nSeries: Atmospheric, Oceanic and Planetary Physics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:Making monthly-to-seasonal forecasts useful
-DTSTART;VALUE=DATE-TIME:20140515T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3819
-DESCRIPTION:Title: TBC\nSpeaker: Laurence Yaffe (University of Washington)\nSeries: Theoretical Physics Colloquia
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140516T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3789
-DESCRIPTION:Title: My Life as Boson: please book your place at http://cherwell-simon-lecture2014.eventbrite.co.uk\nSpeaker: Professor Peter Higgs (Emeritus Professor University of Edinburgh)\nSeries: Colloquia seminar
-LOCATION:http://cherwell-simon-lecture2014.eventbrite.co.uk
-SUMMARY:My Life as Boson: please book your place at http://cherwell-simon-lecture2014.eventbrite.co.uk
-DTSTART;VALUE=DATE-TIME:20140516T153000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3846
-DESCRIPTION:Title: 55th SIMON-CHERWELL MEMORIAL LECTURE: My Life As Boson (Host: Prof Paolo Radaelli)\nSpeaker: Professor Peter Higgs (University of Edinburgh)\nSeries: Condensed Matter Physics seminar
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:55th SIMON-CHERWELL MEMORIAL LECTURE: My Life As Boson (Host: Prof Paolo Radaelli)
-DTSTART;VALUE=DATE-TIME:20140516T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3783
-DESCRIPTION:Title: TBC\nSpeaker: Dr Eilon Poem Kalogerakis (Department of Physics)\nSeries: Atomic and Laser Physics seminar
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140519T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3755
-DESCRIPTION:Title: Growth Spurting Baby Galaxies: The Seeds of Present-Day Massive Galaxies\nSpeaker: Dr. S. Khochfar (University of Edinburgh)\nSeries: Astrophysics Colloquia
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:Growth Spurting Baby Galaxies: The Seeds of Present-Day Massive Galaxies
-DTSTART;VALUE=DATE-TIME:20140519T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3793
-DESCRIPTION:Title: Bespoke climate services: developing products for the wind power industry with decisions in mind\nSpeaker: David Macleod (AOPP)\nSeries: Informal AOPP seminars
-LOCATION:Dobson Room
-SUMMARY:Bespoke climate services: developing products for the wind power industry with decisions in mind
-DTSTART;VALUE=DATE-TIME:20140520T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3829
-DESCRIPTION:Title: Flight of the Fruit Fly\nSpeaker: Prof Itai Cohen (Cornell University, United States)\nSeries: Softbio
-LOCATION:JSR seminar room, PTCL
-SUMMARY:Flight of the Fruit Fly
-DTSTART;VALUE=DATE-TIME:20140520T150000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3815
-DESCRIPTION:Title: New Physics searches through suppressed Penguin processes at LHCb\nSpeaker: Dr Kostas Petridis (Imperial College London)\nSeries: Particle Physics seminar
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:New Physics searches through suppressed Penguin processes at LHCb
-DTSTART;VALUE=DATE-TIME:20140520T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3834
-DESCRIPTION:Title: TBC\nSpeaker: Odele Straub (Observatoire de Paris)\nSeries: (SPI-MAX) coffee
-LOCATION:BIPAC seminar room
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140521T100000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3796
-DESCRIPTION:Title: TBD\nSpeaker: Imke Schneider (Oxford)\nSeries: Informal Condensed Matter seminar
-LOCATION:DWB 501
-SUMMARY:TBD
-DTSTART;VALUE=DATE-TIME:20140521T101500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3811
-DESCRIPTION:Title: TBA\nSpeaker: Felix Kahlhoefer (University of Oxford)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140522T123000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3764
-DESCRIPTION:Title: TBC (Host: Dr Radu Coldea)\nSpeaker: Prof Dirk Van Der Marel (University of Geneva, Switzerland)\nSeries: Condensed Matter Physics seminar
-LOCATION:Audrey Wood Room, Clarendon Laboratory
-SUMMARY:TBC (Host: Dr Radu Coldea)
-DTSTART;VALUE=DATE-TIME:20140522T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3739
-DESCRIPTION:Title: TBA\nSpeaker: Robert Lasenby (University of Oxford)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140522T120000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3603
-DESCRIPTION:Title: Amplification mechanisms for solar-climate connections\nSpeaker: Gavin Schmidt (NASA, GISS)\nSeries: Atmospheric, Oceanic and Planetary Physics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:Amplification mechanisms for solar-climate connections
-DTSTART;VALUE=DATE-TIME:20140522T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3694
-DESCRIPTION:Title: No-scale supergravity realization of the Starobinsky model of inflation\nSpeaker: John Ellis (King's College, London)\nSeries: Particles and fields seminar\nFurther information: http://arxiv.org/abs/1305.1247
-LOCATION:Sciama Lecture Theatre
-SUMMARY:No-scale supergravity realization of the Starobinsky model of inflation
-DTSTART;VALUE=DATE-TIME:20140522T151500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3663
-DESCRIPTION:Title: PT-symmetric Quantum Mechanics\nSpeaker: Professor Carl M Bender (Washington University in St Louis)\nSeries: Colloquia seminar
-LOCATION:Martin Wood Lecture Theatre, Clarendon Laboratory
-SUMMARY:PT-symmetric Quantum Mechanics
-DTSTART;VALUE=DATE-TIME:20140523T151500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3778
-DESCRIPTION:Title: Twisted Crystals and Vortices in Superfluid Helium Films\nSpeaker: David Nelson (Harvard University)\nSeries: Theoretical Condensed Matter seminar\nFurther information: http://www-thphys.physics.ox.ac.uk/talks/solids/abstracts/nelson.html
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:Twisted Crystals and Vortices in Superfluid Helium Films
-DTSTART;VALUE=DATE-TIME:20140523T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3837
-DESCRIPTION:Title: Finite Endpoint Momentum Strings and Applications to Energy Loss\nSpeaker: Andrej Ficnar (Columbia U.)\nSeries: Holography Seminar\nFurther information: http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html
-LOCATION:DWB 501 (Seminar Room)
-SUMMARY:Finite Endpoint Momentum Strings and Applications to Energy Loss
-DTSTART;VALUE=DATE-TIME:20140526T160000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3836
-DESCRIPTION:Title: Generalized Entropy and Higher Derivative Gravity\nSpeaker: Joan Camps (DAMTP Cambridge)\nSeries: Holography Seminar\nFurther information: http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html
-LOCATION:DWB 501 (Seminar Room)
-SUMMARY:Generalized Entropy and Higher Derivative Gravity
-DTSTART;VALUE=DATE-TIME:20140527T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3804
-DESCRIPTION:Title: The SNOOPY Proposal\nSpeaker: Professor Andrei Goultvin (Imperial College, London)\nSeries: Particle Physics seminar
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:The SNOOPY Proposal
-DTSTART;VALUE=DATE-TIME:20140527T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3813
-DESCRIPTION:Title: TBA\nSpeaker: Edward Hardy (University of Oxford)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140529T123000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3840
-DESCRIPTION:Title: TBA\nSpeaker: Clare Burrage (Nottingham)\nSeries: Cosmology
-LOCATION:BIPAC seminar room
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140529T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3842
-DESCRIPTION:Title: TBC\nSpeaker: Dr Timothy Craggs (University of Oxford)\nSeries: Condensed Matter Physics seminar
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140529T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3738
-DESCRIPTION:Title: TBA\nSpeaker: Ciaran Williams (Niels Bohr Institute)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140529T120000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140529T151500Z
+DTEND;VALUE=DATE-TIME:20140529T151500Z
 UID:physicsseminar-3725
-DESCRIPTION:Title: Bounding the Higgs width at the LHC\nSpeaker: Ciaran Williams (NBI Copenhagen)\nSeries: Particles and fields seminar\nFurther information: http://arxiv.org/abs/1312.1628
 LOCATION:Sciama Lecture Theatre
 SUMMARY:Bounding the Higgs width at the LHC
-DTSTART;VALUE=DATE-TIME:20140529T151500Z
+DESCRIPTION:Speaker: Ciaran Williams (NBI Copenhagen)\n Series: Particles and fields seminar\n \n Further information: http://arxiv.org/abs/1312.1628
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3734
-DESCRIPTION:Title: Searching for protoclusters\nSpeaker: Kate Husband (Bristol)\nSeries: Galaxy Evolution Seminars (Thursdays)
-LOCATION:Bipac Seminar Room, DWB
-SUMMARY:Searching for protoclusters
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140529T120000Z
+DTEND;VALUE=DATE-TIME:20140529T120000Z
+UID:physicsseminar-3738
+LOCATION:Dalitz Institute\, DWB
+SUMMARY:Inhomogeneities in cosmology
+DESCRIPTION:Speaker: David Kraljic (University of Oxford)\n Series: Particle Phenomenology Forum\n 
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140529T123000Z
+DTEND;VALUE=DATE-TIME:20140529T123000Z
+UID:physicsseminar-3810
+LOCATION:Dalitz Institute\, DWB
+SUMMARY:Interacting spin-2 fields in the Stueckelberg picture
+DESCRIPTION:Speaker: James Scargill (University of Oxford)\n Series: Particle Phenomenology Forum\n \n Further information: http://arxiv.org/abs/1311.7009
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140529T130000Z
+DTEND;VALUE=DATE-TIME:20140529T130000Z
+UID:physicsseminar-3858
+LOCATION:DWB\, 501 (Seminar Room)
+SUMMARY:Magnetically Induced Currents in the Quark-Gluon Plasma
+DESCRIPTION:Speaker: Umut Grsoy (U. Utrecht)\n Series: Holography Seminar\n \n Further information: http://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/seminar.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
 DTSTART;VALUE=DATE-TIME:20140529T103000Z
+DTEND;VALUE=DATE-TIME:20140529T103000Z
+UID:physicsseminar-3860
+LOCATION:501 DWB
+SUMMARY:Application of statistical mechanics to geostrophic (Hasegawa-Mima) turbulence?
+DESCRIPTION:Speaker: Tomos David (AOPP\, Oxford)\n Series: Plasma Theory Group Seminars\n \n Further information: http://www-thphys.physics.ox.ac.uk/research/plasma/seminarsT14.html
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3604
-DESCRIPTION:Title: Titan's atmosphere: 10 years of seasonal changes from Cassini\nSpeaker: Nick Teanby (Bristol)\nSeries: Atmospheric, Oceanic and Planetary Physics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:Titan's atmosphere: 10 years of seasonal changes from Cassini
-DTSTART;VALUE=DATE-TIME:20140529T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3758
-DESCRIPTION:Title: Churchill, Oxford Physicists and the Bomb\nSpeaker: Mr Graham Farmelo (Science Writer, Commentator, Consultant)\nSeries: Colloquia seminar
-LOCATION:Martin Wood Lecture Theatre, Clarendon Laboratory
-SUMMARY:Churchill, Oxford Physicists and the Bomb
-DTSTART;VALUE=DATE-TIME:20140530T151500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3826
-DESCRIPTION:Title: TBC\nSpeaker: Julia Yeomans (University of Oxford)\nSeries: Theoretical Physics Colloquia
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:TBC
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
 DTSTART;VALUE=DATE-TIME:20140530T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3761
-DESCRIPTION:Title: New developments in nanoplasmonics: Hybrid nanocavities, quantum effects, and light harvesting (Host: Prof Peter Norreys)\nSpeaker: Prof Stefan Maier (Imperial College)\nSeries: Atomic and Laser Physics seminar
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:New developments in nanoplasmonics: Hybrid nanocavities, quantum effects, and light harvesting (Host: Prof Peter Norreys)
-DTSTART;VALUE=DATE-TIME:20140602T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3756
-DESCRIPTION:Title: Superluminous Supernovae  Origins and Cosmic Evolution\nSpeaker: Dr. S. Smartt (Queens University, Belfast)\nSeries: Astrophysics Colloquia
+DTEND;VALUE=DATE-TIME:20140530T130000Z
+UID:physicsseminar-3826
 LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:Superluminous Supernovae  Origins and Cosmic Evolution
-DTSTART;VALUE=DATE-TIME:20140602T130000Z
+SUMMARY:Active nematics and topological defects
+DESCRIPTION:Speaker: Julia Yeomans (University of Oxford)\n Series: Theoretical Physics Colloquia\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3743
-DESCRIPTION:Title: Seasonal and interannual variability in Saturn's stratosphere\nSpeaker: James Sinclair (AOPP)\nSeries: Informal AOPP seminars
-LOCATION:Dobson Room
-SUMMARY:Seasonal and interannual variability in Saturn's stratosphere
-DTSTART;VALUE=DATE-TIME:20140603T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3805
-DESCRIPTION:Title: CMS exotics\nSpeaker: Dr Steve Worm (Rutherford Appleton Laboratory)\nSeries: Particle Physics seminar
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:CMS exotics
-DTSTART;VALUE=DATE-TIME:20140603T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140604T101500Z
+DTEND;VALUE=DATE-TIME:20140604T101500Z
 UID:physicsseminar-3797
-DESCRIPTION:Title: TBD\nSpeaker: Paul McClarty (Oxford/Rutherford Lab)\nSeries: Informal Condensed Matter seminar
 LOCATION:DWB Fisher Room
 SUMMARY:TBD
-DTSTART;VALUE=DATE-TIME:20140604T101500Z
+DESCRIPTION:Speaker: Paul McClarty (Oxford/Rutherford Lab)\n Series: Informal Condensed Matter seminar\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3835
-DESCRIPTION:Title: TBC\nSpeaker: Caroline D'Angelo (Leiden (The Netherlands))\nSeries: (SPI-MAX) coffee
-LOCATION:BIPAC seminar room
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140604T100000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3843
-DESCRIPTION:Title: TBC (Host: Dr John Gregg)\nSpeaker: Professor Robert Hicken (University of Exeter)\nSeries: Condensed Matter Physics seminar
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:TBC (Host: Dr John Gregg)
-DTSTART;VALUE=DATE-TIME:20140605T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3809
-DESCRIPTION:Title: TBA\nSpeaker: Andrew Powell (University of Oxford)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140605T120000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3810
-DESCRIPTION:Title: TBA\nSpeaker: James Scargill (University of Oxford)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140605T123000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3605
-DESCRIPTION:Title: TBA\nSpeaker: Ingo Mueller-Wodarg (Imperial College London)\nSeries: Atmospheric, Oceanic and Planetary Physics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140605T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3735
-DESCRIPTION:Title: TBC\nSpeaker: Witold Maciejewski (Liverpool John Moores)\nSeries: Galaxy Evolution Seminars (Thursdays)
-LOCATION:Bipac Seminar Room, DWB
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140605T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140605T151500Z
+DTEND;VALUE=DATE-TIME:20140605T151500Z
 UID:physicsseminar-3695
-DESCRIPTION:Title: New gauge theories for baryon and lepton numbers\nSpeaker: Michael Duerr (Max-Planck Institut fur Kernphysik, Heidelberg)\nSeries: Particles and fields seminar\nFurther information: http://www.mpi-hd.mpg.de/personalhomes/duerrm/
 LOCATION:Sciama Lecture Theatre
 SUMMARY:New gauge theories for baryon and lepton numbers
-DTSTART;VALUE=DATE-TIME:20140605T151500Z
+DESCRIPTION:Speaker: Michael Duerr (Max-Planck Institut fur Kernphysik\, Heidelberg)\n Series: Particles and fields seminar\n \n Further information: http://www.mpi-hd.mpg.de/personalhomes/duerrm/
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140605T120000Z
+DTEND;VALUE=DATE-TIME:20140605T120000Z
+UID:physicsseminar-3813
+LOCATION:Dalitz Institute\, DWB
+SUMMARY:Maximally Natural Supersymmetry
+DESCRIPTION:Speaker: John March-Russell (University of Oxford)\n Series: Particle Phenomenology Forum\n \n Further information: http://arxiv.org/abs/1404.7554
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140606T130000Z
+DTEND;VALUE=DATE-TIME:20140606T130000Z
 UID:physicsseminar-3779
-DESCRIPTION:Title: New Developments in Critical Phenomena (Hyperscaling) and Complexity (Analysis of Mythological Epics)\nSpeaker: Ralph Kenna (University of Coventry)\nSeries: Theoretical Condensed Matter seminar\nFurther information: http://www-thphys.physics.ox.ac.uk/talks/solids/abstracts/kenna.html
 LOCATION:Dennis Sciama Lecture Theatre
 SUMMARY:New Developments in Critical Phenomena (Hyperscaling) and Complexity (Analysis of Mythological Epics)
-DTSTART;VALUE=DATE-TIME:20140606T130000Z
+DESCRIPTION:Speaker: Ralph Kenna (University of Coventry)\n Series: Theoretical Condensed Matter seminar\n \n Further information: http://www-thphys.physics.ox.ac.uk/talks/solids/abstracts/kenna.html
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3784
-DESCRIPTION:Title: Of walks and graphs\nSpeaker: Dr Pierre-Louis Giscard (Department of Physics)\nSeries: Atomic and Laser Physics seminar\nFurther information: https://www2.physics.ox.ac.uk/sites/default/files/2011-05-27/09_04_2014_pdf_80228.pdf
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:Of walks and graphs
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
 DTSTART;VALUE=DATE-TIME:20140609T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3806
-DESCRIPTION:Title: Neutrino 2014 Conference\nSpeaker: Dr Antonin Vacheret (University of Oxford)\nSeries: Particle Physics seminar
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:Neutrino 2014 Conference
-DTSTART;VALUE=DATE-TIME:20140610T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3509
-DESCRIPTION:Title: TBA\nSpeaker: Francesco Sciortino (Roma)\nSeries: Softbio
-LOCATION:Lindemann Lecture Theatre
+DTEND;VALUE=DATE-TIME:20140609T103000Z
+UID:physicsseminar-3863
+LOCATION:501 DWB
 SUMMARY:TBA
+DESCRIPTION:Speaker: Eliot Quataert (UC Berkeley)\n Series: Plasma Theory Group Seminars\n \n Further information: http://www-thphys.physics.ox.ac.uk/research/plasma/seminarsT14.html
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
 DTSTART;VALUE=DATE-TIME:20140610T150000Z
+DTEND;VALUE=DATE-TIME:20140610T150000Z
+UID:physicsseminar-3509
+LOCATION:Dennis Sciama Lecture Theatre
+SUMMARY:Providing valence to colloids: equilibrium gels and ultrastable liquids
+DESCRIPTION:Speaker: Francesco Sciortino (Roma)\n Series: Softbio\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3759
-DESCRIPTION:Title: The Halley Lecture: How the Universe Evolved From Smooth to Lumpy -- the Physics of Galaxy Formation\nSpeaker: Professor Eliot Quataert (University of California, Berkeley)\nSeries: Colloquia seminar
-LOCATION:Martin Wood Lecture Theatre, Clarendon Laboratory
-SUMMARY:The Halley Lecture: How the Universe Evolved From Smooth to Lumpy -- the Physics of Galaxy Formation
-DTSTART;VALUE=DATE-TIME:20140610T160000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140611T101500Z
+DTEND;VALUE=DATE-TIME:20140611T101500Z
 UID:physicsseminar-3798
-DESCRIPTION:Title: TBD\nSpeaker: Oded Zilberberg (ETH Zurich)\nSeries: Informal Condensed Matter seminar
 LOCATION:DWB 501
 SUMMARY:TBD
-DTSTART;VALUE=DATE-TIME:20140611T101500Z
+DESCRIPTION:Speaker: Oded Zilberberg (ETH Zurich)\n Series: Informal Condensed Matter seminar\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3765
-DESCRIPTION:Title: TBA\nSpeaker: Guillaume Hurier (Institut d'Astrophysique Spatiale)\nSeries: Cosmology
-LOCATION:BIPAC seminar room
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140612T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140612T151500Z
+DTEND;VALUE=DATE-TIME:20140612T151500Z
 UID:physicsseminar-3726
-DESCRIPTION:Title: Cosmology of a FLRW 3-brane and late-time cosmic acceleration\nSpeaker: Ishwaree Neupane (CERN &amp; Kathmandu)\nSeries: Particles and fields seminar\nFurther information: http://arxiv.org/abs/arXiv:1211.3410
 LOCATION:Sciama Lecture Theatre
 SUMMARY:Cosmology of a FLRW 3-brane and late-time cosmic acceleration
-DTSTART;VALUE=DATE-TIME:20140612T151500Z
+DESCRIPTION:Speaker: Ishwaree Neupane (CERN &amp\; Kathmandu)\n Series: Particles and fields seminar\n \n Further information: http://arxiv.org/abs/arXiv:1211.3410
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3606
-DESCRIPTION:Title: From 6 to 16 GW and back again: a tale of Enceladus' enigmatic heat flow\nSpeaker: Carly Howett (Southwest Research Institute)\nSeries: Atmospheric, Oceanic and Planetary Physics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:From 6 to 16 GW and back again: a tale of Enceladus' enigmatic heat flow
-DTSTART;VALUE=DATE-TIME:20140612T103000Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140612T120000Z
+DTEND;VALUE=DATE-TIME:20140612T120000Z
+UID:physicsseminar-3809
+LOCATION:Dalitz Institute\, DWB
+SUMMARY:TBA
+DESCRIPTION:Speaker: Andrew Powell (University of Oxford)\n Series: Particle Phenomenology Forum\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3736
-DESCRIPTION:Title: TBC\nSpeaker: Simon Zieleniewski (Oxford)\nSeries: Galaxy Evolution Seminars (Thursdays)
-LOCATION:Bipac Seminar Room, DWB
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140612T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3827
-DESCRIPTION:Title: TBC\nSpeaker: Sir Roger Penrose (University of Oxford)\nSeries: Theoretical Physics Colloquia
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:TBC
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
 DTSTART;VALUE=DATE-TIME:20140613T130000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3757
-DESCRIPTION:Title: Exoplanetary Atmospheres and Interiors\nSpeaker: Dr. N. Madhusudhan (IOA)\nSeries: Astrophysics Colloquia
+DTEND;VALUE=DATE-TIME:20140613T130000Z
+UID:physicsseminar-3827
 LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:Exoplanetary Atmospheres and Interiors
-DTSTART;VALUE=DATE-TIME:20140616T130000Z
+SUMMARY:TBC
+DESCRIPTION:Speaker: Sir Roger Penrose (University of Oxford)\n Series: Theoretical Physics Colloquia\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3830
-DESCRIPTION:Title: Role of solvent in supramolecular polymerisation\nSpeaker: Prof Paul van der Schoot (Eindhoven University of Technology, The Netherlands)\nSeries: Softbio
-LOCATION:JSR seminar room, PTCL
-SUMMARY:Role of solvent in supramolecular polymerisation
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
 DTSTART;VALUE=DATE-TIME:20140617T150000Z
+DTEND;VALUE=DATE-TIME:20140617T150000Z
+UID:physicsseminar-3830
+LOCATION:JSR seminar room\, PTCL
+SUMMARY:Role of solvent in supramolecular polymerisation
+DESCRIPTION:Speaker: Prof Paul van der Schoot (Eindhoven University of Technology\, The Netherlands)\n Series: Softbio\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3807
-DESCRIPTION:Title: Single top in s channel\nSpeaker: Mr Matteo Cremonesi (University of Oxford)\nSeries: Particle Physics seminar
-LOCATION:Dennis Sciama Lecture Theatre
-SUMMARY:Single top in s channel
-DTSTART;VALUE=DATE-TIME:20140617T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140618T101500Z
+DTEND;VALUE=DATE-TIME:20140618T101500Z
 UID:physicsseminar-3799
-DESCRIPTION:Title: TBD\nSpeaker: Royce Zia (Virginia Tech)\nSeries: Informal Condensed Matter seminar
 LOCATION:DWB 501
 SUMMARY:TBD
-DTSTART;VALUE=DATE-TIME:20140618T101500Z
+DESCRIPTION:Speaker: Royce Zia (Virginia Tech)\n Series: Informal Condensed Matter seminar\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3808
-DESCRIPTION:Title: CheckMATE\nSpeaker: Jong Soo Kim (TU Dortmund)\nSeries: Particle Phenomenology Forum
-LOCATION:Dalitz Institute, DWB
-SUMMARY:CheckMATE
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
 DTSTART;VALUE=DATE-TIME:20140619T120000Z
+DTEND;VALUE=DATE-TIME:20140619T120000Z
+UID:physicsseminar-3808
+LOCATION:Dalitz Institute\, DWB
+SUMMARY:CheckMATE
+DESCRIPTION:Speaker: Jong Soo Kim (IFT Madrid)\n Series: Particle Phenomenology Forum\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140619T151500Z
+DTEND;VALUE=DATE-TIME:20140619T151500Z
 UID:physicsseminar-3727
-DESCRIPTION:Title: TBA\nSpeaker: TBD (TBD)\nSeries: Particles and fields seminar
 LOCATION:Sciama Lecture Theatre
 SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140619T151500Z
+DESCRIPTION:Speaker: TBD (TBD)\n Series: Particles and fields seminar\n 
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3607
-DESCRIPTION:Title: The ECMWF forecast model, quo vadis?\nSpeaker: Nils Wedi (ECMWF)\nSeries: Atmospheric, Oceanic and Planetary Physics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:The ECMWF forecast model, quo vadis?
-DTSTART;VALUE=DATE-TIME:20140619T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3643
-DESCRIPTION:Title: TBC\nSpeaker: Greg Stinson (MPIA)\nSeries: Galaxy Evolution Seminars (Thursdays)
-LOCATION:Bipac Seminar Room, DWB
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140619T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3845
-DESCRIPTION:Title: From Perovskites to Carbon Nanotubes: Novel Materials for High Performance Solar Cells\nSpeaker: Dr Sam Stranks (University of Oxford)\nSeries: Condensed Matter Physics seminar
-LOCATION:Audrey Wood Seminar Room
-SUMMARY:From Perovskites to Carbon Nanotubes: Novel Materials for High Performance Solar Cells
-DTSTART;VALUE=DATE-TIME:20140619T131500Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
+DTSTAMP;VALUE=DATE-TIME:20140529T202557Z
+DTSTART;VALUE=DATE-TIME:20140620T130000Z
+DTEND;VALUE=DATE-TIME:20140620T130000Z
 UID:physicsseminar-3780
-DESCRIPTION:Title: Biomimetic emulsions - a new playground for physicists\nSpeaker: Jasna Brujic (NYU and Cambridge)\nSeries: Theoretical Condensed Matter seminar\nFurther information: http://www-thphys.physics.ox.ac.uk/talks/solids/abstracts/brujic.html
 LOCATION:Dennis Sciama Lecture Theatre
 SUMMARY:Biomimetic emulsions - a new playground for physicists
-DTSTART;VALUE=DATE-TIME:20140620T130000Z
+DESCRIPTION:Speaker: Jasna Brujic (NYU and Cambridge)\n Series: Theoretical Condensed Matter seminar\n \n Further information: http://www-thphys.physics.ox.ac.uk/talks/solids/abstracts/brujic.html
 END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3751
-DESCRIPTION:Title: TBA\nSpeaker: Markus Huber (Reading)\nSeries: Atmospheric, Oceanic and Planetary Physics Seminars
-LOCATION:Dobson Lecture Room
-SUMMARY:TBA
-DTSTART;VALUE=DATE-TIME:20140626T103000Z
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP;VALUE=DATE-TIME:20140508T102935Z
-UID:physicsseminar-3792
-DESCRIPTION:Title: TBC\nSpeaker: Chris Wolf (ANU)\nSeries: Galaxy Evolution Seminars (Thursdays)
-LOCATION:Bipac Seminar Room, DWB
-SUMMARY:TBC
-DTSTART;VALUE=DATE-TIME:20140710T103000Z
-END:VEVENT
+END:VCALENDAR

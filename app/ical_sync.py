@@ -51,9 +51,12 @@ beautify = BeautifyString(
 
 class IcalEvent(object):
 
-    SPEAKER_RE = re.compile(ur'^\s*Speaker:\s*(.*)')
     LOCATION_RE = re.compile(ur'^\s*Location:\s*(.*)')
+    SPEAKER_RE = re.compile(ur'^\s*Speaker:\s*(.*)')
     SERIES_RE = re.compile(ur'^\s*Series:\s*(.*)')
+
+    SEMINAR_RE = re.compile(ur'^\s*Seminar:\s*(.*)')
+    UNIVERSITY_RE = re.compile(ur'^\s*University:\s*(.*)')
 
     def __init__(self, series, author, event, active_by_default=False):
         self.uid = event['UID']
@@ -81,24 +84,67 @@ class IcalEvent(object):
         return dt.astimezone(pytz.utc).replace(tzinfo=None)
 
     def _init_description(self, desc):
+        """
+        Parse the special fields in the ical DESCRIPTION:
+
+        Math has the following specials:
+
+        * Seminar:
+        * Speaker:
+        * University:
+        * Location:
+        * Abstract:
+
+        Physics has the following specials:
+
+        * Speaker:
+        * Series:
+        * Further information:
+        """
         self.speaker = ''
-        self.description = ''
+        description = ''
+        university = ''
         for line in desc.splitlines():
+            # Physics specials
             match = self.SPEAKER_RE.match(line)
             if match:
                 self.speaker = beautify(match.group(1))
-                continue
-            match = self.LOCATION_RE.match(line)
-            if match:
-                self.location = match.group(1)
                 continue
             match = self.SERIES_RE.match(line)
             if match:
                 self.series = match.group(1)
                 continue
-            self.description += line + '\n'
+            # Math specials
+            match = self.LOCATION_RE.match(line)
+            if match:
+                self.location = match.group(1)
+                continue
+            match = self.SEMINAR_RE.match(line)
+            if match:
+                self.series = match.group(1)
+                continue
+            match = self.UNIVERSITY_RE.match(line)
+            if match:
+                university = ' ({0})'.format(match.group(1))
+                continue
+            # everything else
+            description += line + '\n'
+        
+        self.speaker = self.speaker + university
+        self.description = self._beautify_description(description)
 
-        self.description = beautify(textwrap.dedent(self.description))
+    def _beautify_description(self, desc):
+        """
+        Return the description with the intro stripped out
+        """
+        desc = beautify(textwrap.dedent(desc)).lstrip()
+        desc_lower = desc.lower()
+        for to_strip in config.strip_abstract_intro:
+            if desc_lower.startswith(to_strip):
+                desc = desc[len(to_strip):].lstrip()
+                desc_lower = desc_lower[len(to_strip):].lstrip()
+        desc = desc.strip('/ \n')
+        return desc
 
     def __repr__(self):
         s = u'Event\n'
