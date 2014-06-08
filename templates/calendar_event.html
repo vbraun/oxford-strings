@@ -7,8 +7,8 @@
   <div class="event_time_loc">
     On {{ event.get_time() }} {{ event.get_where() }}, a seminar in
     the {{ event.get_series_without_seminar() }} series:</div>
-  <div class="event_speaker">{{ event.get_speaker() }}</div>
-  <div class="event_title">{{ event.title }}</div>
+  <div class="event_speaker">{% autoescape false %}{{ event.get_speaker() }}{% endautoescape %}</div>
+  <div class="event_title">{% autoescape false %}{{ event.title }}{% endautoescape %}</div>
   {% if event.description.strip() %}
   <div class="event_abstract"><b>{{ abstract_intro }}</b>
     {% autoescape false %}{{ event.description }}{% endautoescape %}</div>

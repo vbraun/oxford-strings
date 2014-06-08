@@ -24,10 +24,10 @@
     the {{ event.series }} series:
   </div>
   <div style="font-size:18px; font-weight:bold; padding-top:5px; padding-bottom: 3px;">
-    {{ event.speaker }}
+    {% autoescape false %}{{ event.speaker }}{% endautoescape %}
   </div>
   <div style="font-size:17px; color:#002147;">
-    {{ event.title }}
+    {% autoescape false %}{{ event.title }}{% endautoescape %}
   </div>
   {% if event.description.strip() %}
   <div style="font-size:12px;">
