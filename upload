@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+SDK=$(git config --get googleappengine.path)
+
+"$SDK/appcfg.py" update --oauth2 .
