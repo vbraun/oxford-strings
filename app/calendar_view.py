@@ -115,7 +115,7 @@ class Seminars(EventListing):
 
 
 
-class BagLunch(EventListing):
+class JuniorSeminar(EventListing):
 
     def get_events(self):
         """
@@ -123,13 +123,13 @@ class BagLunch(EventListing):
         """
         now = datetime.combine(date.today(), datetime.min.time())
         query = Event.query(
-            Event.series == 'Bag Lunch', 
+            Event.series == 'Junior Seminar', 
             Event.start_date >= now,
             Event.active == True)
         return query.order(Event.start_date).fetch(100)
 
     def get_template(self):
-        return 'bag_lunch.html'
+        return 'junior_seminar.html'
 
 
 class ThisWeek(EventListing):

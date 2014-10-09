@@ -4,6 +4,7 @@ from app import config
 
 from datetime import datetime, timedelta
 from webapp2 import WSGIApplication, Route, uri_for
+from urllib2 import HTTPError
 
 from app.base_view import RequestHandler, PageRequestHandler
 from app.decorators import cached_property
@@ -68,7 +69,15 @@ class IcalSyncer(RequestHandler):
         self.response.headers['Content-Type'] = 'text/plain'
         cal = CalendarSync()
         for remote in config.remote_calendars:
-            cal.import_url(remote.series, remote.url, remote.activate)
+            self.response.write('-------- contacting remote calendar ---------\n')
+            self.response.write(remote.series + '\n')
+            self.response.write(remote.url + '\n')
+            try:
+                cal.import_url(remote.series, remote.url, remote.activate)
+            except HTTPError as e:
+                self.response.write('ERROR:\n')
+                self.response.write(str(e) + '\n')
+        self.response.write('-------- calendar output follows ---------\n')
         self.response.write(str(cal.events))
 
 
