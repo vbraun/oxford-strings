@@ -119,11 +119,11 @@ class JuniorSeminar(EventListing):
 
     def get_events(self):
         """
-        Return all future events in the bag lunch series
+        Return all future events in the string theory junior seminar series
         """
         now = datetime.combine(date.today(), datetime.min.time())
         query = Event.query(
-            Event.series == 'Junior Seminar', 
+            Event.series == 'Strings Junior Seminar', 
             Event.start_date >= now,
             Event.active == True)
         return query.order(Event.start_date).fetch(100)
