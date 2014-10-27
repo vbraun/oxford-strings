@@ -37,35 +37,70 @@ menu_items = (
 )
 
 
+# This is the seminar name that is shown to the user
+#
+# The physics calendars all override their seminar name, so they don't
+# actually appear under "Physics" but, e.g. "Holography Seminar".
+
+seminar_names = {
+    # Individual calendars that do not override their name, so we can
+    # pick any name we like
+    'math_phys': 'Math/Physics',
+    'strings': 'String Theory Seminar',
+    'qft': 'Quantum Field Theory Seminar',
+    'geometry_analysis': 'Geometry and Analysis Seminar', 
+    'algebraic_symplectic': 'Algebraic and Symplectic Geometry', 
+    'number_theory': 'Number Theory Seminar', 
+    'math_colloquium': 'Math Colloquium', 
+    'junior_strings': 'Strings Junior Seminar', 
+    'relativity': 'Relativity Seminar', 
+    # 'twistor: 'Twistor Workshop', 
+
+    # Note: these are all physics calendars
+    'all_of_physics': 'Physics', 
+
+    # The remaining names must be exactly as they are named
+    # in the physics calendar (up to case)
+    'holography': 'Holography Seminar',
+    'particle_pheno': 'Particle Phenomenology Forum',
+    'theoretical_physics': 'Theoretical Physics Colloquia',
+    'particles_and_fields': 'Particles and fields seminar',
+    'physics_colloquia': 'Colloquia seminar',
+}
+
+
 # The calendars to pull from
-# Note: the seminar series name can be overridden by a "Series: ..." line in the description
+#
+# Note: the seminar series name can be overridden by a "Series: ..."
+# line in the description
+
 from app.remote_calendars import Calendar
 remote_calendars = (
     # series name, ical url, where to include events by default
-    Calendar('Math/Physics', 
+    Calendar(seminar_names['math_phys'], 
              'https://p02-calendarws.icloud.com/ca/subscribe/1/H27V2KdwHOwU'
              'P1-T2utnLgUfT4rbXQwJ20lQlolSc7lxsTg7Rj7k8USjJdnX3fuPx6EX7bhjx'
              '6Lf87LvlFpnxEUmjjbFR6VG4uDCu8EBW08', True),
-    Calendar('String Theory Seminar', 
+    Calendar(seminar_names['strings'], 
              'https://www.maths.ox.ac.uk/events/list/695/all/calendar.ics'),
-    Calendar('Quantum Field Theory', 
+    Calendar(seminar_names['qft'], 
              'https://www.maths.ox.ac.uk/events/list/686/all/calendar.ics'),
-    Calendar('Geometry and Analysis Seminar', 
+    Calendar(seminar_names['geometry_analysis'], 
              'https://www.maths.ox.ac.uk/events/list/641/all/calendar.ics'),
-    Calendar('Algebraic and Symplectic Geometry', 
+    Calendar(seminar_names['algebraic_symplectic'],
              'https://www.maths.ox.ac.uk/events/list/624/all/calendar.ics'),
-    Calendar('Number Theory Seminar', 
+    Calendar(seminar_names['number_theory'],
              'https://www.maths.ox.ac.uk/events/list/669/all/calendar.ics'),
-    Calendar('Math Colloquium', 
+    Calendar(seminar_names['math_colloquium'],
              'https://www.maths.ox.ac.uk/events/list/632/all/calendar.ics'),
-    Calendar('Strings Junior Seminar', 
+    Calendar(seminar_names['junior_strings'],
              'https://www.google.com/calendar/ical/bkhromh605bm44dl8fuq4dip'
              '58%40group.calendar.google.com/public/basic.ics'),
-    Calendar('Relativity Seminar', 
+    Calendar(seminar_names['relativity'],
              'https://www.maths.ox.ac.uk/events/list/688/all/calendar.ics'),
-    Calendar('Physics', 
+    Calendar(seminar_names['all_of_physics'],
              'https://www2.physics.ox.ac.uk/ical/research/seminars'),
-#    Calendar('Twistor Workshop', 
+#    Calendar(seminar_names['twistor'], 
 #             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/1837/ical'),
 )
 
@@ -73,20 +108,19 @@ remote_calendars = (
 # default. All others must be picked manually using the
 # http://strings-oxford.appspot.com/cal/admin view.
 default_series = (
-    'String Theory Seminar',
-    'Quantum Field Theory Seminar',
-    'Math Colloquium',
-    'Strings Junior Seminar',
-    'Holography Seminar',
-    'Particle Phenomenology Forum',
-    'Math/Physics',
-    'Theoretical Physics Colloquia',
-    'Algebraic and Symplectic Geometry',
-    'Relativity Seminar',
-    'Geometry and Analysis Seminar',
-    'Particles and fields seminar',
-    'Colloquia seminar',
-    'Twistor Workshop',
+    seminar_names['strings'], 
+    seminar_names['qft'], 
+    seminar_names['math_colloquium'],
+    seminar_names['junior_strings'],
+    seminar_names['math_phys'],
+    seminar_names['algebraic_symplectic'],
+    seminar_names['relativity'],
+    seminar_names['geometry_analysis'],
+    seminar_names['holography'],
+    seminar_names['particle_pheno'],
+    seminar_names['theoretical_physics'],
+    seminar_names['particles_and_fields'],
+    seminar_names['physics_colloquia'],
 )
 
 default_series_lower_case = tuple(s.lower() for s in default_series)
