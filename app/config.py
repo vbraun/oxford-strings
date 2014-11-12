@@ -78,10 +78,10 @@ seminar_names = {
 from app.remote_calendars import Calendar
 remote_calendars = (
     # series name, ical url, where to include events by default
-    Calendar(seminar_names['math_phys'], 
-             'https://p02-calendarws.icloud.com/ca/subscribe/1/H27V2KdwHOwU'
-             'P1-T2utnLgUfT4rbXQwJ20lQlolSc7lxsTg7Rj7k8USjJdnX3fuPx6EX7bhjx'
-             '6Lf87LvlFpnxEUmjjbFR6VG4uDCu8EBW08', True),
+    #Calendar(seminar_names['math_phys'], 
+    #         'https://p02-calendarws.icloud.com/ca/subscribe/1/H27V2KdwHOwU'
+    #         'P1-T2utnLgUfT4rbXQwJ20lQlolSc7lxsTg7Rj7k8USjJdnX3fuPx6EX7bhjx'
+    #         '6Lf87LvlFpnxEUmjjbFR6VG4uDCu8EBW08', True),
     Calendar(seminar_names['strings'], 
              'https://www.maths.ox.ac.uk/events/list/695/all/calendar.ics'),
     Calendar(seminar_names['qft'], 
@@ -105,8 +105,8 @@ remote_calendars = (
              'https://www.maths.ox.ac.uk/events/list/688/all/calendar.ics'),
     Calendar(seminar_names['all_of_physics'],
              'https://www2.physics.ox.ac.uk/ical/research/seminars'),
-#    Calendar(seminar_names['twistor'], 
-#             'https://www.maths.ox.ac.uk/events/calendar/P2Y1D/4/1837/ical'),
+    Calendar(seminar_names['twistor'],
+             'https://www.maths.ox.ac.uk/events/list/701/all/calendar.ics'),
 )
 
 # Calendar sources (seminar series) whose events should be included by
