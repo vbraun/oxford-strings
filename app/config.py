@@ -98,9 +98,9 @@ remote_calendars = (
              'https://www.maths.ox.ac.uk/events/list/701/all/calendar.ics'),
     Calendar(seminar_names['math_colloquium'],
              'https://www.maths.ox.ac.uk/events/list/632/all/calendar.ics'),
-#    Calendar(seminar_names['junior_strings'],
-#             'https://www.google.com/calendar/ical/bkhromh605bm44dl8fuq4dip'
-#             '58%40group.calendar.google.com/public/basic.ics'),
+    Calendar(seminar_names['junior_strings'],
+             'https://www.google.com/calendar/ical/bkhromh605bm44dl8fuq4dip'
+             '58%40group.calendar.google.com/public/basic.ics'),
     Calendar(seminar_names['relativity'],
              'https://www.maths.ox.ac.uk/events/list/688/all/calendar.ics'),
     Calendar(seminar_names['all_of_physics'],
