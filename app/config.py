@@ -104,7 +104,7 @@ remote_calendars = (
     Calendar(seminar_names['relativity'],
              'https://www.maths.ox.ac.uk/events/list/688/all/calendar.ics'),
     Calendar(seminar_names['all_of_physics'],
-             'https://www2.physics.ox.ac.uk/research/rudolf-peierls-centre-for-theoretical-physics/seminars'),
+             'http://www2.physics.ox.ac.uk/research/rudolf-peierls-centre-for-theoretical-physics/seminars'),
     Calendar(seminar_names['twistor'],
              'https://www.maths.ox.ac.uk/events/list/701/all/calendar.ics'),
 )
