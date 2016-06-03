@@ -32,7 +32,7 @@
   </div>
   {% if event.description.strip() %}
   <div style="font-size:14px;">
-    <b>{{ abstract_intro }}</b>
+    <em><b>{{ abstract_intro }}</b></em>
     <em>{% autoescape false %}{{ event.description }}{% endautoescape %}</em>
   </div>
   {% endif %}

@@ -10,7 +10,7 @@
   <div class="event_speaker">{% autoescape false %}{{ event.get_speaker() }}{% endautoescape %}</div>
   <div class="event_title">{% autoescape false %}{{ event.title }}{% endautoescape %}</div>
   {% if event.description.strip() %}
-  <div class="event_abstract"><b>{{ abstract_intro }}</b>
+  <div class="event_abstract"><em><b>{{ abstract_intro }}</b></em>
     {% autoescape false %}{{ event.description }}{% endautoescape %}</div>
   {% endif %}
 </div>
